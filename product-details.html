@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details - NuBaCo eCommerce</title>
+
+  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style-prefix.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="overlay" data-overlay></div>
+
+  <!--
+    - HEADER
+  -->
+
+  <header>
+
+    <div class="header-top">
+      <div class="container">
+        <ul class="header-social-container">
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+
+        <div class="header-alert-news">
+          <p><b>Free Shipping</b> This Week Order Over - $55</p>
+        </div>
+
+        <div class="header-top-actions">
+          <select name="currency">
+            <option value="usd">USD &dollar;</option>
+            <option value="eur">EUR &euro;</option>
+          </select>
+          <select name="language">
+            <option value="en-US">English</option>
+            <option value="es-ES">Espa&ntilde;ol</option>
+            <option value="fr">Fran&ccedil;ais</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="container">
+        <a href="index.html" class="header-logo">
+          <img src="./assets/images/logo/nubaco1.webp" alt="NuBaCo logo" width="120" height="36">
+        </a>
+
+        <div class="header-search-container">
+          <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
+          <button class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+        </div>
+
+        <div class="header-user-actions">
+          <button class="action-btn">
+            <ion-icon name="person-outline"></ion-icon>
+          </button>
+          <button class="action-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+          <button class="action-btn">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="desktop-navigation-menu">
+      <div class="container">
+        <ul class="desktop-menu-category-list">
+          <li class="menu-category"><a href="index.html" class="menu-title">Home</a></li>
+          <li class="menu-category"><a href="shop.html" class="menu-title">Shop</a></li>
+          <li class="menu-category"><a href="about.html" class="menu-title">About Us</a></li>
+          <li class="menu-category"><a href="contact.html" class="menu-title">Contact Us</a></li>
+          <li class="menu-category"><a href="#" class="menu-title">Blog</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="mobile-bottom-navigation">
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+      <button class="action-btn">
+        <ion-icon name="bag-handle-outline"></ion-icon>
+        <span class="count">0</span>
+      </button>
+      <button class="action-btn">
+        <ion-icon name="home-outline"></ion-icon>
+      </button>
+      <button class="action-btn">
+        <ion-icon name="heart-outline"></ion-icon>
+        <span class="count">0</span>
+      </button>
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="grid-outline"></ion-icon>
+      </button>
+    </div>
+
+    <nav class="mobile-navigation-menu has-scrollbar" data-mobile-menu>
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-category-list">
+        <li class="menu-category"><a href="index.html" class="menu-title">Home</a></li>
+        <li class="menu-category"><a href="shop.html" class="menu-title">Shop</a></li>
+        <li class="menu-category"><a href="about.html" class="menu-title">About Us</a></li>
+        <li class="menu-category"><a href="contact.html" class="menu-title">Contact Us</a></li>
+      </ul>
+
+      <div class="menu-bottom">
+        <ul class="menu-category-list">
+          <li class="menu-category">
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Language</p>
+              <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+            </button>
+            <ul class="submenu-category-list" data-accordion>
+              <li class="submenu-category"><a href="#" class="submenu-title">English</a></li>
+              <li class="submenu-category"><a href="#" class="submenu-title">Espa&ntilde;ol</a></li>
+              <li class="submenu-category"><a href="#" class="submenu-title">Fran&ccedil;h</a></li>
+            </ul>
+          </li>
+          <li class="menu-category">
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Currency</p>
+              <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+            </button>
+            <ul class="submenu-category-list" data-accordion>
+              <li class="submenu-category"><a href="#" class="submenu-title">USD &dollar;</a></li>
+              <li class="submenu-category"><a href="#" class="submenu-title">EUR &euro;</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="menu-social-container">
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+
+  <!--
+    - MAIN
+  -->
+
+  <main>
+
+    <!--
+      - BREADCRUMB
+    -->
+
+    <div class="breadcrumb-container">
+      <div class="container">
+        <ul class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li>Product Details</li>
+        </ul>
+      </div>
+    </div>
+
+    <!--
+      - PRODUCT DETAILS SECTION
+    -->
+
+    <div class="product-details-container">
+
+      <div class="container">
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-bottom: 50px;" class="details-grid">
+
+          <!--
+            - PRODUCT GALLERY
+          -->
+
+          <div class="product-gallery">
+
+            <div style="margin-bottom: 20px; border: 1px solid var(--cultured); border-radius: var(--border-radius-md); overflow: hidden;">
+              <img id="mainImage" src="./assets/images/products/jewellery-1.webp" alt="Gold Standard Whey Protein Isolate" style="width: 100%; height: auto; display: block;">
+            </div>
+
+            <!-- Thumbnail Gallery -->
+            <div style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 10px;">
+              <img src="./assets/images/products/jewellery-1.webp" alt="Image 1" class="thumbnail" style="width: 80px; height: 80px; object-fit: cover; border: 2px solid var(--salmon-pink); border-radius: var(--border-radius-sm); cursor: pointer;">
+              <img src="./assets/images/products/jewellery-2.webp" alt="Image 2" class="thumbnail" style="width: 80px; height: 80px; object-fit: cover; border: 2px solid var(--cultured); border-radius: var(--border-radius-sm); cursor: pointer;">
+              <img src="./assets/images/products/jewellery-3.webp" alt="Image 3" class="thumbnail" style="width: 80px; height: 80px; object-fit: cover; border: 2px solid var(--cultured); border-radius: var(--border-radius-sm); cursor: pointer;">
+              <img src="./assets/images/products/jewellery-4.webp" alt="Image 4" class="thumbnail" style="width: 80px; height: 80px; object-fit: cover; border: 2px solid var(--cultured); border-radius: var(--border-radius-sm); cursor: pointer;">
+            </div>
+
+          </div>
+
+          <!--
+            - PRODUCT INFO
+          -->
+
+          <div class="product-info">
+
+            <!-- Category & Title -->
+            <div style="margin-bottom: 20px;">
+              <a href="shop.html" style="color: var(--salmon-pink); font-size: var(--fs-7); font-weight: var(--weight-500); text-transform: uppercase;">Whey Protein</a>
+              <h1 style="color: var(--eerie-black); font-size: 28px; font-weight: var(--weight-600); margin-top: 8px; line-height: 1.3;">Gold Standard Whey Protein Isolate</h1>
+            </div>
+
+            <!-- Rating -->
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+              <div style="display: flex; gap: 5px; color: var(--sandy-brown); font-size: 18px;">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+              </div>
+              <p style="color: var(--sonic-silver); font-size: var(--fs-7);">4.0 out of 5 (47 reviews)</p>
+            </div>
+
+            <!-- Price -->
+            <div style="display: flex; align-items: center; gap: 15px; margin-bottom: 30px;">
+              <span style="font-size: 28px; font-weight: var(--weight-700); color: var(--salmon-pink);">$39.99</span>
+              <del style="color: var(--sonic-silver); font-size: 20px;">$49.99</del>
+              <span style="background: var(--bittersweet); color: var(--white); padding: 5px 12px; border-radius: var(--border-radius-sm); font-weight: var(--weight-600); font-size: var(--fs-8);">-20% Save $10</span>
+            </div>
+
+            <!-- Description -->
+            <div style="margin-bottom: 30px; color: var(--sonic-silver); line-height: 1.8;">
+              <h3 style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 12px;">Product Description</h3>
+              <p>Premium whey protein isolate with 25g of protein per serving. Designed for muscle building and recovery with minimal carbs and fat. Perfect for fitness enthusiasts and athletes.</p>
+            </div>
+
+            <!-- Product Features -->
+            <div style="margin-bottom: 30px;">
+              <h3 style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 12px;">Key Features</h3>
+              <ul style="color: var(--sonic-silver); line-height: 1.8;">
+                <li style="margin-bottom: 8px;">✓ 25g Protein per serving</li>
+                <li style="margin-bottom: 8px;">✓ Low Carb & Fat content</li>
+                <li style="margin-bottom: 8px;">✓ Microfiltration Technology</li>
+                <li style="margin-bottom: 8px;">✓ Multiple Flavors Available</li>
+                <li style="margin-bottom: 8px;">✓ 30-day Money Back Guarantee</li>
+              </ul>
+            </div>
+
+            <!-- Stock Status -->
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 30px;">
+              <p style="color: var(--eerie-black); font-weight: var(--weight-600);">Availability:</p>
+              <span style="background: var(--ocean-green); color: var(--white); padding: 4px 12px; border-radius: var(--border-radius-sm); font-size: var(--fs-8); font-weight: var(--weight-600);">In Stock</span>
+              <span style="color: var(--sonic-silver); font-size: var(--fs-7);">(250+ items in stock)</span>
+            </div>
+
+            <!-- Quantity & Add to Cart -->
+            <div style="display: flex; gap: 15px; margin-bottom: 30px; flex-wrap: wrap;">
+
+              <div style="display: flex; align-items: center; border: 1px solid var(--cultured); border-radius: var(--border-radius-md);">
+                <button id="decrementBtn" style="background: var(--cultured); color: var(--eerie-black); padding: 10px 15px; cursor: pointer; border: none; transition: var(--transition-timing);">−</button>
+                <input type="number" id="quantityInput" value="1" min="1" max="100" style="width: 60px; text-align: center; border: none; font-weight: var(--weight-600); color: var(--eerie-black);">
+                <button id="incrementBtn" style="background: var(--cultured); color: var(--eerie-black); padding: 10px 15px; cursor: pointer; border: none; transition: var(--transition-timing);">+</button>
+              </div>
+
+              <button style="background: var(--salmon-pink); color: var(--white); padding: 12px 30px; border: none; border-radius: var(--border-radius-md); font-weight: var(--weight-600); cursor: pointer; transition: var(--transition-timing); flex: 1; min-width: 200px;" onmouseover="this.style.background='var(--eerie-black)'" onmouseout="this.style.background='var(--salmon-pink)'">
+                <ion-icon name="bag-handle-outline" style="vertical-align: middle; margin-right: 8px;"></ion-icon> Add to Cart
+              </button>
+
+              <button style="background: var(--white); color: var(--salmon-pink); padding: 12px 20px; border: 2px solid var(--salmon-pink); border-radius: var(--border-radius-md); font-weight: var(--weight-600); cursor: pointer; transition: var(--transition-timing);" onmouseover="this.style.background='var(--salmon-pink)'; this.style.color='var(--white)'" onmouseout="this.style.background='var(--white)'; this.style.color='var(--salmon-pink)'">
+                <ion-icon name="heart-outline" style="vertical-align: middle;"></ion-icon>
+              </button>
+
+            </div>
+
+            <!-- Share & SKU -->
+            <div style="display: flex; gap: 30px; font-size: var(--fs-7); color: var(--sonic-silver);">
+              <div>
+                <p style="margin-bottom: 5px;">SKU: WP-ISO-001</p>
+              </div>
+              <div>
+                <p style="margin-bottom: 5px;">Category: <a href="shop.html" style="color: var(--salmon-pink);">Whey Protein</a></p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!--
+          - REVIEWS & RATINGS
+        -->
+
+        <div style="margin-bottom: 50px;">
+
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+
+            <!-- Reviews Summary -->
+            <div>
+              <h2 style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 20px; font-size: 20px;">Customer Reviews</h2>
+
+              <div style="background: var(--cultured); padding: 20px; border-radius: var(--border-radius-md); margin-bottom: 20px;">
+                <div style="display: flex; align-items: center; gap: 20px; margin-bottom: 20px;">
+                  <div style="text-align: center;">
+                    <p style="font-size: 36px; font-weight: var(--weight-700); color: var(--eerie-black);">4.0</p>
+                    <div style="color: var(--sandy-brown); display: flex; gap: 5px; margin: 5px 0;">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star-outline"></ion-icon>
+                    </div>
+                    <p style="color: var(--sonic-silver); font-size: var(--fs-7);">47 reviews</p>
+                  </div>
+
+                  <div style="flex: 1;">
+                    <div style="margin-bottom: 10px;">
+                      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                        <span style="font-size: 12px; color: var(--sonic-silver);">5 ★</span>
+                        <div style="flex: 1; height: 6px; background: var(--salmon-pink); border-radius: 3px; width: 70%;"></div>
+                      </div>
+                      <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 5px;">
+                        <span style="font-size: 12px; color: var(--sonic-silver);">4 ★</span>
+                        <div style="flex: 1; height: 6px; background: var(--sandy-brown); border-radius: 3px; width: 20%;"></div>
+                      </div>
+                      <div style="display: flex; align-items: center; gap: 10px;">
+                        <span style="font-size: 12px; color: var(--sonic-silver);">3 ★</span>
+                        <div style="flex: 1; height: 6px; background: var(--spanish-gray); border-radius: 3px; width: 10%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <button style="background: var(--salmon-pink); color: var(--white); padding: 10px 20px; border: none; border-radius: var(--border-radius-md); font-weight: var(--weight-600); cursor: pointer; width: 100%; transition: var(--transition-timing);" onmouseover="this.style.background='var(--eerie-black)'" onmouseout="this.style.background='var(--salmon-pink)'">Write a Review</button>
+
+            </div>
+
+            <!-- Individual Reviews -->
+            <div>
+              <h2 style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 20px; font-size: 20px;">Latest Reviews</h2>
+
+              <div style="border-bottom: 1px solid var(--cultured); padding-bottom: 20px; margin-bottom: 20px;">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 10px;">
+                  <div>
+                    <p style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 5px;">John Smith</p>
+                    <div style="color: var(--sandy-brown); display: flex; gap: 3px; margin-bottom: 5px;">
+                      <ion-icon name="star" style="font-size: 16px;"></ion-icon>
+                      <ion-icon name="star" style="font-size: 16px;"></ion-icon>
+                      <ion-icon name="star" style="font-size: 16px;"></ion-icon>
+                      <ion-icon name="star" style="font-size: 16px;"></ion-icon>
+                      <ion-icon name="star" style="font-size: 16px;"></ion-icon>
+                    </div>
+                  </div>
+                  <p style="color: var(--sonic-silver); font-size: var(--fs-8);">2 days ago</p>
+                </div>
+                <p style="color: var(--sonic-silver); line-height: 1.6; font-size: var(--fs-7);">Excellent product! Great taste and mixes well. Definitely recommend for anyone serious about fitness.</p>
+              </div>
+
+              <div style="border-bottom: 1px solid var(--cultured); padding-bottom: 20px; margin-bottom: 20px;">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 10px;">
+                  <div>
+                    <p style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 5px;">Sarah Johnson</p>
+                    <div style="color: var(--sandy-brown); display: flex; gap: 3px; margin-bottom: 5px;">
+                      <ion-icon name="star" style="font-size: 16px;"></ion-icon>
+                      <ion-icon name="star" style="font-size: 16px;"></ion-icon>
+                      <ion-icon name="star" style="font-size: 16px;"></ion-icon>
+                      <ion-icon name="star" style="font-size: 16px;"></ion-icon>
+                      <ion-icon name="star-outline" style="font-size: 16px;"></ion-icon>
+                    </div>
+                  </div>
+                  <p style="color: var(--sonic-silver); font-size: var(--fs-8);">1 week ago</p>
+                </div>
+                <p style="color: var(--sonic-silver); line-height: 1.6; font-size: var(--fs-7);">Great product at a good price. Fast shipping and excellent customer service.</p>
+              </div>
+
+              <div style="border-bottom: 1px solid var(--cultured); padding-bottom: 20px;">
+                <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 10px;">
+                  <div>
+                    <p style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 5px;">Mike Davis</p>
+                    <div style="color: var(--sandy-brown); display: flex; gap: 3px; margin-bottom: 5px;">
+                      <ion-icon name="star" style="font-size: 16px;"></ion-icon>
+                      <ion-icon name="star" style="font-size: 16px;"></ion-icon>
+                      <ion-icon name="star" style="font-size: 16px;"></ion-icon>
+                      <ion-icon name="star" style="font-size: 16px;"></ion-icon>
+                      <ion-icon name="star" style="font-size: 16px;"></ion-icon>
+                    </div>
+                  </div>
+                  <p style="color: var(--sonic-silver); font-size: var(--fs-8);">3 weeks ago</p>
+                </div>
+                <p style="color: var(--sonic-silver); line-height: 1.6; font-size: var(--fs-7);">This is my third purchase. Consistently good quality and performance. Highly recommend!</p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <!--
+          - SIMILAR PRODUCTS
+        -->
+
+        <div style="margin-bottom: 50px;">
+
+          <h2 style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 30px; font-size: 24px;">Similar Products</h2>
+
+          <div class="product-grid">
+
+            <!-- Similar Product 1 -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/jewellery-3.webp" alt="Whey Protein Concentrate" class="product-img default">
+                <img src="./assets/images/products/jewellery-4.webp" alt="Whey Protein Concentrate" class="product-img hover">
+                <p class="showcase-badge">-15%</p>
+                <div class="showcase-actions">
+                  <button class="btn-action" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Quick view">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Whey Protein</a>
+                <a href="product-details.html"><h3 class="showcase-title">Whey Protein Concentrate</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <p>(98)</p>
+                </div>
+                <div class="price-box">
+                  <p class="price">$29.99</p>
+                  <del>$34.99</del>
+                </div>
+              </div>
+            </div>
+
+            <!-- Similar Product 2 -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/jewellery-5.webp" alt="Mass Gainer Pro" class="product-img default">
+                <img src="./assets/images/products/jewellery-6.webp" alt="Mass Gainer Pro" class="product-img hover">
+                <p class="showcase-badge">-20%</p>
+                <div class="showcase-actions">
+                  <button class="btn-action" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Quick view">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Supplements</a>
+                <a href="product-details.html"><h3 class="showcase-title">Mass Gainer Pro Blend</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <p>(234)</p>
+                </div>
+                <div class="price-box">
+                  <p class="price">$54.99</p>
+                  <del>$69.99</del>
+                </div>
+              </div>
+            </div>
+
+            <!-- Similar Product 3 -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/jewellery-1.webp" alt="BCAA Complex" class="product-img default">
+                <img src="./assets/images/products/jewellery-2.webp" alt="BCAA Complex" class="product-img hover">
+                <p class="showcase-badge pink">Sale</p>
+                <div class="showcase-actions">
+                  <button class="btn-action" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Quick view">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Supplements</a>
+                <a href="product-details.html"><h3 class="showcase-title">BCAA Complex Amino</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <p>(342)</p>
+                </div>
+                <div class="price-box">
+                  <p class="price">$32.99</p>
+                  <del>$39.99</del>
+                </div>
+              </div>
+            </div>
+
+            <!-- Similar Product 4 -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/jewellery-3.webp" alt="Pre-Workout Boost" class="product-img default">
+                <img src="./assets/images/products/jewellery-4.webp" alt="Pre-Workout Boost" class="product-img hover">
+                <p class="showcase-badge black">New</p>
+                <div class="showcase-actions">
+                  <button class="btn-action" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Quick view">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Supplements</a>
+                <a href="product-details.html"><h3 class="showcase-title">Pre-Workout Energy Boost</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <p>(156)</p>
+                </div>
+                <div class="price-box">
+                  <p class="price">$27.99</p>
+                  <del>$39.99</del>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!--
+    - FOOTER
+  -->
+
+  <footer>
+
+    <div class="footer-category">
+      <div class="container">
+        <h2 class="footer-category-title">Brand directory</h2>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Pharmaceuticals :</h3>
+          <a href="#" class="footer-category-link">Tablets</a>
+          <a href="#" class="footer-category-link">Capsules</a>
+          <a href="#" class="footer-category-link">Syrups</a>
+          <a href="#" class="footer-category-link">Injections</a>
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Whey Protein :</h3>
+          <a href="#" class="footer-category-link">Isolate</a>
+          <a href="#" class="footer-category-link">Concentrate</a>
+          <a href="#" class="footer-category-link">Mass Gainers</a>
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Cocoa Powder :</h3>
+          <a href="#" class="footer-category-link">Organic</a>
+          <a href="#" class="footer-category-link">Dutch Processed</a>
+          <a href="#" class="footer-category-link">Instant Mix</a>
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Supplements :</h3>
+          <a href="#" class="footer-category-link">Vitamins</a>
+          <a href="#" class="footer-category-link">Minerals</a>
+          <a href="#" class="footer-category-link">Herbs</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-nav">
+      <div class="container">
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Popular Categories</h2></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Pharmaceuticals</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Whey Protein</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Supplements</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Cocoa Powder</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Products</h2></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">New products</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Best sales</a></li>
+          <li class="footer-nav-item"><a href="shop.html" class="footer-nav-link">All products</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Sitemap</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Our Company</h2></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Delivery</a></li>
+          <li class="footer-nav-item"><a href="about.html" class="footer-nav-link">About us</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Terms and conditions</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Secure payment</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Services</h2></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Free shipping</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Easy returns</a></li>
+          <li class="footer-nav-item"><a href="contact.html" class="footer-nav-link">Contact us</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Support</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Contact</h2></li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <address class="content">419 State 414 Rte, Beaver Dams, New York(NY), 14812, USA</address>
+          </li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+            <a href="tel:+607936-8058" class="footer-nav-link">(607) 936-8058</a>
+          </li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <a href="mailto:example@gmail.com" class="footer-nav-link">example@gmail.com</a>
+          </li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Follow Us</h2></li>
+          <li>
+            <ul class="social-link">
+              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <img src="./assets/images/payment.webp" alt="payment method" class="payment-img">
+        <p class="copyright">Copyright &copy; <a href="index.html">NuBaCo</a> all rights reserved.</p>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    // Thumbnail gallery
+    const thumbnails = document.querySelectorAll('.thumbnail');
+    const mainImage = document.getElementById('mainImage');
+
+    thumbnails.forEach(thumbnail => {
+      thumbnail.addEventListener('click', function() {
+        thumbnails.forEach(t => t.style.borderColor = 'var(--cultured)');
+        this.style.borderColor = 'var(--salmon-pink)';
+        mainImage.src = this.src;
+      });
+    });
+
+    // Quantity selector
+    const quantityInput = document.getElementById('quantityInput');
+    const incrementBtn = document.getElementById('incrementBtn');
+    const decrementBtn = document.getElementById('decrementBtn');
+
+    incrementBtn.addEventListener('click', function() {
+      let currentValue = parseInt(quantityInput.value);
+      if (currentValue < 100) {
+        quantityInput.value = currentValue + 1;
+      }
+    });
+
+    decrementBtn.addEventListener('click', function() {
+      let currentValue = parseInt(quantityInput.value);
+      if (currentValue > 1) {
+        quantityInput.value = currentValue - 1;
+      }
+    });
+
+    quantityInput.addEventListener('change', function() {
+      if (this.value < 1) this.value = 1;
+      if (this.value > 100) this.value = 100;
+    });
+  </script>
+
+</body>
+
+</html>

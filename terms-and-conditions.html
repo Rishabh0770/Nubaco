@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms and Conditions - NuBaCo eCommerce</title>
+
+  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style-prefix.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="overlay" data-overlay></div>
+
+  <!--
+    - HEADER
+  -->
+
+  <header>
+
+    <div class="header-top">
+      <div class="container">
+        <ul class="header-social-container">
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+
+        <div class="header-alert-news">
+          <p><b>Free Shipping</b> This Week Order Over - $55</p>
+        </div>
+
+        <div class="header-top-actions">
+          <select name="currency">
+            <option value="usd">USD &dollar;</option>
+            <option value="eur">EUR &euro;</option>
+          </select>
+          <select name="language">
+            <option value="en-US">English</option>
+            <option value="es-ES">Espa&ntilde;ol</option>
+            <option value="fr">Fran&ccedil;ais</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="container">
+        <a href="index.html" class="header-logo">
+          <img src="./assets/images/logo/nubaco1.webp" alt="NuBaCo logo" width="120" height="36">
+        </a>
+
+        <div class="header-search-container">
+          <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
+          <button class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+        </div>
+
+        <div class="header-user-actions">
+          <button class="action-btn">
+            <ion-icon name="person-outline"></ion-icon>
+          </button>
+          <button class="action-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+          <button class="action-btn">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="desktop-navigation-menu">
+      <div class="container">
+        <ul class="desktop-menu-category-list">
+          <li class="menu-category"><a href="index.html" class="menu-title">Home</a></li>
+          <li class="menu-category"><a href="shop.html" class="menu-title">Shop</a></li>
+          <li class="menu-category"><a href="about.html" class="menu-title">About Us</a></li>
+          <li class="menu-category"><a href="contact.html" class="menu-title">Contact Us</a></li>
+          <li class="menu-category"><a href="#" class="menu-title">Blog</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="mobile-bottom-navigation">
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+      <button class="action-btn">
+        <ion-icon name="bag-handle-outline"></ion-icon>
+        <span class="count">0</span>
+      </button>
+      <button class="action-btn">
+        <ion-icon name="home-outline"></ion-icon>
+      </button>
+      <button class="action-btn">
+        <ion-icon name="heart-outline"></ion-icon>
+        <span class="count">0</span>
+      </button>
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="grid-outline"></ion-icon>
+      </button>
+    </div>
+
+    <nav class="mobile-navigation-menu has-scrollbar" data-mobile-menu>
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-category-list">
+        <li class="menu-category"><a href="index.html" class="menu-title">Home</a></li>
+        <li class="menu-category"><a href="shop.html" class="menu-title">Shop</a></li>
+        <li class="menu-category"><a href="about.html" class="menu-title">About Us</a></li>
+        <li class="menu-category"><a href="contact.html" class="menu-title">Contact Us</a></li>
+      </ul>
+
+      <div class="menu-bottom">
+        <ul class="menu-category-list">
+          <li class="menu-category">
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Language</p>
+              <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+            </button>
+            <ul class="submenu-category-list" data-accordion>
+              <li class="submenu-category"><a href="#" class="submenu-title">English</a></li>
+              <li class="submenu-category"><a href="#" class="submenu-title">Espa&ntilde;ol</a></li>
+              <li class="submenu-category"><a href="#" class="submenu-title">Fran&ccedil;h</a></li>
+            </ul>
+          </li>
+          <li class="menu-category">
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Currency</p>
+              <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+            </button>
+            <ul class="submenu-category-list" data-accordion>
+              <li class="submenu-category"><a href="#" class="submenu-title">USD &dollar;</a></li>
+              <li class="submenu-category"><a href="#" class="submenu-title">EUR &euro;</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="menu-social-container">
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+
+  <!--
+    - MAIN
+  -->
+
+  <main>
+
+    <!-- BREADCRUMB -->
+    <div style="padding: 40px 0; background: var(--cultured);">
+      <div class="container">
+        <ul class="breadcrumb" style="list-style: none; display: flex; align-items: center; gap: 10px; color: var(--sonic-silver); font-size: var(--fs-7);">
+          <li><a href="index.html" style="color: var(--salmon-pink); text-decoration: none;">Home</a></li>
+          <li style="color: var(--sonic-silver);">Terms and Conditions</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- TERMS AND CONDITIONS CONTENT -->
+    <section style="padding: 60px 0;">
+      <div class="container">
+        <div style="max-width: 800px; margin: 0 auto;">
+
+          <h1 style="color: var(--eerie-black); font-size: 2.5rem; font-weight: var(--weight-700); margin-bottom: 10px;">Terms and Conditions</h1>
+          <p style="color: var(--sonic-silver); font-size: var(--fs-7); margin-bottom: 30px;">Effective Date: January 1, 2024</p>
+
+          <h2 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-700); margin-top: 30px; margin-bottom: 15px;">1. Agreement to Terms</h2>
+          <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8; margin-bottom: 20px;">
+            By accessing and using this website, you accept and agree to be bound by the terms and provision of this agreement. NuBaCo reserves the right to make changes to these terms and conditions at any time and for any reason.
+          </p>
+
+          <h2 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-700); margin-top: 30px; margin-bottom: 15px;">2. Use License</h2>
+          <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8; margin-bottom: 15px;">
+            Permission is granted to temporarily download one copy of the materials (information or software) on NuBaCo website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not:
+          </p>
+          <ul style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8; margin-bottom: 20px; padding-left: 25px;">
+            <li>Modify or copy the materials</li>
+            <li>Use the materials for any commercial purpose or for any public display</li>
+            <li>Attempt to decompile or reverse engineer any software contained on the website</li>
+            <li>Remove any copyright or other proprietary notations from the materials</li>
+            <li>Transfer the materials to another person or "mirror" the materials on any other server</li>
+            <li>Engage in any conduct that restricts or inhibits anyone's use or enjoyment of the website</li>
+          </ul>
+
+          <h2 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-700); margin-top: 30px; margin-bottom: 15px;">3. Product Information</h2>
+          <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8; margin-bottom: 20px;">
+            All product descriptions, pricing, and availability information provided on this website are subject to change without notice. We make every effort to ensure that the information on this website is accurate and current. However, we do not warrant the accuracy or completeness of the information.
+          </p>
+
+          <h2 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-700); margin-top: 30px; margin-bottom: 15px;">4. Ordering and Pricing</h2>
+          <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8; margin-bottom: 15px;">
+            All orders are subject to acceptance by NuBaCo. We reserve the right to refuse any order. Prices are subject to change without notice. NuBaCo reserves the right to correct pricing errors at any time.
+          </p>
+
+          <h2 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-700); margin-top: 30px; margin-bottom: 15px;">5. Payment</h2>
+          <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8; margin-bottom: 20px;">
+            By submitting an order, you represent and warrant that you are authorized to use the payment method provided. You agree to pay all charges that are incurred to your account, including any applicable taxes and shipping charges.
+          </p>
+
+          <h2 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-700); margin-top: 30px; margin-bottom: 15px;">6. Shipping and Delivery</h2>
+          <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8; margin-bottom: 15px;">
+            Shipping times are estimates only and are not guaranteed. NuBaCo is not responsible for any delays caused by shipping carriers or other circumstances beyond our control. Risk of loss for products passes to you upon delivery to the carrier.
+          </p>
+
+          <h2 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-700); margin-top: 30px; margin-bottom: 15px;">7. Returns and Refunds</h2>
+          <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8; margin-bottom: 15px;">
+            We accept returns within 30 days of purchase for a full refund, provided the product is in its original, unused condition with all original packaging and documentation. Refunds will be processed within 7-10 business days of receiving the returned item.
+          </p>
+
+          <h2 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-700); margin-top: 30px; margin-bottom: 15px;">8. Product Warranties</h2>
+          <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8; margin-bottom: 15px;">
+            Products are sold "as is" unless otherwise specified. NuBaCo makes no warranty, express or implied, regarding the products, including any warranty of merchantability or fitness for a particular purpose. Liability for defective products is limited to replacement or refund of the purchase price.
+          </p>
+
+          <h2 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-700); margin-top: 30px; margin-bottom: 15px;">9. Limitation of Liability</h2>
+          <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8; margin-bottom: 20px;">
+            In no event shall NuBaCo, its suppliers, or other third parties mentioned on this website be liable for any damages (including, without limitation, incidental and consequential damages, personal injury/wrongful death, lost profits, or damages resulting from lost data or business interruption) resulting from the use of or inability to use the materials on this website.
+          </p>
+
+          <h2 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-700); margin-top: 30px; margin-bottom: 15px;">10. User Accounts</h2>
+          <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8; margin-bottom: 20px;">
+            If you create an account on our website, you agree to provide accurate and complete information. You are responsible for maintaining the confidentiality of your account credentials and are liable for all activities that occur under your account. You agree to immediately notify us of any unauthorized use of your account.
+          </p>
+
+          <h2 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-700); margin-top: 30px; margin-bottom: 15px;">11. Intellectual Property Rights</h2>
+          <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8; margin-bottom: 20px;">
+            All content on this website, including text, graphics, logos, images, and software, is the property of NuBaCo or its content suppliers and is protected by international copyright laws. Unauthorized use is prohibited.
+          </p>
+
+          <h2 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-700); margin-top: 30px; margin-bottom: 15px;">12. Third-Party Links</h2>
+          <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8; margin-bottom: 20px;">
+            NuBaCo provides links to third-party websites for your convenience. We are not responsible for the content, accuracy, or practices of these external sites. Use of third-party websites is at your own risk and subject to their terms and conditions.
+          </p>
+
+          <h2 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-700); margin-top: 30px; margin-bottom: 15px;">13. Prohibited Activities</h2>
+          <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8; margin-bottom: 15px;">
+            You may not:
+          </p>
+          <ul style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8; margin-bottom: 20px; padding-left: 25px;">
+            <li>Harass, abuse, or threaten other users or NuBaCo staff</li>
+            <li>Publish or distribute any defamatory, obscene, or abusive content</li>
+            <li>Engage in any fraudulent or illegal activity</li>
+            <li>Attempt to gain unauthorized access to our systems</li>
+            <li>Interfere with the operation of the website</li>
+            <li>Spam or send unsolicited communications</li>
+          </ul>
+
+          <h2 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-700); margin-top: 30px; margin-bottom: 15px;">14. Governing Law</h2>
+          <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8; margin-bottom: 20px;">
+            These terms and conditions are governed by and construed in accordance with the laws of the United States, and you irrevocably submit to the exclusive jurisdiction of the courts located in New York.
+          </p>
+
+          <h2 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-700); margin-top: 30px; margin-bottom: 15px;">15. Severability</h2>
+          <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8; margin-bottom: 20px;">
+            If any provision of these terms is found to be invalid or unenforceable, the remaining provisions shall remain in full force and effect.
+          </p>
+
+          <h2 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-700); margin-top: 30px; margin-bottom: 15px;">16. Contact Information</h2>
+          <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8; margin-bottom: 20px;">
+            For questions about these Terms and Conditions, please contact us at:
+          </p>
+          <div style="background: var(--cultured); padding: 20px; border-radius: var(--border-radius-md); margin-bottom: 20px;">
+            <p style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 10px;">NuBaCo Legal Department</p>
+            <p style="color: var(--sonic-silver); font-size: var(--fs-7); margin-bottom: 5px;">Email: legal@nubaco.com</p>
+            <p style="color: var(--sonic-silver); font-size: var(--fs-7); margin-bottom: 5px;">Phone: (607) 936-8058</p>
+            <p style="color: var(--sonic-silver); font-size: var(--fs-7);">Address: 419 State 414 Rte, Beaver Dams, NY 14812, USA</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!--
+    - FOOTER
+  -->
+
+  <footer>
+
+    <div class="footer-category">
+      <div class="container">
+        <h2 class="footer-category-title">Brand directory</h2>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Pharmaceuticals :</h3>
+          <a href="#" class="footer-category-link">Tablets</a>
+          <a href="#" class="footer-category-link">Capsules</a>
+          <a href="#" class="footer-category-link">Syrups</a>
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Whey Protein :</h3>
+          <a href="#" class="footer-category-link">Isolate</a>
+          <a href="#" class="footer-category-link">Concentrate</a>
+          <a href="#" class="footer-category-link">Mass Gainers</a>
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Cocoa Powder :</h3>
+          <a href="#" class="footer-category-link">Organic</a>
+          <a href="#" class="footer-category-link">Dutch Processed</a>
+          <a href="#" class="footer-category-link">Instant Mix</a>
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Supplements :</h3>
+          <a href="#" class="footer-category-link">Vitamins</a>
+          <a href="#" class="footer-category-link">Minerals</a>
+          <a href="#" class="footer-category-link">Herbs</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-nav">
+      <div class="container">
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Popular Categories</h2></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Pharmaceuticals</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Whey Protein</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Supplements</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Cocoa Powder</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Products</h2></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">New products</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Best sales</a></li>
+          <li class="footer-nav-item"><a href="shop.html" class="footer-nav-link">All products</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Sitemap</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Our Company</h2></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Delivery</a></li>
+          <li class="footer-nav-item"><a href="about.html" class="footer-nav-link">About us</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Terms and conditions</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Secure payment</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Services</h2></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Free shipping</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Easy returns</a></li>
+          <li class="footer-nav-item"><a href="contact.html" class="footer-nav-link">Contact us</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Support</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Contact</h2></li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <address class="content">419 State 414 Rte, Beaver Dams, New York(NY), 14812, USA</address>
+          </li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+            <a href="tel:+607936-8058" class="footer-nav-link">(607) 936-8058</a>
+          </li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <a href="mailto:example@gmail.com" class="footer-nav-link">example@gmail.com</a>
+          </li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Follow Us</h2></li>
+          <li>
+            <ul class="social-link">
+              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <img src="./assets/images/payment.webp" alt="payment method" class="payment-img">
+        <p class="copyright">Copyright &copy; <a href="index.html">NuBaCo</a> all rights reserved.</p>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

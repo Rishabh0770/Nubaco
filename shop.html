@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop - NuBaCo eCommerce</title>
+
+  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style-prefix.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="overlay" data-overlay></div>
+
+  <!--
+    - HEADER
+  -->
+
+  <header>
+
+    <div class="header-top">
+      <div class="container">
+        <ul class="header-social-container">
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+
+        <div class="header-alert-news">
+          <p><b>Free Shipping</b> This Week Order Over - $55</p>
+        </div>
+
+        <div class="header-top-actions">
+          <select name="currency">
+            <option value="usd">USD &dollar;</option>
+            <option value="eur">EUR &euro;</option>
+          </select>
+          <select name="language">
+            <option value="en-US">English</option>
+            <option value="es-ES">Espa&ntilde;ol</option>
+            <option value="fr">Fran&ccedil;ais</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="container">
+        <a href="index.html" class="header-logo">
+          <img src="./assets/images/logo/nubaco1.webp" alt="NuBaCo logo" width="120" height="36">
+        </a>
+
+        <div class="header-search-container">
+          <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
+          <button class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+        </div>
+
+        <div class="header-user-actions">
+          <button class="action-btn">
+            <ion-icon name="person-outline"></ion-icon>
+          </button>
+          <button class="action-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+          <button class="action-btn">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="desktop-navigation-menu">
+      <div class="container">
+        <ul class="desktop-menu-category-list">
+          <li class="menu-category"><a href="index.html" class="menu-title">Home</a></li>
+          <li class="menu-category">
+            <a href="shop.html" class="menu-title">Shop</a>
+          </li>
+          <li class="menu-category"><a href="about.html" class="menu-title">About Us</a></li>
+          <li class="menu-category"><a href="contact.html" class="menu-title">Contact Us</a></li>
+          <li class="menu-category"><a href="#" class="menu-title">Blog</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="mobile-bottom-navigation">
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+      <button class="action-btn">
+        <ion-icon name="bag-handle-outline"></ion-icon>
+        <span class="count">0</span>
+      </button>
+      <button class="action-btn">
+        <ion-icon name="home-outline"></ion-icon>
+      </button>
+      <button class="action-btn">
+        <ion-icon name="heart-outline"></ion-icon>
+        <span class="count">0</span>
+      </button>
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="grid-outline"></ion-icon>
+      </button>
+    </div>
+
+    <nav class="mobile-navigation-menu has-scrollbar" data-mobile-menu>
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-category-list">
+        <li class="menu-category"><a href="index.html" class="menu-title">Home</a></li>
+        <li class="menu-category"><a href="shop.html" class="menu-title">Shop</a></li>
+        <li class="menu-category"><a href="about.html" class="menu-title">About Us</a></li>
+        <li class="menu-category"><a href="contact.html" class="menu-title">Contact Us</a></li>
+      </ul>
+
+      <div class="menu-bottom">
+        <ul class="menu-category-list">
+          <li class="menu-category">
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Language</p>
+              <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+            </button>
+            <ul class="submenu-category-list" data-accordion>
+              <li class="submenu-category"><a href="#" class="submenu-title">English</a></li>
+              <li class="submenu-category"><a href="#" class="submenu-title">Espa&ntilde;ol</a></li>
+              <li class="submenu-category"><a href="#" class="submenu-title">Fran&ccedil;h</a></li>
+            </ul>
+          </li>
+          <li class="menu-category">
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Currency</p>
+              <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+            </button>
+            <ul class="submenu-category-list" data-accordion>
+              <li class="submenu-category"><a href="#" class="submenu-title">USD &dollar;</a></li>
+              <li class="submenu-category"><a href="#" class="submenu-title">EUR &euro;</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="menu-social-container">
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+
+  <!--
+    - MAIN
+  -->
+
+  <main>
+
+    <!--
+      - BREADCRUMB
+    -->
+
+    <div class="breadcrumb-container">
+      <div class="container">
+        <ul class="breadcrumb">
+          <li><a href="index.html">Home</a></li>
+          <li>Shop</li>
+        </ul>
+      </div>
+    </div>
+
+    <!--
+      - PRODUCT SECTION
+    -->
+
+    <div class="product-container">
+
+      <div class="container">
+
+        <!--
+          - SIDEBAR (FILTERS)
+        -->
+
+        <div class="sidebar has-scrollbar" data-mobile-menu>
+
+          <div class="sidebar-category">
+
+            <div class="sidebar-top">
+              <h2 class="sidebar-title">Filters</h2>
+              <button class="sidebar-close-btn" data-mobile-menu-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+            </div>
+
+            <!-- Category Filter -->
+            <ul class="sidebar-menu-category-list">
+
+              <li class="sidebar-menu-category">
+                <button class="sidebar-accordion-menu" data-accordion-btn>
+                  <div class="menu-title-flex">
+                    <img src="./assets/images/icons/health.webp" alt="Pharmaceutical" width="20" height="20" class="menu-title-img">
+                    <p class="menu-title">Pharmaceutical</p>
+                  </div>
+                  <div>
+                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                  </div>
+                </button>
+
+                <ul class="sidebar-submenu-category-list" data-accordion>
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Tablets</p>
+                      <data value="300" class="stock" title="Available Stock">300</data>
+                    </a>
+                  </li>
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Capsules</p>
+                      <data value="60" class="stock" title="Available Stock">60</data>
+                    </a>
+                  </li>
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Syrups</p>
+                      <data value="50" class="stock" title="Available Stock">50</data>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="sidebar-menu-category">
+                <button class="sidebar-accordion-menu" data-accordion-btn>
+                  <div class="menu-title-flex">
+                    <img src="./assets/images/icons/whey-protein.webp" alt="WHEY PROTEIN" width="20" height="20" class="menu-title-img">
+                    <p class="menu-title">WHEY PROTEIN</p>
+                  </div>
+                  <div>
+                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                  </div>
+                </button>
+
+                <ul class="sidebar-submenu-category-list" data-accordion>
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Isolate</p>
+                      <data value="120" class="stock" title="Available Stock">120</data>
+                    </a>
+                  </li>
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Concentrate</p>
+                      <data value="95" class="stock" title="Available Stock">95</data>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="sidebar-menu-category">
+                <button class="sidebar-accordion-menu" data-accordion-btn>
+                  <div class="menu-title-flex">
+                    <img src="./assets/images/icons/cocoa.webp" alt="COCOA POWDER" width="20" height="20" class="menu-title-img">
+                    <p class="menu-title">COCOA POWDER</p>
+                  </div>
+                  <div>
+                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                  </div>
+                </button>
+
+                <ul class="sidebar-submenu-category-list" data-accordion>
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Organic</p>
+                      <data value="85" class="stock" title="Available Stock">85</data>
+                    </a>
+                  </li>
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Dutch Processed</p>
+                      <data value="110" class="stock" title="Available Stock">110</data>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="sidebar-menu-category">
+                <button class="sidebar-accordion-menu" data-accordion-btn>
+                  <div class="menu-title-flex">
+                    <img src="./assets/images/icons/diet.webp" alt="Supplements" width="20" height="20" class="menu-title-img">
+                    <p class="menu-title">Supplements</p>
+                  </div>
+                  <div>
+                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                  </div>
+                </button>
+
+                <ul class="sidebar-submenu-category-list" data-accordion>
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Vitamins</p>
+                      <data value="200" class="stock" title="Available Stock">200</data>
+                    </a>
+                  </li>
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Minerals</p>
+                      <data value="150" class="stock" title="Available Stock">150</data>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+            </ul>
+
+            <!-- Price Filter -->
+            <div class="filter-section" style="margin-top: 30px;">
+              <h3 class="sidebar-title">Price Range</h3>
+              <div style="margin-top: 15px;">
+                <input type="range" id="priceRange" min="0" max="500" value="250" style="width: 100%; cursor: pointer;">
+                <p style="color: var(--eerie-black); font-weight: var(--weight-600); margin-top: 10px;">Max: $<span id="priceValue">250</span></p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <!--
+          - PRODUCT MAIN
+        -->
+
+        <div class="product-main">
+
+          <!-- Sorting Options -->
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; flex-wrap: wrap; gap: 15px;">
+
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <label for="sort" style="color: var(--eerie-black); font-weight: var(--weight-600);">Sort by:</label>
+              <select id="sort" style="padding: 8px 12px; border: 1px solid var(--cultured); border-radius: var(--border-radius-sm); cursor: pointer;">
+                <option value="default">Default</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="rating">Highest Rated</option>
+                <option value="newest">Newest First</option>
+              </select>
+            </div>
+
+            <div style="color: var(--sonic-silver); font-size: var(--fs-7);">
+              Showing <span id="productCount">12</span> products
+            </div>
+
+          </div>
+
+          <!--
+            - PRODUCT GRID
+          -->
+
+          <div class="product-grid">
+
+            <!-- Product Card 1 -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/jewellery-1.webp" alt="Whey Protein Isolate" class="product-img default">
+                <img src="./assets/images/products/jewellery-2.webp" alt="Whey Protein Isolate" class="product-img hover">
+                <p class="showcase-badge">-20%</p>
+                <div class="showcase-actions">
+                  <button class="btn-action" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Quick view">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Whey Protein</a>
+                <a href="product-details.html"><h3 class="showcase-title">Gold Standard Whey Protein Isolate</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <p>(47)</p>
+                </div>
+
+                <div class="price-box">
+                  <p class="price">$39.99</p>
+                  <del>$49.99</del>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 2 -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/jewellery-3.webp" alt="Organic Cocoa Powder" class="product-img default">
+                <img src="./assets/images/products/jewellery-4.webp" alt="Organic Cocoa Powder" class="product-img hover">
+                <p class="showcase-badge">-15%</p>
+                <div class="showcase-actions">
+                  <button class="btn-action" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Quick view">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Cocoa Powder</a>
+                <a href="product-details.html"><h3 class="showcase-title">Organic Premium Cocoa Powder</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <p>(125)</p>
+                </div>
+
+                <div class="price-box">
+                  <p class="price">$24.99</p>
+                  <del>$29.99</del>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 3 -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/jewellery-5.webp" alt="Multi-Vitamin Complex" class="product-img default">
+                <img src="./assets/images/products/jewellery-6.webp" alt="Multi-Vitamin Complex" class="product-img hover">
+                <p class="showcase-badge pink">Sale</p>
+                <div class="showcase-actions">
+                  <button class="btn-action" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Quick view">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Supplements</a>
+                <a href="product-details.html"><h3 class="showcase-title">Daily Multi-Vitamin Complex</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <p>(89)</p>
+                </div>
+
+                <div class="price-box">
+                  <p class="price">$19.99</p>
+                  <del>$24.99</del>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 4 -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/jewellery-1.webp" alt="Omega-3 Fish Oil" class="product-img default">
+                <img src="./assets/images/products/jewellery-2.webp" alt="Omega-3 Fish Oil" class="product-img hover">
+                <p class="showcase-badge black">New</p>
+                <div class="showcase-actions">
+                  <button class="btn-action" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Quick view">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Health</a>
+                <a href="product-details.html"><h3 class="showcase-title">Premium Omega-3 Fish Oil</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <p>(112)</p>
+                </div>
+
+                <div class="price-box">
+                  <p class="price">$34.99</p>
+                  <del>$39.99</del>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 5 -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/jewellery-3.webp" alt="Creatine Monohydrate" class="product-img default">
+                <img src="./assets/images/products/jewellery-4.webp" alt="Creatine Monohydrate" class="product-img hover">
+                <p class="showcase-badge">-25%</p>
+                <div class="showcase-actions">
+                  <button class="btn-action" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Quick view">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Supplements</a>
+                <a href="product-details.html"><h3 class="showcase-title">Pure Creatine Monohydrate</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <p>(234)</p>
+                </div>
+
+                <div class="price-box">
+                  <p class="price">$14.99</p>
+                  <del>$19.99</del>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 6 -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/jewellery-5.webp" alt="Vitamin C Boost" class="product-img default">
+                <img src="./assets/images/products/jewellery-6.webp" alt="Vitamin C Boost" class="product-img hover">
+                <p class="showcase-badge">-10%</p>
+                <div class="showcase-actions">
+                  <button class="btn-action" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Quick view">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Supplements</a>
+                <a href="product-details.html"><h3 class="showcase-title">Vitamin C 1000mg Boost</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <p>(198)</p>
+                </div>
+
+                <div class="price-box">
+                  <p class="price">$12.99</p>
+                  <del>$14.49</del>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 7 -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/jewellery-1.webp" alt="Mass Gainer Deluxe" class="product-img default">
+                <img src="./assets/images/products/jewellery-2.webp" alt="Mass Gainer Deluxe" class="product-img hover">
+                <p class="showcase-badge pink">Bestseller</p>
+                <div class="showcase-actions">
+                  <button class="btn-action" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Quick view">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Supplements</a>
+                <a href="product-details.html"><h3 class="showcase-title">Mass Gainer Deluxe Blend</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <p>(456)</p>
+                </div>
+
+                <div class="price-box">
+                  <p class="price">$54.99</p>
+                  <del>$69.99</del>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 8 -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/jewellery-3.webp" alt="Pre-Workout Energy" class="product-img default">
+                <img src="./assets/images/products/jewellery-4.webp" alt="Pre-Workout Energy" class="product-img hover">
+                <p class="showcase-badge">-30%</p>
+                <div class="showcase-actions">
+                  <button class="btn-action" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Quick view">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Supplements</a>
+                <a href="product-details.html"><h3 class="showcase-title">Pre-Workout Energy Drink</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <p>(203)</p>
+                </div>
+
+                <div class="price-box">
+                  <p class="price">$27.99</p>
+                  <del>$39.99</del>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 9 -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/jewellery-5.webp" alt="Protein Bars Box" class="product-img default">
+                <img src="./assets/images/products/jewellery-6.webp" alt="Protein Bars Box" class="product-img hover">
+                <p class="showcase-badge">-12%</p>
+                <div class="showcase-actions">
+                  <button class="btn-action" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Quick view">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Nutrition</a>
+                <a href="product-details.html"><h3 class="showcase-title">Protein Bars - 12 Count Box</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <p>(167)</p>
+                </div>
+
+                <div class="price-box">
+                  <p class="price">$29.99</p>
+                  <del>$34.99</del>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 10 -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/jewellery-1.webp" alt="BCAAs Powder" class="product-img default">
+                <img src="./assets/images/products/jewellery-2.webp" alt="BCAAs Powder" class="product-img hover">
+                <p class="showcase-badge black">Popular</p>
+                <div class="showcase-actions">
+                  <button class="btn-action" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Quick view">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Supplements</a>
+                <a href="product-details.html"><h3 class="showcase-title">BCAA 2:1:1 Amino Powder</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <p>(342)</p>
+                </div>
+
+                <div class="price-box">
+                  <p class="price">$32.99</p>
+                  <del>$39.99</del>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 11 -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/jewellery-3.webp" alt="Dutch Cocoa Premium" class="product-img default">
+                <img src="./assets/images/products/jewellery-4.webp" alt="Dutch Cocoa Premium" class="product-img hover">
+                <p class="showcase-badge">-18%</p>
+                <div class="showcase-actions">
+                  <button class="btn-action" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Quick view">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Cocoa Powder</a>
+                <a href="product-details.html"><h3 class="showcase-title">Dutch Processed Cocoa Premium</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <p>(289)</p>
+                </div>
+
+                <div class="price-box">
+                  <p class="price">$22.99</p>
+                  <del>$27.99</del>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 12 -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/jewellery-5.webp" alt="Probiotics Blend" class="product-img default">
+                <img src="./assets/images/products/jewellery-6.webp" alt="Probiotics Blend" class="product-img hover">
+                <p class="showcase-badge pink">Sale</p>
+                <div class="showcase-actions">
+                  <button class="btn-action" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Quick view">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Health</a>
+                <a href="product-details.html"><h3 class="showcase-title">Probiotics 50 Billion CFU</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <p>(256)</p>
+                </div>
+
+                <div class="price-box">
+                  <p class="price">$28.99</p>
+                  <del>$35.99</del>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Pagination -->
+          <div style="display: flex; justify-content: center; gap: 10px; margin-top: 40px; margin-bottom: 40px; flex-wrap: wrap;">
+            <button style="padding: 8px 12px; border: 1px solid var(--cultured); border-radius: var(--border-radius-sm); cursor: pointer; background: var(--white); transition: var(--transition-timing);">← Prev</button>
+            <button style="padding: 8px 12px; border: 1px solid var(--cultured); border-radius: var(--border-radius-sm); cursor: pointer; background: var(--salmon-pink); color: var(--white);">1</button>
+            <button style="padding: 8px 12px; border: 1px solid var(--cultured); border-radius: var(--border-radius-sm); cursor: pointer; background: var(--white); transition: var(--transition-timing);">2</button>
+            <button style="padding: 8px 12px; border: 1px solid var(--cultured); border-radius: var(--border-radius-sm); cursor: pointer; background: var(--white); transition: var(--transition-timing);">3</button>
+            <button style="padding: 8px 12px; border: 1px solid var(--cultured); border-radius: var(--border-radius-sm); cursor: pointer; background: var(--white); transition: var(--transition-timing);">Next →</button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <!--
+    - FOOTER
+  -->
+
+  <footer>
+
+    <div class="footer-category">
+      <div class="container">
+        <h2 class="footer-category-title">Brand directory</h2>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Pharmaceuticals :</h3>
+          <a href="#" class="footer-category-link">Tablets</a>
+          <a href="#" class="footer-category-link">Capsules</a>
+          <a href="#" class="footer-category-link">Syrups</a>
+          <a href="#" class="footer-category-link">Injections</a>
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Whey Protein :</h3>
+          <a href="#" class="footer-category-link">Isolate</a>
+          <a href="#" class="footer-category-link">Concentrate</a>
+          <a href="#" class="footer-category-link">Mass Gainers</a>
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Cocoa Powder :</h3>
+          <a href="#" class="footer-category-link">Organic</a>
+          <a href="#" class="footer-category-link">Dutch Processed</a>
+          <a href="#" class="footer-category-link">Instant Mix</a>
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Supplements :</h3>
+          <a href="#" class="footer-category-link">Vitamins</a>
+          <a href="#" class="footer-category-link">Minerals</a>
+          <a href="#" class="footer-category-link">Herbs</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-nav">
+      <div class="container">
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Popular Categories</h2></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Pharmaceuticals</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Whey Protein</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Supplements</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Cocoa Powder</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Products</h2></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">New products</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Best sales</a></li>
+          <li class="footer-nav-item"><a href="shop.html" class="footer-nav-link">All products</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Sitemap</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Our Company</h2></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Delivery</a></li>
+          <li class="footer-nav-item"><a href="about.html" class="footer-nav-link">About us</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Terms and conditions</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Secure payment</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Services</h2></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Free shipping</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Easy returns</a></li>
+          <li class="footer-nav-item"><a href="contact.html" class="footer-nav-link">Contact us</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Support</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Contact</h2></li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <address class="content">419 State 414 Rte, Beaver Dams, New York(NY), 14812, USA</address>
+          </li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+            <a href="tel:+607936-8058" class="footer-nav-link">(607) 936-8058</a>
+          </li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <a href="mailto:example@gmail.com" class="footer-nav-link">example@gmail.com</a>
+          </li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Follow Us</h2></li>
+          <li>
+            <ul class="social-link">
+              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <img src="./assets/images/payment.webp" alt="payment method" class="payment-img">
+        <p class="copyright">Copyright &copy; <a href="index.html">NuBaCo</a> all rights reserved.</p>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    // Price range slider
+    const priceRange = document.getElementById('priceRange');
+    const priceValue = document.getElementById('priceValue');
+
+    priceRange.addEventListener('input', function() {
+      priceValue.textContent = this.value;
+    });
+  </script>
+
+</body>
+
+</html>

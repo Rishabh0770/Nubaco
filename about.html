@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - NuBaCo eCommerce</title>
+
+  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style-prefix.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="overlay" data-overlay></div>
+
+  <!--
+    - HEADER
+  -->
+
+  <header>
+
+    <div class="header-top">
+      <div class="container">
+        <ul class="header-social-container">
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+
+        <div class="header-alert-news">
+          <p><b>Free Shipping</b> This Week Order Over - $55</p>
+        </div>
+
+        <div class="header-top-actions">
+          <select name="currency">
+            <option value="usd">USD &dollar;</option>
+            <option value="eur">EUR &euro;</option>
+          </select>
+          <select name="language">
+            <option value="en-US">English</option>
+            <option value="es-ES">Espa&ntilde;ol</option>
+            <option value="fr">Fran&ccedil;ais</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="container">
+        <a href="index.html" class="header-logo">
+          <img src="./assets/images/logo/nubaco1.webp" alt="NuBaCo logo" width="120" height="36">
+        </a>
+
+        <div class="header-search-container">
+          <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
+          <button class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+        </div>
+
+        <div class="header-user-actions">
+          <button class="action-btn">
+            <ion-icon name="person-outline"></ion-icon>
+          </button>
+          <button class="action-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+          <button class="action-btn">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="desktop-navigation-menu">
+      <div class="container">
+        <ul class="desktop-menu-category-list">
+          <li class="menu-category"><a href="index.html" class="menu-title">Home</a></li>
+          <li class="menu-category"><a href="shop.html" class="menu-title">Shop</a></li>
+          <li class="menu-category"><a href="about.html" class="menu-title">About Us</a></li>
+          <li class="menu-category"><a href="contact.html" class="menu-title">Contact Us</a></li>
+          <li class="menu-category"><a href="#" class="menu-title">Blog</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="mobile-bottom-navigation">
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+      <button class="action-btn">
+        <ion-icon name="bag-handle-outline"></ion-icon>
+        <span class="count">0</span>
+      </button>
+      <button class="action-btn">
+        <ion-icon name="home-outline"></ion-icon>
+      </button>
+      <button class="action-btn">
+        <ion-icon name="heart-outline"></ion-icon>
+        <span class="count">0</span>
+      </button>
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="grid-outline"></ion-icon>
+      </button>
+    </div>
+
+    <nav class="mobile-navigation-menu has-scrollbar" data-mobile-menu>
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-category-list">
+        <li class="menu-category"><a href="index.html" class="menu-title">Home</a></li>
+        <li class="menu-category"><a href="shop.html" class="menu-title">Shop</a></li>
+        <li class="menu-category"><a href="about.html" class="menu-title">About Us</a></li>
+        <li class="menu-category"><a href="contact.html" class="menu-title">Contact Us</a></li>
+      </ul>
+
+      <div class="menu-bottom">
+        <ul class="menu-category-list">
+          <li class="menu-category">
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Language</p>
+              <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+            </button>
+            <ul class="submenu-category-list" data-accordion>
+              <li class="submenu-category"><a href="#" class="submenu-title">English</a></li>
+              <li class="submenu-category"><a href="#" class="submenu-title">Espa&ntilde;ol</a></li>
+              <li class="submenu-category"><a href="#" class="submenu-title">Fran&ccedil;h</a></li>
+            </ul>
+          </li>
+          <li class="menu-category">
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Currency</p>
+              <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+            </button>
+            <ul class="submenu-category-list" data-accordion>
+              <li class="submenu-category"><a href="#" class="submenu-title">USD &dollar;</a></li>
+              <li class="submenu-category"><a href="#" class="submenu-title">EUR &euro;</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="menu-social-container">
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+
+  <!--
+    - MAIN
+  -->
+
+  <main>
+
+    <!-- BREADCRUMB -->
+    <div style="padding: 40px 0; background: var(--cultured);">
+      <div class="container">
+        <ul class="breadcrumb" style="list-style: none; display: flex; align-items: center; gap: 10px; color: var(--sonic-silver); font-size: var(--fs-7);">
+          <li><a href="index.html" style="color: var(--salmon-pink); text-decoration: none;">Home</a></li>
+          <li style="color: var(--sonic-silver);">About Us</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ABOUT HERO SECTION -->
+    <section style="padding: 60px 0;">
+      <div class="container">
+        <div style="text-align: center; max-width: 700px; margin: 0 auto;">
+          <h1 style="color: var(--eerie-black); font-size: 2.5rem; font-weight: var(--weight-700); margin-bottom: 20px; line-height: 1.2;">About NuBaCo</h1>
+          <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8; margin-bottom: 30px;">At NuBaCo, we're committed to providing premium quality health and wellness products that help you achieve your fitness and wellness goals. With over 15 years of experience in the industry, we've built a trusted reputation for excellence.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPANY STORY SECTION -->
+    <section style="padding: 60px 0; background: var(--cultured);">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+          
+          <div>
+            <img src="./assets/images/logo/nubaco1.webp" alt="NuBaCo Story" style="width: 100%; height: auto; border-radius: var(--border-radius-md); object-fit: cover;">
+          </div>
+
+          <div>
+            <h2 style="color: var(--eerie-black); font-size: 28px; font-weight: var(--weight-700); margin-bottom: 20px;">Our Story</h2>
+            <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8; margin-bottom: 15px;">Founded in 2009, NuBaCo started with a simple mission: to make premium health and nutrition products accessible to everyone. What began as a small local supplement shop has grown into a leading online retailer serving thousands of customers worldwide.</p>
+            <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8; margin-bottom: 15px;">Our journey has been driven by a passion for quality, integrity, and customer satisfaction. We've partnered with leading manufacturers and suppliers to ensure that every product we offer meets the highest standards of purity and efficacy.</p>
+            <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8;">Today, NuBaCo is proud to be the trusted choice for fitness enthusiasts, health professionals, and wellness seekers across the globe.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- MISSION & VALUES SECTION -->
+    <section style="padding: 60px 0;">
+      <div class="container">
+        <h2 style="color: var(--eerie-black); font-size: 28px; font-weight: var(--weight-700); margin-bottom: 50px; text-align: center;">Our Mission & Values</h2>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+
+          <!-- Mission Card -->
+          <div style="padding: 30px; background: var(--cultured); border-radius: var(--border-radius-md); text-align: center;">
+            <div style="font-size: 40px; margin-bottom: 15px;">
+              <ion-icon name="rocket-outline" style="color: var(--salmon-pink);"></ion-icon>
+            </div>
+            <h3 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-600); margin-bottom: 15px;">Our Mission</h3>
+            <p style="color: var(--sonic-silver); font-size: var(--fs-7); line-height: 1.6;">To empower individuals to achieve their health and fitness goals by providing premium quality products, expert guidance, and exceptional customer service.</p>
+          </div>
+
+          <!-- Quality Value -->
+          <div style="padding: 30px; background: var(--cultured); border-radius: var(--border-radius-md); text-align: center;">
+            <div style="font-size: 40px; margin-bottom: 15px;">
+              <ion-icon name="checkmark-circle-outline" style="color: var(--ocean-green);"></ion-icon>
+            </div>
+            <h3 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-600); margin-bottom: 15px;">Quality First</h3>
+            <p style="color: var(--sonic-silver); font-size: var(--fs-7); line-height: 1.6;">We're committed to sourcing and offering only the highest quality products from trusted manufacturers who share our commitment to excellence.</p>
+          </div>
+
+          <!-- Integrity Value -->
+          <div style="padding: 30px; background: var(--cultured); border-radius: var(--border-radius-md); text-align: center;">
+            <div style="font-size: 40px; margin-bottom: 15px;">
+              <ion-icon name="shield-checkmark-outline" style="color: var(--sandy-brown);"></ion-icon>
+            </div>
+            <h3 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-600); margin-bottom: 15px;">Integrity</h3>
+            <p style="color: var(--sonic-silver); font-size: var(--fs-7); line-height: 1.6;">Transparency and honesty are at the core of everything we do. We believe in fair pricing and truthful product information.</p>
+          </div>
+
+          <!-- Customer Focus -->
+          <div style="padding: 30px; background: var(--cultured); border-radius: var(--border-radius-md); text-align: center;">
+            <div style="font-size: 40px; margin-bottom: 15px;">
+              <ion-icon name="people-outline" style="color: var(--bittersweet);"></ion-icon>
+            </div>
+            <h3 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-600); margin-bottom: 15px;">Customer Focus</h3>
+            <p style="color: var(--sonic-silver); font-size: var(--fs-7); line-height: 1.6;">Your satisfaction is our priority. We're dedicated to providing exceptional customer service and support at every touchpoint.</p>
+          </div>
+
+          <!-- Innovation Value -->
+          <div style="padding: 30px; background: var(--cultured); border-radius: var(--border-radius-md); text-align: center;">
+            <div style="font-size: 40px; margin-bottom: 15px;">
+              <ion-icon name="bulb-outline" style="color: var(--eerie-black);"></ion-icon>
+            </div>
+            <h3 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-600); margin-bottom: 15px;">Innovation</h3>
+            <p style="color: var(--sonic-silver); font-size: var(--fs-7); line-height: 1.6;">We continuously seek new ways to improve our products, services, and customer experience to stay ahead of industry trends.</p>
+          </div>
+
+          <!-- Community Value -->
+          <div style="padding: 30px; background: var(--cultured); border-radius: var(--border-radius-md); text-align: center;">
+            <div style="font-size: 40px; margin-bottom: 15px;">
+              <ion-icon name="earth-outline" style="color: var(--ocean-green);"></ion-icon>
+            </div>
+            <h3 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-600); margin-bottom: 15px;">Community</h3>
+            <p style="color: var(--sonic-silver); font-size: var(--fs-7); line-height: 1.6;">We believe in giving back to the community through educational initiatives, sustainability practices, and social responsibility programs.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US SECTION -->
+    <section style="padding: 60px 0; background: var(--cultured);">
+      <div class="container">
+        <h2 style="color: var(--eerie-black); font-size: 28px; font-weight: var(--weight-700); margin-bottom: 50px; text-align: center;">Why Choose NuBaCo?</h2>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 900px; margin: 0 auto;">
+
+          <ul style="list-style: none; padding: 0;">
+            <li style="display: flex; gap: 15px; margin-bottom: 20px; align-items: flex-start;">
+              <ion-icon name="checkmark-circle" style="color: var(--salmon-pink); font-size: 24px; flex-shrink: 0;"></ion-icon>
+              <div>
+                <h4 style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 5px;">Premium Quality</h4>
+                <p style="color: var(--sonic-silver); font-size: var(--fs-7);">All products are sourced from trusted manufacturers</p>
+              </div>
+            </li>
+
+            <li style="display: flex; gap: 15px; margin-bottom: 20px; align-items: flex-start;">
+              <ion-icon name="checkmark-circle" style="color: var(--salmon-pink); font-size: 24px; flex-shrink: 0;"></ion-icon>
+              <div>
+                <h4 style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 5px;">Competitive Pricing</h4>
+                <p style="color: var(--sonic-silver); font-size: var(--fs-7);">We offer the best value without compromising quality</p>
+              </div>
+            </li>
+
+            <li style="display: flex; gap: 15px; margin-bottom: 20px; align-items: flex-start;">
+              <ion-icon name="checkmark-circle" style="color: var(--salmon-pink); font-size: 24px; flex-shrink: 0;"></ion-icon>
+              <div>
+                <h4 style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 5px;">Fast Shipping</h4>
+                <p style="color: var(--sonic-silver); font-size: var(--fs-7);">Quick and reliable delivery to your doorstep</p>
+              </div>
+            </li>
+
+            <li style="display: flex; gap: 15px; margin-bottom: 20px; align-items: flex-start;">
+              <ion-icon name="checkmark-circle" style="color: var(--salmon-pink); font-size: 24px; flex-shrink: 0;"></ion-icon>
+              <div>
+                <h4 style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 5px;">Secure Payment</h4>
+                <p style="color: var(--sonic-silver); font-size: var(--fs-7);">Your transactions are protected with SSL encryption</p>
+              </div>
+            </li>
+          </ul>
+
+          <ul style="list-style: none; padding: 0;">
+            <li style="display: flex; gap: 15px; margin-bottom: 20px; align-items: flex-start;">
+              <ion-icon name="checkmark-circle" style="color: var(--salmon-pink); font-size: 24px; flex-shrink: 0;"></ion-icon>
+              <div>
+                <h4 style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 5px;">Expert Support</h4>
+                <p style="color: var(--sonic-silver); font-size: var(--fs-7);">Our knowledgeable team is ready to help anytime</p>
+              </div>
+            </li>
+
+            <li style="display: flex; gap: 15px; margin-bottom: 20px; align-items: flex-start;">
+              <ion-icon name="checkmark-circle" style="color: var(--salmon-pink); font-size: 24px; flex-shrink: 0;"></ion-icon>
+              <div>
+                <h4 style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 5px;">Easy Returns</h4>
+                <p style="color: var(--sonic-silver); font-size: var(--fs-7);">Hassle-free returns within 30 days of purchase</p>
+              </div>
+            </li>
+
+            <li style="display: flex; gap: 15px; margin-bottom: 20px; align-items: flex-start;">
+              <ion-icon name="checkmark-circle" style="color: var(--salmon-pink); font-size: 24px; flex-shrink: 0;"></ion-icon>
+              <div>
+                <h4 style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 5px;">Loyalty Rewards</h4>
+                <p style="color: var(--sonic-silver); font-size: var(--fs-7);">Earn points with every purchase and redeem rewards</p>
+              </div>
+            </li>
+
+            <li style="display: flex; gap: 15px; margin-bottom: 20px; align-items: flex-start;">
+              <ion-icon name="checkmark-circle" style="color: var(--salmon-pink); font-size: 24px; flex-shrink: 0;"></ion-icon>
+              <div>
+                <h4 style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 5px;">Wide Selection</h4>
+                <p style="color: var(--sonic-silver); font-size: var(--fs-7);">Thousands of products from top brands available</p>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section style="padding: 60px 0;">
+      <div class="container">
+        <div style="background: var(--eerie-black); padding: 50px; border-radius: var(--border-radius-md); text-align: center;">
+          <h2 style="color: var(--white); font-size: 28px; font-weight: var(--weight-700); margin-bottom: 15px;">Ready to Start Your Wellness Journey?</h2>
+          <p style="color: var(--spanish-gray); font-size: var(--fs-6); margin-bottom: 30px;">Explore our wide range of premium products and find exactly what you need to reach your health goals.</p>
+          <a href="shop.html" style="display: inline-block; background: var(--salmon-pink); color: var(--white); padding: 12px 40px; border-radius: var(--border-radius-md); text-decoration: none; font-weight: var(--weight-600); transition: var(--transition-timing);" onmouseover="this.style.background='var(--bittersweet)'" onmouseout="this.style.background='var(--salmon-pink)'">
+            Shop Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!--
+    - FOOTER
+  -->
+
+  <footer>
+
+    <div class="footer-category">
+      <div class="container">
+        <h2 class="footer-category-title">Brand directory</h2>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Pharmaceuticals :</h3>
+          <a href="#" class="footer-category-link">Tablets</a>
+          <a href="#" class="footer-category-link">Capsules</a>
+          <a href="#" class="footer-category-link">Syrups</a>
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Whey Protein :</h3>
+          <a href="#" class="footer-category-link">Isolate</a>
+          <a href="#" class="footer-category-link">Concentrate</a>
+          <a href="#" class="footer-category-link">Mass Gainers</a>
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Cocoa Powder :</h3>
+          <a href="#" class="footer-category-link">Organic</a>
+          <a href="#" class="footer-category-link">Dutch Processed</a>
+          <a href="#" class="footer-category-link">Instant Mix</a>
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Supplements :</h3>
+          <a href="#" class="footer-category-link">Vitamins</a>
+          <a href="#" class="footer-category-link">Minerals</a>
+          <a href="#" class="footer-category-link">Herbs</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-nav">
+      <div class="container">
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Popular Categories</h2></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Pharmaceuticals</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Whey Protein</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Supplements</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Cocoa Powder</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Products</h2></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">New products</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Best sales</a></li>
+          <li class="footer-nav-item"><a href="shop.html" class="footer-nav-link">All products</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Sitemap</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Our Company</h2></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Delivery</a></li>
+          <li class="footer-nav-item"><a href="about.html" class="footer-nav-link">About us</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Terms and conditions</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Secure payment</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Services</h2></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Free shipping</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Easy returns</a></li>
+          <li class="footer-nav-item"><a href="contact.html" class="footer-nav-link">Contact us</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Support</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Contact</h2></li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <address class="content">419 State 414 Rte, Beaver Dams, New York(NY), 14812, USA</address>
+          </li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+            <a href="tel:+607936-8058" class="footer-nav-link">(607) 936-8058</a>
+          </li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <a href="mailto:example@gmail.com" class="footer-nav-link">example@gmail.com</a>
+          </li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Follow Us</h2></li>
+          <li>
+            <ul class="social-link">
+              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <img src="./assets/images/payment.webp" alt="payment method" class="payment-img">
+        <p class="copyright">Copyright &copy; <a href="index.html">NuBaCo</a> all rights reserved.</p>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

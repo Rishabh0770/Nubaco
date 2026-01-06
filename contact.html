@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - NuBaCo eCommerce</title>
+
+  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/css/style-prefix.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+</head>
+
+<body>
+
+  <div class="overlay" data-overlay></div>
+
+  <!--
+    - HEADER
+  -->
+
+  <header>
+
+    <div class="header-top">
+      <div class="container">
+        <ul class="header-social-container">
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+
+        <div class="header-alert-news">
+          <p><b>Free Shipping</b> This Week Order Over - $55</p>
+        </div>
+
+        <div class="header-top-actions">
+          <select name="currency">
+            <option value="usd">USD &dollar;</option>
+            <option value="eur">EUR &euro;</option>
+          </select>
+          <select name="language">
+            <option value="en-US">English</option>
+            <option value="es-ES">Espa&ntilde;ol</option>
+            <option value="fr">Fran&ccedil;ais</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="header-main">
+      <div class="container">
+        <a href="index.html" class="header-logo">
+          <img src="./assets/images/logo/nubaco1.webp" alt="NuBaCo logo" width="120" height="36">
+        </a>
+
+        <div class="header-search-container">
+          <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
+          <button class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
+        </div>
+
+        <div class="header-user-actions">
+          <button class="action-btn">
+            <ion-icon name="person-outline"></ion-icon>
+          </button>
+          <button class="action-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+          <button class="action-btn">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="desktop-navigation-menu">
+      <div class="container">
+        <ul class="desktop-menu-category-list">
+          <li class="menu-category"><a href="index.html" class="menu-title">Home</a></li>
+          <li class="menu-category"><a href="shop.html" class="menu-title">Shop</a></li>
+          <li class="menu-category"><a href="about.html" class="menu-title">About Us</a></li>
+          <li class="menu-category"><a href="contact.html" class="menu-title">Contact Us</a></li>
+          <li class="menu-category"><a href="#" class="menu-title">Blog</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="mobile-bottom-navigation">
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+      <button class="action-btn">
+        <ion-icon name="bag-handle-outline"></ion-icon>
+        <span class="count">0</span>
+      </button>
+      <button class="action-btn">
+        <ion-icon name="home-outline"></ion-icon>
+      </button>
+      <button class="action-btn">
+        <ion-icon name="heart-outline"></ion-icon>
+        <span class="count">0</span>
+      </button>
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="grid-outline"></ion-icon>
+      </button>
+    </div>
+
+    <nav class="mobile-navigation-menu has-scrollbar" data-mobile-menu>
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+
+      <ul class="mobile-menu-category-list">
+        <li class="menu-category"><a href="index.html" class="menu-title">Home</a></li>
+        <li class="menu-category"><a href="shop.html" class="menu-title">Shop</a></li>
+        <li class="menu-category"><a href="about.html" class="menu-title">About Us</a></li>
+        <li class="menu-category"><a href="contact.html" class="menu-title">Contact Us</a></li>
+      </ul>
+
+      <div class="menu-bottom">
+        <ul class="menu-category-list">
+          <li class="menu-category">
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Language</p>
+              <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+            </button>
+            <ul class="submenu-category-list" data-accordion>
+              <li class="submenu-category"><a href="#" class="submenu-title">English</a></li>
+              <li class="submenu-category"><a href="#" class="submenu-title">Espa&ntilde;ol</a></li>
+              <li class="submenu-category"><a href="#" class="submenu-title">Fran&ccedil;h</a></li>
+            </ul>
+          </li>
+          <li class="menu-category">
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Currency</p>
+              <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+            </button>
+            <ul class="submenu-category-list" data-accordion>
+              <li class="submenu-category"><a href="#" class="submenu-title">USD &dollar;</a></li>
+              <li class="submenu-category"><a href="#" class="submenu-title">EUR &euro;</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul class="menu-social-container">
+          <li><a href="#" class="social-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+          <li><a href="#" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+        </ul>
+      </div>
+    </nav>
+
+  </header>
+
+  <!--
+    - MAIN
+  -->
+
+  <main>
+
+    <!-- BREADCRUMB -->
+    <div style="padding: 40px 0; background: var(--cultured);">
+      <div class="container">
+        <ul class="breadcrumb" style="list-style: none; display: flex; align-items: center; gap: 10px; color: var(--sonic-silver); font-size: var(--fs-7);">
+          <li><a href="index.html" style="color: var(--salmon-pink); text-decoration: none;">Home</a></li>
+          <li style="color: var(--sonic-silver);">Contact Us</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- CONTACT HERO SECTION -->
+    <section style="padding: 60px 0;">
+      <div class="container">
+        <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+          <h1 style="color: var(--eerie-black); font-size: 2.5rem; font-weight: var(--weight-700); margin-bottom: 15px; line-height: 1.2;">Get in Touch</h1>
+          <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8;">Have questions or feedback? We'd love to hear from you. Reach out to our team and we'll respond as soon as possible.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT CONTENT SECTION -->
+    <section style="padding: 60px 0; background: var(--cultured);">
+      <div class="container">
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px;">
+
+          <!-- CONTACT FORM -->
+          <div>
+            <h2 style="color: var(--eerie-black); font-size: 24px; font-weight: var(--weight-700); margin-bottom: 30px;">Send us a Message</h2>
+
+            <form>
+
+              <div style="margin-bottom: 20px;">
+                <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">Full Name</label>
+                <input type="text" placeholder="John Doe" style="width: 100%; padding: 12px; border: 1px solid var(--white); border-radius: var(--border-radius-sm); font-size: var(--fs-7); background: var(--white);">
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">Email Address</label>
+                <input type="email" placeholder="you@example.com" style="width: 100%; padding: 12px; border: 1px solid var(--white); border-radius: var(--border-radius-sm); font-size: var(--fs-7); background: var(--white);">
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">Phone Number (Optional)</label>
+                <input type="tel" placeholder="+1 (555) 123-4567" style="width: 100%; padding: 12px; border: 1px solid var(--white); border-radius: var(--border-radius-sm); font-size: var(--fs-7); background: var(--white);">
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">Subject</label>
+                <input type="text" placeholder="How can we help?" style="width: 100%; padding: 12px; border: 1px solid var(--white); border-radius: var(--border-radius-sm); font-size: var(--fs-7); background: var(--white);">
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">Message</label>
+                <textarea placeholder="Tell us what's on your mind..." style="width: 100%; padding: 12px; border: 1px solid var(--white); border-radius: var(--border-radius-sm); font-size: var(--fs-7); background: var(--white); min-height: 150px; resize: vertical;"></textarea>
+              </div>
+
+              <button type="submit" style="width: 100%; background: var(--salmon-pink); color: var(--white); padding: 12px; border: none; border-radius: var(--border-radius-md); font-weight: var(--weight-600); cursor: pointer; transition: var(--transition-timing);" onmouseover="this.style.background='var(--eerie-black)'" onmouseout="this.style.background='var(--salmon-pink)'">
+                Send Message
+              </button>
+
+            </form>
+          </div>
+
+          <!-- CONTACT INFO -->
+          <div>
+            <h2 style="color: var(--eerie-black); font-size: 24px; font-weight: var(--weight-700); margin-bottom: 30px;">Contact Information</h2>
+
+            <!-- Address -->
+            <div style="margin-bottom: 30px; padding: 20px; background: var(--white); border-radius: var(--border-radius-md);">
+              <h3 style="display: flex; align-items: center; gap: 10px; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 10px;">
+                <ion-icon name="location-outline" style="font-size: 20px; color: var(--salmon-pink);"></ion-icon>
+                Address
+              </h3>
+              <p style="color: var(--sonic-silver); font-size: var(--fs-7); line-height: 1.6;">
+                419 State 414 Rte<br>
+                Beaver Dams, New York(NY), 14812<br>
+                United States
+              </p>
+            </div>
+
+            <!-- Phone -->
+            <div style="margin-bottom: 30px; padding: 20px; background: var(--white); border-radius: var(--border-radius-md);">
+              <h3 style="display: flex; align-items: center; gap: 10px; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 10px;">
+                <ion-icon name="call-outline" style="font-size: 20px; color: var(--salmon-pink);"></ion-icon>
+                Phone
+              </h3>
+              <p style="color: var(--sonic-silver); font-size: var(--fs-7); line-height: 1.6;">
+                <a href="tel:+6079368058" style="color: var(--salmon-pink); text-decoration: none;">(607) 936-8058</a><br>
+                <span style="color: var(--sonic-silver); font-size: var(--fs-8);">Mon - Fri, 9:00 AM - 6:00 PM EST</span>
+              </p>
+            </div>
+
+            <!-- Email -->
+            <div style="margin-bottom: 30px; padding: 20px; background: var(--white); border-radius: var(--border-radius-md);">
+              <h3 style="display: flex; align-items: center; gap: 10px; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 10px;">
+                <ion-icon name="mail-outline" style="font-size: 20px; color: var(--salmon-pink);"></ion-icon>
+                Email
+              </h3>
+              <p style="color: var(--sonic-silver); font-size: var(--fs-7); line-height: 1.6;">
+                <a href="mailto:info@nubaco.com" style="color: var(--salmon-pink); text-decoration: none;">info@nubaco.com</a><br>
+                <a href="mailto:support@nubaco.com" style="color: var(--salmon-pink); text-decoration: none;">support@nubaco.com</a>
+              </p>
+            </div>
+
+            <!-- Business Hours -->
+            <div style="padding: 20px; background: var(--white); border-radius: var(--border-radius-md);">
+              <h3 style="display: flex; align-items: center; gap: 10px; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 10px;">
+                <ion-icon name="time-outline" style="font-size: 20px; color: var(--salmon-pink);"></ion-icon>
+                Business Hours
+              </h3>
+              <p style="color: var(--sonic-silver); font-size: var(--fs-7); line-height: 1.8;">
+                <strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM EST<br>
+                <strong>Saturday:</strong> 10:00 AM - 4:00 PM EST<br>
+                <strong>Sunday:</strong> Closed
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MAP SECTION -->
+    <section style="padding: 60px 0;">
+      <div class="container">
+        <h2 style="color: var(--eerie-black); font-size: 24px; font-weight: var(--weight-700); margin-bottom: 30px; text-align: center;">Find Us on the Map</h2>
+        
+        <div style="border-radius: var(--border-radius-md); overflow: hidden; height: 400px;">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2973.066532936901!2d-76.82486!3d42.7108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d8a5e6e6e6e6e7%3A0x5e5e5e5e5e5e5e5e!2s419%20State%20414%20Rte%2C%20Beaver%20Dams%2C%20NY%2014812!5e0!3m2!1sen!2sus!4v1234567890"
+            width="100%" 
+            height="100%" 
+            style="border: 0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section style="padding: 60px 0; background: var(--cultured);">
+      <div class="container">
+        <h2 style="color: var(--eerie-black); font-size: 24px; font-weight: var(--weight-700); margin-bottom: 40px; text-align: center;">Frequently Asked Questions</h2>
+
+        <div style="max-width: 700px; margin: 0 auto;">
+
+          <div style="margin-bottom: 20px; padding: 20px; background: var(--white); border-radius: var(--border-radius-md);">
+            <h3 style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+              What's the best way to contact customer support?
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </h3>
+            <p style="color: var(--sonic-silver); font-size: var(--fs-7); line-height: 1.6; display: none;">You can reach our customer support team via email at support@nubaco.com or call (607) 936-8058. We're available Monday-Friday, 9 AM to 6 PM EST. For the fastest response, please use email with details about your inquiry.</p>
+          </div>
+
+          <div style="margin-bottom: 20px; padding: 20px; background: var(--white); border-radius: var(--border-radius-md);">
+            <h3 style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+              What is your return policy?
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </h3>
+            <p style="color: var(--sonic-silver); font-size: var(--fs-7); line-height: 1.6; display: none;">We offer hassle-free returns within 30 days of purchase. Products must be in their original condition with all packaging and documentation. Simply contact our support team to initiate a return.</p>
+          </div>
+
+          <div style="margin-bottom: 20px; padding: 20px; background: var(--white); border-radius: var(--border-radius-md);">
+            <h3 style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+              How long does shipping take?
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </h3>
+            <p style="color: var(--sonic-silver); font-size: var(--fs-7); line-height: 1.6; display: none;">Standard shipping typically takes 5-7 business days. Express shipping takes 2-3 business days, and Overnight shipping delivers the next business day. Shipping times may vary during peak seasons.</p>
+          </div>
+
+          <div style="margin-bottom: 20px; padding: 20px; background: var(--white); border-radius: var(--border-radius-md);">
+            <h3 style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+              Are your products authentic?
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </h3>
+            <p style="color: var(--sonic-silver); font-size: var(--fs-7); line-height: 1.6; display: none;">Yes, all products sold on NuBaCo are 100% authentic and sourced directly from authorized manufacturers and distributors. We guarantee the authenticity of every product we sell.</p>
+          </div>
+
+          <div style="margin-bottom: 20px; padding: 20px; background: var(--white); border-radius: var(--border-radius-md);">
+            <h3 style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 10px; display: flex; justify-content: space-between; align-items: center; cursor: pointer;">
+              Do you offer bulk discounts?
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </h3>
+            <p style="color: var(--sonic-silver); font-size: var(--fs-7); line-height: 1.6; display: none;">Yes, we offer special discounts for bulk orders. Please contact our sales team at sales@nubaco.com for a custom quote based on your specific needs.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!--
+    - FOOTER
+  -->
+
+  <footer>
+
+    <div class="footer-category">
+      <div class="container">
+        <h2 class="footer-category-title">Brand directory</h2>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Pharmaceuticals :</h3>
+          <a href="#" class="footer-category-link">Tablets</a>
+          <a href="#" class="footer-category-link">Capsules</a>
+          <a href="#" class="footer-category-link">Syrups</a>
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Whey Protein :</h3>
+          <a href="#" class="footer-category-link">Isolate</a>
+          <a href="#" class="footer-category-link">Concentrate</a>
+          <a href="#" class="footer-category-link">Mass Gainers</a>
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Cocoa Powder :</h3>
+          <a href="#" class="footer-category-link">Organic</a>
+          <a href="#" class="footer-category-link">Dutch Processed</a>
+          <a href="#" class="footer-category-link">Instant Mix</a>
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">Supplements :</h3>
+          <a href="#" class="footer-category-link">Vitamins</a>
+          <a href="#" class="footer-category-link">Minerals</a>
+          <a href="#" class="footer-category-link">Herbs</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-nav">
+      <div class="container">
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Popular Categories</h2></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Pharmaceuticals</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Whey Protein</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Supplements</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Cocoa Powder</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Products</h2></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">New products</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Best sales</a></li>
+          <li class="footer-nav-item"><a href="shop.html" class="footer-nav-link">All products</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Sitemap</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Our Company</h2></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Delivery</a></li>
+          <li class="footer-nav-item"><a href="about.html" class="footer-nav-link">About us</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Terms and conditions</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Secure payment</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Services</h2></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Free shipping</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Easy returns</a></li>
+          <li class="footer-nav-item"><a href="contact.html" class="footer-nav-link">Contact us</a></li>
+          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Support</a></li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Contact</h2></li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <address class="content">419 State 414 Rte, Beaver Dams, New York(NY), 14812, USA</address>
+          </li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
+            <a href="tel:+607936-8058" class="footer-nav-link">(607) 936-8058</a>
+          </li>
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+            <a href="mailto:example@gmail.com" class="footer-nav-link">example@gmail.com</a>
+          </li>
+        </ul>
+
+        <ul class="footer-nav-list">
+          <li class="footer-nav-item"><h2 class="nav-title">Follow Us</h2></li>
+          <li>
+            <ul class="social-link">
+              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
+              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
+              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <img src="./assets/images/payment.webp" alt="payment method" class="payment-img">
+        <p class="copyright">Copyright &copy; <a href="index.html">NuBaCo</a> all rights reserved.</p>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scripts -->
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
