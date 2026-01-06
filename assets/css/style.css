@@ -2140,6 +2140,125 @@ footer {
 
 
 /**
+ * RESPONSIVE - GENERAL IMPROVEMENTS
+ */
+
+/* Better box sizing for product cards */
+.product-grid .showcase {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.product-grid .showcase:active {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* Better alignment for forms */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+textarea,
+select {
+  transition: all 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--salmon-pink);
+  box-shadow: 0 0 0 3px rgba(223, 142, 132, 0.1);
+}
+
+/* Button improvements */
+button {
+  transition: all 0.3s ease;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+/* Better spacing for mobile */
+@media (max-width: 480px) {
+  main { padding-bottom: 80px; }
+  .product-grid { grid-template-columns: 1fr; }
+  
+  /* Improve mobile header alignment */
+  .header-search-container { margin-bottom: 15px; }
+  
+  /* Better footer spacing on mobile */
+  footer { padding: 20px 0; }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Better link hover states */
+a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+/* Image improvements */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Better modal styling */
+.modal { background: rgba(0,0,0,0.5); }
+
+/* Improved product showcase hover effect */
+.product-grid .showcase-banner {
+  position: relative;
+  overflow: hidden;
+  background: var(--cultured);
+  aspect-ratio: 1;
+}
+
+.product-grid .product-img {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Better button transitions */
+.banner-btn,
+.add-cart-btn,
+.btn-action {
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-btn:before,
+.add-cart-btn:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,0.1);
+  transition: left 0.3s ease;
+}
+
+.banner-btn:hover:before,
+.add-cart-btn:hover:before {
+  left: 100%;
+}
+
+/* Improved grid alignment */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+/**
  * responsive larger than 1024px screen
  */
 
