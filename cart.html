@@ -15,6 +15,414 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
+  <style>
+    :root {
+      --salmon-pink: #FF6B6B;
+      --eerie-black: #1a1a1a;
+      --sonic-silver: #757575;
+      --cultured: #f7f7f7;
+      --white: #ffffff;
+      --bittersweet: #ff6b6b;
+      --ocean-green: #2dcc71;
+      --border-radius-md: 8px;
+      --border-radius-sm: 6px;
+      --weight-600: 600;
+      --weight-700: 700;
+      --fs-7: 14px;
+      --fs-8: 12px;
+      --transition-timing: all 0.3s ease;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+
+    .cart-container {
+      padding: 40px 0;
+      background: #fafafa;
+    }
+
+    .cart-grid {
+      display: grid !important;
+      grid-template-columns: 1fr 350px !important;
+      gap: 30px !important;
+      margin-bottom: 50px !important;
+    }
+
+    .cart-items h1 {
+      color: var(--eerie-black);
+      font-size: 28px;
+      font-weight: var(--weight-600);
+      margin-bottom: 30px;
+    }
+
+    .quantity-btn {
+      background: var(--cultured);
+      color: var(--eerie-black);
+      border: none;
+      padding: 8px 14px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: var(--weight-700);
+      transition: var(--transition-timing);
+      min-width: 36px;
+    }
+
+    .quantity-btn:hover {
+      background: var(--salmon-pink);
+      color: var(--white);
+    }
+
+    .quantity-input {
+      width: 45px;
+      text-align: center;
+      border: none;
+      font-weight: var(--weight-600);
+      color: var(--eerie-black);
+      font-size: 16px;
+    }
+
+    .cart-item-card {
+      display: flex;
+      gap: 20px;
+      padding: 24px;
+      border: 1px solid var(--cultured);
+      border-radius: var(--border-radius-md);
+      margin-bottom: 20px;
+      background: var(--white);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      transition: var(--transition-timing);
+    }
+
+    .cart-item-card:hover {
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .cart-item-image {
+      width: 120px;
+      height: 120px;
+      border: 1px solid var(--cultured);
+      border-radius: var(--border-radius-md);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .cart-item-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .cart-item-info {
+      flex: 1;
+    }
+
+    .cart-item-title {
+      color: var(--eerie-black);
+      font-weight: var(--weight-700);
+      margin-bottom: 6px;
+      font-size: 16px;
+    }
+
+    .cart-item-category {
+      color: var(--sonic-silver);
+      font-size: var(--fs-7);
+      margin-bottom: 8px;
+    }
+
+    .cart-item-price {
+      color: var(--salmon-pink);
+      font-size: 18px;
+      font-weight: var(--weight-700);
+    }
+
+    .cart-item-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .quantity-control {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--cultured);
+      border-radius: var(--border-radius-md);
+      background: var(--white);
+    }
+
+    .remove-btn {
+      background: var(--bittersweet);
+      color: var(--white);
+      padding: 10px 16px;
+      border: none;
+      border-radius: var(--border-radius-sm);
+      cursor: pointer;
+      font-size: var(--fs-7);
+      transition: var(--transition-timing);
+      font-weight: var(--weight-600);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .remove-btn:hover {
+      background: #ff5252;
+    }
+
+    .cart-summary {
+      position: sticky;
+      top: 20px;
+    }
+
+    .cart-summary > div {
+      background: var(--cultured);
+      padding: 25px;
+      border-radius: var(--border-radius-md);
+    }
+
+    .cart-summary h2 {
+      color: var(--eerie-black);
+      font-size: 20px;
+      font-weight: var(--weight-600);
+      margin-bottom: 20px;
+    }
+
+    .cart-summary div[style*="justify-content"] {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 0;
+      border-bottom: 1px solid var(--white);
+      color: var(--sonic-silver);
+    }
+
+    .cart-summary button {
+      width: 100%;
+      background: var(--salmon-pink);
+      color: var(--white);
+      padding: 15px;
+      border: none;
+      border-radius: var(--border-radius-md);
+      font-weight: var(--weight-600);
+      cursor: pointer;
+      transition: var(--transition-timing);
+      margin-bottom: 10px;
+    }
+
+    .cart-summary button:hover {
+      background: var(--eerie-black);
+    }
+
+    /* Tablet Responsive */
+    @media (max-width: 768px) {
+      .cart-container {
+        padding: 25px 0;
+      }
+
+      .container {
+        padding: 0 12px !important;
+      }
+
+      .cart-grid {
+        grid-template-columns: 1fr !important;
+        gap: 20px !important;
+        margin-bottom: 30px !important;
+      }
+
+      .cart-items h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .cart-item-card {
+        gap: 15px;
+        padding: 20px;
+        margin-bottom: 15px;
+      }
+
+      .cart-item-image {
+        width: 100%;
+        height: 200px;
+      }
+
+      .cart-item-info {
+        width: 100%;
+      }
+
+      .cart-item-title {
+        font-size: 15px;
+      }
+
+      .cart-item-category {
+        font-size: 13px;
+      }
+
+      .cart-item-price {
+        font-size: 16px;
+      }
+
+      .cart-item-actions {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .quantity-control {
+        flex: 1;
+      }
+
+      .remove-btn {
+        flex: 1;
+        padding: 10px 12px;
+        font-size: 12px;
+      }
+
+      .cart-summary {
+        position: static;
+      }
+
+      .cart-summary > div {
+        padding: 20px;
+      }
+
+      .cart-summary h2 {
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+
+      .cart-summary div[style*="justify-content"] {
+        padding: 12px 0;
+        font-size: 14px;
+      }
+
+      .cart-summary button {
+        padding: 12px;
+        font-size: 14px;
+      }
+
+      .cart-summary p {
+        font-size: 12px;
+      }
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 480px) {
+      .cart-container {
+        padding: 20px 0;
+      }
+
+      .container {
+        padding: 0 10px !important;
+      }
+
+      .cart-items h1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+
+      .cart-item-card {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px;
+        margin-bottom: 12px;
+      }
+
+      .cart-item-image {
+        width: 100%;
+        height: 150px;
+        border-radius: 6px;
+      }
+
+      .cart-item-title {
+        font-size: 14px;
+        margin-bottom: 4px;
+      }
+
+      .cart-item-category {
+        font-size: 12px;
+        margin-bottom: 6px;
+      }
+
+      .cart-item-price {
+        font-size: 15px;
+      }
+
+      .cart-item-actions {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .quantity-control {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .quantity-btn {
+        padding: 8px 12px;
+        font-size: 14px;
+        min-width: 32px;
+      }
+
+      .quantity-input {
+        width: 40px;
+        font-size: 14px;
+      }
+
+      .remove-btn {
+        width: 100%;
+        padding: 10px;
+        font-size: 12px;
+        justify-content: center;
+      }
+
+      .cart-summary {
+        position: static;
+      }
+
+      .cart-summary > div {
+        padding: 15px;
+        border-radius: 6px;
+      }
+
+      .cart-summary h2 {
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+
+      .cart-summary div[style*="justify-content"] {
+        padding: 10px 0;
+        font-size: 13px;
+      }
+
+      .cart-summary button {
+        padding: 10px;
+        font-size: 13px;
+        margin-bottom: 8px;
+      }
+
+      .cart-summary p {
+        font-size: 11px;
+      }
+
+      .cart-summary input[type="text"] {
+        font-size: 13px;
+        padding: 8px;
+      }
+
+      .cart-summary input[type="text"]::placeholder {
+        font-size: 12px;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -71,14 +479,14 @@
           <button class="action-btn">
             <ion-icon name="person-outline"></ion-icon>
           </button>
-          <button class="action-btn">
+          <a href="wishlist.html" class="action-btn">
             <ion-icon name="heart-outline"></ion-icon>
             <span class="count">0</span>
-          </button>
-          <button class="action-btn">
+          </a>
+          <a href="cart.html" class="action-btn">
             <ion-icon name="bag-handle-outline"></ion-icon>
             <span class="count">3</span>
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -99,17 +507,17 @@
       <button class="action-btn" data-mobile-menu-open-btn>
         <ion-icon name="menu-outline"></ion-icon>
       </button>
-      <button class="action-btn">
+      <a href="cart.html" class="action-btn">
         <ion-icon name="bag-handle-outline"></ion-icon>
         <span class="count">3</span>
-      </button>
+      </a>
       <button class="action-btn">
         <ion-icon name="home-outline"></ion-icon>
       </button>
-      <button class="action-btn">
+      <a href="wishlist.html" class="action-btn">
         <ion-icon name="heart-outline"></ion-icon>
         <span class="count">0</span>
-      </button>
+      </a>
       <button class="action-btn" data-mobile-menu-open-btn>
         <ion-icon name="grid-outline"></ion-icon>
       </button>
@@ -173,19 +581,6 @@
   <main>
 
     <!--
-      - BREADCRUMB
-    -->
-
-    <div class="breadcrumb-container">
-      <div class="container">
-        <ul class="breadcrumb">
-          <li><a href="index.html">Home</a></li>
-          <li>Shopping Cart</li>
-        </ul>
-      </div>
-    </div>
-
-    <!--
       - CART SECTION
     -->
 
@@ -193,116 +588,18 @@
 
       <div class="container">
 
-        <div style="display: grid; grid-template-columns: 1fr 350px; gap: 30px; margin-bottom: 50px;" class="cart-grid">
+        <div class="cart-grid">
 
           <!--
             - CART ITEMS
           -->
 
-          <div class="cart-items">
+          <div class="cart-items" id="cartItemsContainer">
 
-            <h1 style="color: var(--eerie-black); font-size: 28px; font-weight: var(--weight-600); margin-bottom: 30px;">Shopping Cart <span style="color: var(--salmon-pink);">(3 items)</span></h1>
+            <h1 style="color: var(--eerie-black); font-size: 28px; font-weight: var(--weight-600); margin-bottom: 30px;">Shopping Cart <span style="color: var(--salmon-pink);" id="cartCount">(0 items)</span></h1>
 
-            <!--
-              - CART ITEM 1
-            -->
-
-            <div style="display: flex; gap: 20px; padding: 20px; border: 1px solid var(--cultured); border-radius: var(--border-radius-md); margin-bottom: 20px; background: var(--white);">
-
-              <div style="width: 100px; height: 100px; border: 1px solid var(--cultured); border-radius: var(--border-radius-sm); overflow: hidden;">
-                <img src="https://via.placeholder.com/100x100?text=Whey+Protein" alt="Gold Standard Whey Protein" style="width: 100%; height: 100%; object-fit: cover;">
-              </div>
-
-              <div style="flex: 1;">
-                <h3 style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 5px;">Gold Standard Whey Protein Isolate</h3>
-                <p style="color: var(--sonic-silver); font-size: var(--fs-7); margin-bottom: 10px;">Category: Whey Protein</p>
-                <p style="color: var(--salmon-pink); font-size: 18px; font-weight: var(--weight-700);">$39.99</p>
-              </div>
-
-              <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
-
-                <div style="display: flex; align-items: center; border: 1px solid var(--cultured); border-radius: var(--border-radius-md);">
-                  <button style="background: var(--cultured); color: var(--eerie-black); padding: 6px 12px; cursor: pointer; border: none; transition: var(--transition-timing);">−</button>
-                  <input type="number" value="1" min="1" style="width: 40px; text-align: center; border: none; font-weight: var(--weight-600); color: var(--eerie-black);">
-                  <button style="background: var(--cultured); color: var(--eerie-black); padding: 6px 12px; cursor: pointer; border: none; transition: var(--transition-timing);">+</button>
-                </div>
-
-                <button style="background: var(--bittersweet); color: var(--white); padding: 8px 15px; border: none; border-radius: var(--border-radius-sm); cursor: pointer; font-size: var(--fs-8); transition: var(--transition-timing);" title="Remove item">
-                  <ion-icon name="trash-outline"></ion-icon> Remove
-                </button>
-
-              </div>
-
-            </div>
-
-            <!--
-              - CART ITEM 2
-            -->
-
-            <div style="display: flex; gap: 20px; padding: 20px; border: 1px solid var(--cultured); border-radius: var(--border-radius-md); margin-bottom: 20px; background: var(--white);">
-
-              <div style="width: 100px; height: 100px; border: 1px solid var(--cultured); border-radius: var(--border-radius-sm); overflow: hidden;">
-                <img src="https://via.placeholder.com/100x100?text=Cocoa+Powder" alt="Organic Cocoa Powder" style="width: 100%; height: 100%; object-fit: cover;">
-              </div>
-
-              <div style="flex: 1;">
-                <h3 style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 5px;">Organic Premium Cocoa Powder</h3>
-                <p style="color: var(--sonic-silver); font-size: var(--fs-7); margin-bottom: 10px;">Category: Cocoa Powder</p>
-                <p style="color: var(--salmon-pink); font-size: 18px; font-weight: var(--weight-700);">$24.99</p>
-              </div>
-
-              <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
-
-                <div style="display: flex; align-items: center; border: 1px solid var(--cultured); border-radius: var(--border-radius-md);">
-                  <button style="background: var(--cultured); color: var(--eerie-black); padding: 6px 12px; cursor: pointer; border: none; transition: var(--transition-timing);">−</button>
-                  <input type="number" value="2" min="1" style="width: 40px; text-align: center; border: none; font-weight: var(--weight-600); color: var(--eerie-black);">
-                  <button style="background: var(--cultured); color: var(--eerie-black); padding: 6px 12px; cursor: pointer; border: none; transition: var(--transition-timing);">+</button>
-                </div>
-
-                <button style="background: var(--bittersweet); color: var(--white); padding: 8px 15px; border: none; border-radius: var(--border-radius-sm); cursor: pointer; font-size: var(--fs-8); transition: var(--transition-timing);" title="Remove item">
-                  <ion-icon name="trash-outline"></ion-icon> Remove
-                </button>
-
-              </div>
-
-            </div>
-
-            <!--
-              - CART ITEM 3
-            -->
-
-            <div style="display: flex; gap: 20px; padding: 20px; border: 1px solid var(--cultured); border-radius: var(--border-radius-md); margin-bottom: 20px; background: var(--white);">
-
-              <div style="width: 100px; height: 100px; border: 1px solid var(--cultured); border-radius: var(--border-radius-sm); overflow: hidden;">
-                <img src="https://via.placeholder.com/100x100?text=Vitamins" alt="Daily Multi-Vitamin Complex" style="width: 100%; height: 100%; object-fit: cover;">
-              </div>
-
-              <div style="flex: 1;">
-                <h3 style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 5px;">Daily Multi-Vitamin Complex</h3>
-                <p style="color: var(--sonic-silver); font-size: var(--fs-7); margin-bottom: 10px;">Category: Supplements</p>
-                <p style="color: var(--salmon-pink); font-size: 18px; font-weight: var(--weight-700);">$19.99</p>
-              </div>
-
-              <div style="display: flex; flex-direction: column; align-items: center; gap: 15px;">
-
-                <div style="display: flex; align-items: center; border: 1px solid var(--cultured); border-radius: var(--border-radius-md);">
-                  <button style="background: var(--cultured); color: var(--eerie-black); padding: 6px 12px; cursor: pointer; border: none; transition: var(--transition-timing);">−</button>
-                  <input type="number" value="1" min="1" style="width: 40px; text-align: center; border: none; font-weight: var(--weight-600); color: var(--eerie-black);">
-                  <button style="background: var(--cultured); color: var(--eerie-black); padding: 6px 12px; cursor: pointer; border: none; transition: var(--transition-timing);">+</button>
-                </div>
-
-                <button style="background: var(--bittersweet); color: var(--white); padding: 8px 15px; border: none; border-radius: var(--border-radius-sm); cursor: pointer; font-size: var(--fs-8); transition: var(--transition-timing);" title="Remove item">
-                  <ion-icon name="trash-outline"></ion-icon> Remove
-                </button>
-
-              </div>
-
-            </div>
-
-            <div style="text-align: center; padding: 30px; background: var(--cultured); border-radius: var(--border-radius-md); margin-top: 30px;">
-              <p style="color: var(--sonic-silver); margin-bottom: 15px;">Continue shopping with more great products</p>
-              <a href="shop.html" style="display: inline-block; background: var(--salmon-pink); color: var(--white); padding: 10px 25px; border-radius: var(--border-radius-md); text-decoration: none; font-weight: var(--weight-600); transition: var(--transition-timing);">Continue Shopping</a>
-            </div>
+            <!-- Cart items will be loaded here by JavaScript -->
+            <div id="cartItemsList"></div>
 
           </div>
 
@@ -491,9 +788,216 @@
   </footer>
 
   <!-- Scripts -->
+  <script src="./assets/js/cart-manager.js"></script>
   <script src="./assets/js/script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    // Cart functionality
+    function increaseQuantity(btn) {
+      const input = btn.parentElement.querySelector('.quantity-input');
+      input.value = parseInt(input.value) + 1;
+      updateCartCount();
+      updateCartSummary();
+    }
+
+    function decreaseQuantity(btn) {
+      const input = btn.parentElement.querySelector('.quantity-input');
+      if (parseInt(input.value) > 1) {
+        input.value = parseInt(input.value) - 1;
+      }
+      updateCartCount();
+      updateCartSummary();
+    }
+
+    function removeItem(btn) {
+      const cartItem = btn.closest('.cart-item-card');
+      cartItem.style.opacity = '0';
+      cartItem.style.transition = 'opacity 0.3s ease';
+      setTimeout(() => {
+        cartItem.remove();
+        updateCartCount();
+        updateCartSummary();
+      }, 300);
+    }
+
+    function updateCartCount() {
+      let totalItems = 0;
+      document.querySelectorAll('.cart-item-card').forEach(item => {
+        const qty = parseInt(item.querySelector('.quantity-input').value) || 0;
+        totalItems += qty;
+      });
+      document.getElementById('cartCount').textContent = `(${totalItems} items)`;
+      
+      // Update bag icon count in header
+      document.querySelectorAll('.action-btn').forEach(btn => {
+        if (btn.querySelector('[name="bag-handle-outline"]') || btn.innerHTML.includes('bag-handle-outline')) {
+          const countSpan = btn.querySelector('.count');
+          if (countSpan) {
+            countSpan.textContent = totalItems;
+          }
+        }
+      });
+    }
+
+    function updateCartSummary() {
+      const prices = [39.99, 24.99, 19.99];
+      let subtotal = 0;
+      let itemIndex = 0;
+
+      document.querySelectorAll('.cart-item-card').forEach(item => {
+        const qty = parseInt(item.querySelector('.quantity-input').value) || 0;
+        if (prices[itemIndex]) {
+          subtotal += prices[itemIndex] * qty;
+        }
+        itemIndex++;
+      });
+
+      const tax = subtotal * 0.08;
+      const discount = 10.50;
+      const total = subtotal + tax - discount;
+
+      // Update summary if it exists
+      const summaryElements = document.querySelectorAll('.cart-summary');
+      if (summaryElements.length > 0) {
+        const summaryDiv = summaryElements[0];
+        const lines = summaryDiv.querySelectorAll('div[style*="justify-content"]');
+        if (lines.length >= 4) {
+          lines[0].querySelector('span:last-child').textContent = '$' + subtotal.toFixed(2);
+          lines[2].querySelector('span:last-child').textContent = '$' + tax.toFixed(2);
+          lines[3].querySelector('span:last-child').textContent = '-$' + discount.toFixed(2);
+          const totalLine = summaryDiv.querySelectorAll('div[style*="justify-content"]')[4];
+          if (totalLine) {
+            totalLine.querySelector('span:last-child').textContent = '$' + total.toFixed(2);
+          }
+        }
+      }
+    }
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      loadCartItems();
+      updateCartCountNavbar();
+    });
+
+    // Load cart items from localStorage
+    function loadCartItems() {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      const cartItemsList = document.getElementById('cartItemsList');
+      const cartCount = document.getElementById('cartCount');
+
+      cartItemsList.innerHTML = '';
+
+      if (cart.length === 0) {
+        cartItemsList.innerHTML = '<div style="text-align: center; padding: 60px 20px; background: var(--cultured); border-radius: var(--border-radius-md);"><p style="color: var(--sonic-silver); font-size: 16px; margin-bottom: 20px;">Your cart is empty</p><a href="shop.html" style="display: inline-block; background: var(--salmon-pink); color: var(--white); padding: 12px 30px; border-radius: var(--border-radius-md); text-decoration: none; font-weight: var(--weight-600);">Continue Shopping</a></div>';
+        cartCount.textContent = '(0 items)';
+        updateOrderSummary([]);
+        return;
+      }
+
+      cartCount.textContent = '(' + cart.length + ' items)';
+
+      cart.forEach((item, index) => {
+        const itemHTML = `
+          <div class="cart-item-card" data-product-index="${index}">
+            <div class="cart-item-image">
+              <img src="${item.image || './assets/images/products/whey-powder.webp'}" alt="${item.name}" onerror="this.src='./assets/images/products/whey-powder.webp'">
+            </div>
+            <div class="cart-item-info">
+              <h3 class="cart-item-title">${item.name}</h3>
+              <p class="cart-item-category">Category: Supplements</p>
+              <p class="cart-item-price">₹${item.price.toLocaleString('en-IN')}</p>
+            </div>
+            <div class="cart-item-actions">
+              <div class="quantity-control">
+                <button class="quantity-btn minus-btn" onclick="decreaseCartQuantity(${index})">−</button>
+                <input type="number" class="quantity-input" value="${item.quantity || 1}" min="1" readonly>
+                <button class="quantity-btn plus-btn" onclick="increaseCartQuantity(${index})">+</button>
+              </div>
+              <button class="remove-btn" onclick="removeCartItem(${index})">
+                <ion-icon name="trash-outline"></ion-icon> Remove
+              </button>
+            </div>
+          </div>
+        `;
+        cartItemsList.innerHTML += itemHTML;
+      });
+
+      // Add continue shopping button
+      cartItemsList.innerHTML += `
+        <div style="text-align: center; padding: 30px; background: var(--cultured); border-radius: var(--border-radius-md); margin-top: 30px;">
+          <p style="color: var(--sonic-silver); margin-bottom: 15px;">Continue shopping with more great products</p>
+          <a href="shop.html" style="display: inline-block; background: var(--salmon-pink); color: var(--white); padding: 12px 30px; border-radius: var(--border-radius-md); text-decoration: none; font-weight: var(--weight-600); transition: var(--transition-timing);" onmouseover="this.style.background='var(--eerie-black)'" onmouseout="this.style.background='var(--salmon-pink)'">Continue Shopping</a>
+        </div>
+      `;
+
+      updateOrderSummary(cart);
+    }
+
+    // Increase quantity
+    function increaseCartQuantity(index) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      if (cart[index]) {
+        cart[index].quantity = (cart[index].quantity || 1) + 1;
+        localStorage.setItem('cart', JSON.stringify(cart));
+        loadCartItems();
+        updateCartCountNavbar();
+      }
+    }
+
+    // Decrease quantity
+    function decreaseCartQuantity(index) {
+      let cart = JSON.parse(localStorage.getItem('cart')) || [];
+      if (cart[index]) {
+        if (cart[index].quantity > 1) {
+          cart[index].quantity -= 1;
+        } else {
+          cart.splice(index, 1);
+        }
+        localStorage.setItem('cart', JSON.stringify(cart));
+        loadCartItems();
+        updateCartCountNavbar();
+      }
+    }
+
+    // Remove item from cart
+    function removeCartItem(index) {
+      if (confirm('Are you sure you want to remove this item?')) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        cart.splice(index, 1);
+        localStorage.setItem('cart', JSON.stringify(cart));
+        loadCartItems();
+        updateCartCountNavbar();
+      }
+    }
+
+    // Update order summary
+    function updateOrderSummary(cart) {
+      let subtotal = 0;
+      cart.forEach(item => {
+        subtotal += (item.price * (item.quantity || 1));
+      });
+
+      const tax = subtotal * 0.0;
+      const discount = 0;
+      const total = subtotal + tax - discount;
+
+      const summaryDiv = document.querySelector('.cart-summary');
+      if (summaryDiv) {
+        const lines = summaryDiv.querySelectorAll('div[style*="justify-content"]');
+        if (lines.length >= 4) {
+          lines[0].querySelector('span:last-child').textContent = '₹' + subtotal.toLocaleString('en-IN');
+          lines[2].querySelector('span:last-child').textContent = '₹' + tax.toFixed(2);
+          lines[3].querySelector('span:last-child').textContent = '-₹' + discount.toFixed(2);
+          const totalLine = summaryDiv.querySelectorAll('div[style*="justify-content"]')[4];
+          if (totalLine) {
+            totalLine.querySelector('span:last-child').textContent = '₹' + total.toLocaleString('en-IN');
+          }
+        }
+      }
+    }
+  </script>
 
 </body>
 

@@ -10,6 +10,546 @@
   <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./assets/css/style-prefix.css">
 
+  <style>
+    :root {
+      --salmon-pink: #FF6B6B;
+      --eerie-black: #1a1a1a;
+      --sonic-silver: #757575;
+      --cultured: #f7f7f7;
+      --white: #ffffff;
+      --border-radius-md: 8px;
+      --border-radius-sm: 4px;
+      --weight-600: 600;
+      --fs-7: 14px;
+      --transition-timing: 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .login-container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .login-content {
+      background: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 40px;
+    }
+
+    .login-card {
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .login-card-container {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 50px 40px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      border: 1px solid #f0f0f0;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    .login-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .login-header img {
+      height: 40px;
+      width: auto;
+      margin-bottom: 24px;
+      display: inline-block;
+    }
+
+    .login-header h1 {
+      color: var(--eerie-black);
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .login-header p {
+      color: var(--sonic-silver);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      color: var(--eerie-black);
+      font-weight: 600;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid #e0e0e0;
+      border-radius: var(--border-radius-md);
+      font-size: 14px;
+      font-family: inherit;
+      transition: all 0.3s ease;
+      background: var(--white);
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--salmon-pink);
+      box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+      background: var(--white);
+    }
+
+    .form-group input::placeholder {
+      color: #bdbdbd;
+    }
+
+    .form-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      font-size: 14px;
+      gap: 12px;
+    }
+
+    .remember-me {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      color: var(--sonic-silver);
+      transition: color 0.3s ease;
+    }
+
+    .remember-me:hover {
+      color: var(--eerie-black);
+    }
+
+    .remember-me input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+      accent-color: var(--salmon-pink);
+    }
+
+    .forgot-password {
+      color: var(--salmon-pink);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .forgot-password:hover {
+      color: var(--eerie-black);
+      text-decoration: underline;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 12px;
+      background: var(--salmon-pink);
+      color: var(--white);
+      border: none;
+      border-radius: var(--border-radius-md);
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-bottom: 20px;
+    }
+
+    .login-btn:hover {
+      background: var(--eerie-black);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(255, 107, 107, 0.2);
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin: 24px 0;
+      color: var(--sonic-silver);
+      font-size: 14px;
+    }
+
+    .divider-line {
+      flex: 1;
+      height: 1px;
+      background: #e0e0e0;
+    }
+
+    .social-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .social-btn {
+      width: 100%;
+      padding: 12px;
+      background: var(--white);
+      color: var(--eerie-black);
+      border: 1.5px solid #e0e0e0;
+      border-radius: var(--border-radius-md);
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .social-btn:hover {
+      background: var(--cultured);
+      border-color: var(--salmon-pink);
+      color: var(--salmon-pink);
+    }
+
+    .social-btn ion-icon {
+      font-size: 20px;
+    }
+
+    .signup-link {
+      text-align: center;
+      margin-top: 24px;
+      color: var(--sonic-silver);
+      font-size: 14px;
+    }
+
+    .signup-link a {
+      color: var(--salmon-pink);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .signup-link a:hover {
+      color: var(--eerie-black);
+      text-decoration: underline;
+    }
+
+    .login-image {
+      background: linear-gradient(135deg, #FF6B6B 0%, #FF8E7F 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 40px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .login-image::before {
+      content: '';
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      top: -100px;
+      right: -100px;
+    }
+
+    .login-image::after {
+      content: '';
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 50%;
+      bottom: -80px;
+      left: -80px;
+    }
+
+    .image-content {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: var(--white);
+    }
+
+    .image-content ion-icon {
+      font-size: 120px;
+      margin-bottom: 30px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .image-content h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      line-height: 1.3;
+    }
+
+    .image-content p {
+      font-size: 16px;
+      line-height: 1.6;
+      opacity: 0.95;
+      margin-bottom: 40px;
+    }
+
+    .image-features {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: left;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+    }
+
+    .feature-item ion-icon {
+      font-size: 24px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .feature-item span {
+      line-height: 1.5;
+    }
+
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+      padding: 30px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .stat-box {
+      text-align: center;
+    }
+
+    .stat-box h3 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--white);
+    }
+
+    .stat-box p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.4;
+    }
+
+    .signup-cta-btn {
+      width: 100%;
+      max-width: 300px;
+      padding: 14px 32px;
+      background: var(--white);
+      color: var(--salmon-pink);
+      border: none;
+      border-radius: var(--border-radius-md);
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 40px;
+    }
+
+    .signup-cta-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+      color: var(--eerie-black);
+    }
+
+    .signup-cta-btn ion-icon {
+      font-size: 20px;
+    }
+
+    .trust-section {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .trust-section p {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 16px;
+    }
+
+    .trust-badges {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .badge {
+      width: 60px;
+      height: 60px;
+      background: rgba(255, 255, 255, 0.15);
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      color: var(--white);
+      cursor: pointer;
+    }
+
+    .badge:hover {
+      background: rgba(255, 255, 255, 0.25);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    /* Mobile Responsive for stats */
+    @media (max-width: 768px) {
+      .stats-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+
+      .stat-box h3 {
+        font-size: 24px;
+      }
+
+      .stat-box p {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .stats-container {
+        gap: 12px;
+        padding: 16px;
+        margin-bottom: 24px;
+      }
+
+      .stat-box h3 {
+        font-size: 20px;
+      }
+
+      .stat-box p {
+        font-size: 11px;
+      }
+
+      .signup-cta-btn {
+        max-width: 100%;
+        padding: 12px 24px;
+        font-size: 14px;
+      }
+
+      .trust-badges {
+        gap: 16px;
+      }
+
+      .badge {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+      }
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .login-container {
+        grid-template-columns: 1fr;
+      }
+
+      .login-image {
+        display: none;
+      }
+
+      .login-content {
+        padding: 40px 24px;
+      }
+
+      .login-card {
+        max-width: 100%;
+      }
+
+      .login-header h1 {
+        font-size: 24px;
+      }
+
+      .form-group input {
+        padding: 12px 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .login-content {
+        padding: 30px 16px;
+      }
+
+      .login-header {
+        margin-bottom: 30px;
+      }
+
+      .login-header h1 {
+        font-size: 22px;
+      }
+
+      .login-header p {
+        font-size: 13px;
+      }
+
+      .form-group {
+        margin-bottom: 16px;
+      }
+
+      .form-group input {
+        padding: 11px 12px;
+        font-size: 16px;
+      }
+
+      .login-btn {
+        padding: 11px;
+        font-size: 14px;
+      }
+
+      .social-btn {
+        padding: 11px;
+        font-size: 13px;
+      }
+
+      .signup-link {
+        font-size: 13px;
+      }
+    }
+  </style>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
@@ -71,14 +611,14 @@
           <button class="action-btn">
             <ion-icon name="person-outline"></ion-icon>
           </button>
-          <button class="action-btn">
+          <a href="wishlist.html" class="action-btn">
             <ion-icon name="heart-outline"></ion-icon>
             <span class="count">0</span>
-          </button>
-          <button class="action-btn">
+          </a>
+          <a href="cart.html" class="action-btn">
             <ion-icon name="bag-handle-outline"></ion-icon>
             <span class="count">0</span>
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -99,17 +639,17 @@
       <button class="action-btn" data-mobile-menu-open-btn>
         <ion-icon name="menu-outline"></ion-icon>
       </button>
-      <button class="action-btn">
+      <a href="cart.html" class="action-btn">
         <ion-icon name="bag-handle-outline"></ion-icon>
         <span class="count">0</span>
-      </button>
+      </a>
       <button class="action-btn">
         <ion-icon name="home-outline"></ion-icon>
       </button>
-      <button class="action-btn">
+      <a href="wishlist.html" class="action-btn">
         <ion-icon name="heart-outline"></ion-icon>
         <span class="count">0</span>
-      </button>
+      </a>
       <button class="action-btn" data-mobile-menu-open-btn>
         <ion-icon name="grid-outline"></ion-icon>
       </button>
@@ -171,79 +711,70 @@
   -->
 
   <main>
-
-    <div style="min-height: 70vh; display: flex; align-items: center; justify-content: center; padding: 40px 20px;">
-
-      <div class="container">
-
-        <div style="max-width: 400px; margin: 0 auto;">
-
-          <!-- Logo -->
-          <div style="text-align: center; margin-bottom: 30px;">
-            <a href="index.html" style="display: inline-block;">
-              <img src="./assets/images/logo/nubaco1.webp" alt="NuBaCo logo" width="120" height="36">
-            </a>
-          </div>
-
-          <!-- Login Form -->
-          <div style="background: var(--cultured); padding: 40px; border-radius: var(--border-radius-md);">
-
-            <h1 style="color: var(--eerie-black); font-size: 24px; font-weight: var(--weight-600); text-align: center; margin-bottom: 10px;">Welcome Back</h1>
-            <p style="color: var(--sonic-silver); text-align: center; margin-bottom: 30px;">Sign in to your NuBaCo account</p>
-
-            <form>
-
-              <div style="margin-bottom: 20px;">
-                <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">Email Address</label>
-                <input type="email" placeholder="you@example.com" style="width: 100%; padding: 12px; border: 1px solid var(--white); border-radius: var(--border-radius-sm); font-size: var(--fs-7); background: var(--white);">
-              </div>
-
-              <div style="margin-bottom: 10px;">
-                <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">Password</label>
-                <input type="password" placeholder="••••••••" style="width: 100%; padding: 12px; border: 1px solid var(--white); border-radius: var(--border-radius-sm); font-size: var(--fs-7); background: var(--white);">
-              </div>
-
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; font-size: var(--fs-7);">
-                <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; color: var(--sonic-silver);">
-                  <input type="checkbox"> Remember me
-                </label>
-                <a href="#" style="color: var(--salmon-pink); text-decoration: none;">Forgot Password?</a>
-              </div>
-
-              <button type="submit" style="width: 100%; background: var(--salmon-pink); color: var(--white); padding: 12px; border: none; border-radius: var(--border-radius-md); font-weight: var(--weight-600); cursor: pointer; transition: var(--transition-timing); margin-bottom: 15px;" onmouseover="this.style.background='var(--eerie-black)'" onmouseout="this.style.background='var(--salmon-pink)'">
-                Sign In
-              </button>
-
-            </form>
-
-            <div style="display: flex; align-items: center; gap: 15px; margin: 25px 0; color: var(--sonic-silver);">
-              <div style="flex: 1; height: 1px; background: var(--white);"></div>
-              <span>OR</span>
-              <div style="flex: 1; height: 1px; background: var(--white);"></div>
+    <div class="login-container">
+      <!-- Login Form Section -->
+      <div class="login-content">
+        <div class="login-card-container">
+          <div class="login-card">
+            <div class="login-header">
+              <a href="index.html">
+                <img src="./assets/images/logo/nubaco1.webp" alt="NuBaCo logo">
+              </a>
+              <h1>Welcome Back</h1>
+              <p>Sign in to your NuBaCo account and continue shopping</p>
             </div>
 
-            <!-- Social Login -->
-            <button style="width: 100%; background: var(--white); color: var(--eerie-black); padding: 12px; border: 1px solid var(--white); border-radius: var(--border-radius-md); font-weight: var(--weight-600); cursor: pointer; transition: var(--transition-timing); margin-bottom: 12px;" onmouseover="this.style.background='var(--cultured)'" onmouseout="this.style.background='var(--white)'">
-              <ion-icon name="logo-google" style="vertical-align: middle; margin-right: 8px;"></ion-icon> Continue with Google
-            </button>
+            <form id="loginForm">
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+              </div>
 
-            <button style="width: 100%; background: var(--white); color: var(--eerie-black); padding: 12px; border: 1px solid var(--white); border-radius: var(--border-radius-md); font-weight: var(--weight-600); cursor: pointer; transition: var(--transition-timing);" onmouseover="this.style.background='var(--cultured)'" onmouseout="this.style.background='var(--white)'">
-              <ion-icon name="logo-facebook" style="vertical-align: middle; margin-right: 8px;"></ion-icon> Continue with Facebook
-            </button>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+              </div>
 
+              <div class="form-options">
+                <label class="remember-me">
+                  <input type="checkbox" name="remember" id="remember">
+                  <span>Remember me</span>
+                </label>
+                <a href="#" class="forgot-password">Forgot Password?</a>
+              </div>
+
+              <button type="submit" class="login-btn">Sign In</button>
+            </form>
+
+            <div class="divider">
+              <div class="divider-line"></div>
+              <span>OR</span>
+              <div class="divider-line"></div>
+            </div>
+
+            <div class="social-buttons">
+              <button class="social-btn" type="button">
+                <ion-icon name="logo-google"></ion-icon>
+                Continue with Google
+              </button>
+              <button class="social-btn" type="button">
+                <ion-icon name="logo-facebook"></ion-icon>
+                Continue with Facebook
+              </button>
+            </div>
+
+            <div class="signup-link">
+              Don't have an account? <a href="signup.html">Sign up here</a>
+            </div>
           </div>
-
-          <!-- Sign Up Link -->
-          <div style="text-align: center; margin-top: 20px; color: var(--sonic-silver);">
-            <p>Don't have an account? <a href="signup.html" style="color: var(--salmon-pink); text-decoration: none; font-weight: var(--weight-600);">Sign up here</a></p>
-          </div>
-
         </div>
-
       </div>
 
+      <!-- Image Section -->
+      <div class="login-image" style="display: none;">
+        <div class="image-content"></div>
+      </div>
     </div>
-
   </main>
 
   <!--
@@ -371,6 +902,80 @@
   <script src="./assets/js/script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    // Form validation and submission
+    const loginForm = document.getElementById('loginForm');
+    
+    loginForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      
+      // Basic validation
+      if (!email || !password) {
+        alert('Please fill in all fields');
+        return;
+      }
+      
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address');
+        return;
+      }
+      
+      // Password validation (minimum 6 characters)
+      if (password.length < 6) {
+        alert('Password must be at least 6 characters');
+        return;
+      }
+      
+      // Show success message
+      alert('Login successful! Redirecting...');
+      
+      // Simulate login and redirect
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 1000);
+    });
+
+    // Email input - add focus effect
+    const emailInput = document.getElementById('email');
+    const passwordInput = document.getElementById('password');
+
+    emailInput.addEventListener('focus', function() {
+      this.parentElement.style.marginBottom = '20px';
+    });
+
+    // Social login buttons
+    const socialButtons = document.querySelectorAll('.social-btn');
+    socialButtons.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const provider = this.textContent.includes('Google') ? 'Google' : 'Facebook';
+        alert(`Signing in with ${provider}...`);
+      });
+    });
+
+    // Forgot password
+    const forgotLink = document.querySelector('.forgot-password');
+    forgotLink.addEventListener('click', function(e) {
+      e.preventDefault();
+      alert('Password reset email will be sent to your email address');
+    });
+
+    // Remember me functionality
+    const rememberCheckbox = document.getElementById('remember');
+    if (localStorage.getItem('rememberMe') === 'true') {
+      rememberCheckbox.checked = true;
+    }
+
+    rememberCheckbox.addEventListener('change', function() {
+      localStorage.setItem('rememberMe', this.checked);
+    });
+  </script>
 
 </body>
 

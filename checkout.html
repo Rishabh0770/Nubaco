@@ -15,6 +15,302 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
+  <style>
+    :root {
+      --salmon-pink: #FF6B6B;
+      --eerie-black: #1a1a1a;
+      --sonic-silver: #757575;
+      --cultured: #f7f7f7;
+      --white: #ffffff;
+      --bittersweet: #ff6b6b;
+      --ocean-green: #2dcc71;
+      --border-radius-md: 8px;
+      --border-radius-sm: 6px;
+      --weight-600: 600;
+      --weight-700: 700;
+      --fs-7: 14px;
+      --fs-8: 12px;
+      --transition-timing: all 0.3s ease;
+    }
+
+    /* Progress Steps */
+    .progress-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-bottom: 50px;
+    }
+
+    .progress-step {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .progress-step-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      background: var(--salmon-pink);
+      color: var(--white);
+      border-radius: 50%;
+      font-weight: var(--weight-700);
+      flex-shrink: 0;
+    }
+
+    .progress-step.completed .progress-step-number {
+      background: var(--ocean-green);
+    }
+
+    .progress-step-label {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .progress-step-label h3 {
+      color: var(--eerie-black);
+      font-weight: var(--weight-700);
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .progress-step-label p {
+      color: var(--sonic-silver);
+      font-size: 12px;
+      margin: 0;
+    }
+
+    /* Form Sections */
+    .checkout-section {
+      background: var(--white);
+      padding: 30px;
+      border-radius: var(--border-radius-md);
+      margin-bottom: 25px;
+      border: 1px solid var(--cultured);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .checkout-section h2 {
+      color: var(--eerie-black);
+      font-size: 20px;
+      font-weight: var(--weight-700);
+      margin-bottom: 25px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .form-row.full {
+      grid-template-columns: 1fr;
+    }
+
+    .form-group {
+      margin-bottom: 0;
+    }
+
+    .form-label {
+      display: block;
+      color: var(--eerie-black);
+      font-weight: var(--weight-600);
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .form-input, .form-select {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid #e0e0e0;
+      border-radius: var(--border-radius-sm);
+      font-size: 14px;
+      font-family: inherit;
+      background: var(--white);
+      transition: var(--transition-timing);
+    }
+
+    .form-input:focus, .form-select:focus {
+      outline: none;
+      border-color: var(--salmon-pink);
+      box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+    }
+
+    .form-input::placeholder {
+      color: var(--sonic-silver);
+    }
+
+    /* Checkbox & Radio Styles */
+    .checkbox-group, .radio-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 14px;
+      border: 1.5px solid #e0e0e0;
+      border-radius: var(--border-radius-sm);
+      margin-bottom: 12px;
+      cursor: pointer;
+      transition: var(--transition-timing);
+    }
+
+    .checkbox-group:hover, .radio-group:hover {
+      border-color: var(--salmon-pink);
+      background: rgba(255, 107, 107, 0.02);
+    }
+
+    .checkbox-group.selected, .radio-group.selected {
+      border-color: var(--salmon-pink);
+      background: rgba(255, 107, 107, 0.05);
+    }
+
+    .checkbox-group input[type="checkbox"],
+    .radio-group input[type="radio"] {
+      cursor: pointer;
+      width: 18px;
+      height: 18px;
+    }
+
+    .radio-content {
+      flex: 1;
+    }
+
+    .radio-content-title {
+      font-weight: var(--weight-600);
+      color: var(--eerie-black);
+      margin-bottom: 4px;
+    }
+
+    .radio-content-desc {
+      color: var(--sonic-silver);
+      font-size: 12px;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      width: 100%;
+      padding: 14px;
+      background: var(--salmon-pink);
+      color: var(--white);
+      border: none;
+      border-radius: var(--border-radius-md);
+      font-weight: var(--weight-700);
+      font-size: 16px;
+      cursor: pointer;
+      transition: var(--transition-timing);
+    }
+
+    .btn-primary:hover {
+      background: var(--eerie-black);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+
+    /* Order Summary */
+    .order-summary-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+
+    .order-summary-item-qty {
+      color: var(--sonic-silver);
+      font-size: 14px;
+    }
+
+    .order-summary-item-price {
+      color: var(--eerie-black);
+      font-weight: var(--weight-600);
+    }
+
+    .order-summary-total {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 0;
+      font-size: 18px;
+      font-weight: var(--weight-700);
+    }
+
+    .order-summary-total-label {
+      color: var(--eerie-black);
+    }
+
+    .order-summary-total-price {
+      color: var(--salmon-pink);
+    }
+
+    /* Security Badge */
+    .security-badge {
+      padding: 16px;
+      background: #e8f5e9;
+      border-radius: var(--border-radius-md);
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .security-badge-title {
+      color: var(--ocean-green);
+      font-weight: var(--weight-700);
+      margin-bottom: 6px;
+    }
+
+    .security-badge-desc {
+      color: var(--sonic-silver);
+      font-size: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .checkout-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .progress-steps {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .checkout-section {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .progress-steps {
+        margin-bottom: 30px;
+      }
+
+      .progress-step-label h3 {
+        font-size: 13px;
+      }
+
+      .checkout-section {
+        padding: 16px;
+        margin-bottom: 16px;
+      }
+
+      .form-input, .form-select {
+        padding: 10px 12px;
+        font-size: 13px;
+      }
+
+      .btn-primary {
+        padding: 12px;
+        font-size: 15px;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
@@ -71,14 +367,14 @@
           <button class="action-btn">
             <ion-icon name="person-outline"></ion-icon>
           </button>
-          <button class="action-btn">
+          <a href="wishlist.html" class="action-btn">
             <ion-icon name="heart-outline"></ion-icon>
             <span class="count">0</span>
-          </button>
-          <button class="action-btn">
+          </a>
+          <a href="cart.html" class="action-btn">
             <ion-icon name="bag-handle-outline"></ion-icon>
             <span class="count">3</span>
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -99,17 +395,17 @@
       <button class="action-btn" data-mobile-menu-open-btn>
         <ion-icon name="menu-outline"></ion-icon>
       </button>
-      <button class="action-btn">
+      <a href="cart.html" class="action-btn">
         <ion-icon name="bag-handle-outline"></ion-icon>
         <span class="count">3</span>
-      </button>
+      </a>
       <button class="action-btn">
         <ion-icon name="home-outline"></ion-icon>
       </button>
-      <button class="action-btn">
+      <a href="wishlist.html" class="action-btn">
         <ion-icon name="heart-outline"></ion-icon>
         <span class="count">0</span>
-      </button>
+      </a>
       <button class="action-btn" data-mobile-menu-open-btn>
         <ion-icon name="grid-outline"></ion-icon>
       </button>
@@ -173,20 +469,6 @@
   <main>
 
     <!--
-      - BREADCRUMB
-    -->
-
-    <div class="breadcrumb-container">
-      <div class="container">
-        <ul class="breadcrumb">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="cart.html">Cart</a></li>
-          <li>Checkout</li>
-        </ul>
-      </div>
-    </div>
-
-    <!--
       - CHECKOUT SECTION
     -->
 
@@ -194,7 +476,32 @@
 
       <div class="container">
 
-        <div style="display: grid; grid-template-columns: 1fr 350px; gap: 30px; margin-bottom: 50px;" class="checkout-grid">
+        <!-- Progress Steps -->
+        <div class="progress-steps">
+          <div class="progress-step completed">
+            <div class="progress-step-number">✓</div>
+            <div class="progress-step-label">
+              <h3>Cart</h3>
+              <p>Review items</p>
+            </div>
+          </div>
+          <div class="progress-step completed">
+            <div class="progress-step-number">2</div>
+            <div class="progress-step-label">
+              <h3>Checkout</h3>
+              <p>Your information</p>
+            </div>
+          </div>
+          <div class="progress-step">
+            <div class="progress-step-number">3</div>
+            <div class="progress-step-label">
+              <h3>Confirmation</h3>
+              <p>Order placed</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 380px; gap: 40px; margin-bottom: 50px;" class="checkout-grid">
 
           <!--
             - CHECKOUT FORMS
@@ -202,272 +509,282 @@
 
           <div class="checkout-form">
 
-            <h1 style="color: var(--eerie-black); font-size: 28px; font-weight: var(--weight-600); margin-bottom: 30px;">Checkout</h1>
+            <h1 style="color: var(--eerie-black); font-size: 32px; font-weight: var(--weight-700); margin-bottom: 40px;">Checkout</h1>
 
-            <!--
-              - BILLING DETAILS
-            -->
+            <!-- BILLING DETAILS -->
+            <div class="checkout-section">
+              <h2>
+                <ion-icon name="document-text-outline" style="font-size: 24px; color: var(--salmon-pink);"></ion-icon>
+                Billing Details
+              </h2>
 
-            <div style="background: var(--cultured); padding: 25px; border-radius: var(--border-radius-md); margin-bottom: 30px;">
-
-              <h2 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-600); margin-bottom: 20px;">Billing Details</h2>
-
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
-                <div>
-                  <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">First Name *</label>
-                  <input type="text" placeholder="John" style="width: 100%; padding: 10px; border: 1px solid var(--white); border-radius: var(--border-radius-sm); font-size: var(--fs-7);">
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">First Name *</label>
+                  <input type="text" class="form-input" placeholder="John">
                 </div>
-                <div>
-                  <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">Last Name *</label>
-                  <input type="text" placeholder="Doe" style="width: 100%; padding: 10px; border: 1px solid var(--white); border-radius: var(--border-radius-sm); font-size: var(--fs-7);">
-                </div>
-              </div>
-
-              <div style="margin-bottom: 15px;">
-                <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">Email Address *</label>
-                <input type="email" placeholder="john@example.com" style="width: 100%; padding: 10px; border: 1px solid var(--white); border-radius: var(--border-radius-sm); font-size: var(--fs-7);">
-              </div>
-
-              <div style="margin-bottom: 15px;">
-                <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">Phone Number *</label>
-                <input type="tel" placeholder="(607) 936-8058" style="width: 100%; padding: 10px; border: 1px solid var(--white); border-radius: var(--border-radius-sm); font-size: var(--fs-7);">
-              </div>
-
-              <div style="margin-bottom: 15px;">
-                <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">Street Address *</label>
-                <input type="text" placeholder="123 Main Street" style="width: 100%; padding: 10px; border: 1px solid var(--white); border-radius: var(--border-radius-sm); font-size: var(--fs-7);">
-              </div>
-
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
-                <div>
-                  <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">City *</label>
-                  <input type="text" placeholder="New York" style="width: 100%; padding: 10px; border: 1px solid var(--white); border-radius: var(--border-radius-sm); font-size: var(--fs-7);">
-                </div>
-                <div>
-                  <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">State/Province *</label>
-                  <input type="text" placeholder="NY" style="width: 100%; padding: 10px; border: 1px solid var(--white); border-radius: var(--border-radius-sm); font-size: var(--fs-7);">
+                <div class="form-group">
+                  <label class="form-label">Last Name *</label>
+                  <input type="text" class="form-input" placeholder="Doe">
                 </div>
               </div>
 
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                <div>
-                  <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">Postal Code *</label>
-                  <input type="text" placeholder="14812" style="width: 100%; padding: 10px; border: 1px solid var(--white); border-radius: var(--border-radius-sm); font-size: var(--fs-7);">
+              <div class="form-row full">
+                <div class="form-group">
+                  <label class="form-label">Email Address *</label>
+                  <input type="email" class="form-input" placeholder="john@example.com">
                 </div>
-                <div>
-                  <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">Country *</label>
-                  <select style="width: 100%; padding: 10px; border: 1px solid var(--white); border-radius: var(--border-radius-sm); font-size: var(--fs-7);">
+              </div>
+
+              <div class="form-row full">
+                <div class="form-group">
+                  <label class="form-label">Phone Number *</label>
+                  <input type="tel" class="form-input" placeholder="(607) 936-8058">
+                </div>
+              </div>
+
+              <div class="form-row full">
+                <div class="form-group">
+                  <label class="form-label">Street Address *</label>
+                  <input type="text" class="form-input" placeholder="123 Main Street, Apt 4B">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">City *</label>
+                  <input type="text" class="form-input" placeholder="New York">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">State/Province *</label>
+                  <input type="text" class="form-input" placeholder="NY">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label">Postal Code *</label>
+                  <input type="text" class="form-input" placeholder="14812">
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Country *</label>
+                  <select class="form-select">
                     <option>United States</option>
                     <option>Canada</option>
                     <option>United Kingdom</option>
+                    <option>Australia</option>
                   </select>
                 </div>
               </div>
-
             </div>
 
-            <!--
-              - SHIPPING DETAILS
-            -->
+            <!-- SHIPPING ADDRESS -->
+            <div class="checkout-section">
+              <h2>
+                <ion-icon name="locate-outline" style="font-size: 24px; color: var(--salmon-pink);"></ion-icon>
+                Shipping Address
+              </h2>
 
-            <div style="background: var(--cultured); padding: 25px; border-radius: var(--border-radius-md); margin-bottom: 30px;">
-
-              <h2 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-600); margin-bottom: 15px;">Shipping Address</h2>
-
-              <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
-                <input type="checkbox" id="sameAddress" checked style="cursor: pointer;">
-                <label for="sameAddress" style="color: var(--sonic-silver); cursor: pointer;">Same as billing address</label>
+              <div class="checkbox-group">
+                <input type="checkbox" id="sameAddress" checked>
+                <label for="sameAddress" style="flex: 1; cursor: pointer; margin: 0;">
+                  <span style="font-weight: var(--weight-600); color: var(--eerie-black);">Same as billing address</span>
+                </label>
               </div>
 
               <div id="shippingForm" style="display: none;">
-                <div style="margin-bottom: 15px;">
-                  <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">Street Address *</label>
-                  <input type="text" placeholder="123 Main Street" style="width: 100%; padding: 10px; border: 1px solid var(--white); border-radius: var(--border-radius-sm); font-size: var(--fs-7);">
+                <div class="form-row full">
+                  <div class="form-group">
+                    <label class="form-label">Street Address *</label>
+                    <input type="text" class="form-input" placeholder="123 Main Street">
+                  </div>
                 </div>
 
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
-                  <div>
-                    <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">City *</label>
-                    <input type="text" placeholder="New York" style="width: 100%; padding: 10px; border: 1px solid var(--white); border-radius: var(--border-radius-sm); font-size: var(--fs-7);">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label">City *</label>
+                    <input type="text" class="form-input" placeholder="New York">
                   </div>
-                  <div>
-                    <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">State/Province *</label>
-                    <input type="text" placeholder="NY" style="width: 100%; padding: 10px; border: 1px solid var(--white); border-radius: var(--border-radius-sm); font-size: var(--fs-7);">
+                  <div class="form-group">
+                    <label class="form-label">State/Province *</label>
+                    <input type="text" class="form-input" placeholder="NY">
                   </div>
                 </div>
               </div>
-
             </div>
 
-            <!--
-              - SHIPPING METHOD
-            -->
+            <!-- SHIPPING METHOD -->
+            <div class="checkout-section">
+              <h2>
+                <ion-icon name="car-outline" style="font-size: 24px; color: var(--salmon-pink);"></ion-icon>
+                Shipping Method
+              </h2>
 
-            <div style="background: var(--cultured); padding: 25px; border-radius: var(--border-radius-md); margin-bottom: 30px;">
-
-              <h2 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-600); margin-bottom: 20px;">Shipping Method</h2>
-
-              <div style="display: flex; align-items: center; padding: 12px; border: 2px solid var(--ocean-green); border-radius: var(--border-radius-sm); margin-bottom: 12px; cursor: pointer;">
-                <input type="radio" name="shipping" value="standard" checked style="cursor: pointer;">
-                <label style="flex: 1; margin-left: 10px; cursor: pointer; color: var(--eerie-black);">
-                  <span style="font-weight: var(--weight-600);">Standard Shipping</span>
-                  <span style="display: block; color: var(--sonic-silver); font-size: var(--fs-8);">Delivered in 5-7 business days - FREE</span>
-                </label>
-              </div>
-
-              <div style="display: flex; align-items: center; padding: 12px; border: 1px solid var(--cultured); border-radius: var(--border-radius-sm); margin-bottom: 12px; cursor: pointer;">
-                <input type="radio" name="shipping" value="express" style="cursor: pointer;">
-                <label style="flex: 1; margin-left: 10px; cursor: pointer; color: var(--eerie-black);">
-                  <span style="font-weight: var(--weight-600);">Express Shipping</span>
-                  <span style="display: block; color: var(--sonic-silver); font-size: var(--fs-8);">Delivered in 2-3 business days - $9.99</span>
-                </label>
-              </div>
-
-              <div style="display: flex; align-items: center; padding: 12px; border: 1px solid var(--cultured); border-radius: var(--border-radius-sm); cursor: pointer;">
-                <input type="radio" name="shipping" value="overnight" style="cursor: pointer;">
-                <label style="flex: 1; margin-left: 10px; cursor: pointer; color: var(--eerie-black);">
-                  <span style="font-weight: var(--weight-600);">Overnight Shipping</span>
-                  <span style="display: block; color: var(--sonic-silver); font-size: var(--fs-8);">Delivered next business day - $24.99</span>
-                </label>
-              </div>
-
-            </div>
-
-            <!--
-              - PAYMENT METHOD
-            -->
-
-            <div style="background: var(--cultured); padding: 25px; border-radius: var(--border-radius-md); margin-bottom: 30px;">
-
-              <h2 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-600); margin-bottom: 20px;">Payment Method</h2>
-
-              <div style="display: flex; align-items: center; padding: 12px; border: 2px solid var(--eerie-black); border-radius: var(--border-radius-sm); margin-bottom: 12px; cursor: pointer;">
-                <input type="radio" name="payment" value="card" checked style="cursor: pointer;">
-                <label style="flex: 1; margin-left: 10px; cursor: pointer; color: var(--eerie-black); font-weight: var(--weight-600);">
-                  <ion-icon name="card-outline" style="vertical-align: middle; margin-right: 8px;"></ion-icon> Credit/Debit Card
-                </label>
-              </div>
-
-              <div id="cardForm" style="padding: 20px; background: var(--white); border-radius: var(--border-radius-sm); margin-bottom: 12px;">
-                <div style="margin-bottom: 12px;">
-                  <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">Cardholder Name *</label>
-                  <input type="text" placeholder="John Doe" style="width: 100%; padding: 10px; border: 1px solid var(--cultured); border-radius: var(--border-radius-sm); font-size: var(--fs-7);">
+              <label class="radio-group">
+                <input type="radio" name="shipping" value="standard" checked>
+                <div class="radio-content">
+                  <div class="radio-content-title">Standard Shipping</div>
+                  <div class="radio-content-desc">Delivered in 5-7 business days</div>
                 </div>
-                <div style="margin-bottom: 12px;">
-                  <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">Card Number *</label>
-                  <input type="text" placeholder="1234 5678 9012 3456" style="width: 100%; padding: 10px; border: 1px solid var(--cultured); border-radius: var(--border-radius-sm); font-size: var(--fs-7);">
+                <span style="color: var(--ocean-green); font-weight: var(--weight-700); margin-left: auto;">FREE</span>
+              </label>
+
+              <label class="radio-group">
+                <input type="radio" name="shipping" value="express">
+                <div class="radio-content">
+                  <div class="radio-content-title">Express Shipping</div>
+                  <div class="radio-content-desc">Delivered in 2-3 business days</div>
                 </div>
-                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 15px;">
-                  <div>
-                    <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">Expiry Date *</label>
-                    <input type="text" placeholder="MM/YY" style="width: 100%; padding: 10px; border: 1px solid var(--cultured); border-radius: var(--border-radius-sm); font-size: var(--fs-7);">
-                  </div>
-                  <div>
-                    <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">CVV *</label>
-                    <input type="text" placeholder="123" style="width: 100%; padding: 10px; border: 1px solid var(--cultured); border-radius: var(--border-radius-sm); font-size: var(--fs-7);">
-                  </div>
+                <span style="color: var(--eerie-black); font-weight: var(--weight-700); margin-left: auto;">+$9.99</span>
+              </label>
+
+              <label class="radio-group">
+                <input type="radio" name="shipping" value="overnight">
+                <div class="radio-content">
+                  <div class="radio-content-title">Overnight Shipping</div>
+                  <div class="radio-content-desc">Delivered next business day</div>
                 </div>
-              </div>
-
-              <div style="display: flex; align-items: center; padding: 12px; border: 1px solid var(--cultured); border-radius: var(--border-radius-sm); margin-bottom: 12px; cursor: pointer;">
-                <input type="radio" name="payment" value="paypal" style="cursor: pointer;">
-                <label style="flex: 1; margin-left: 10px; cursor: pointer; color: var(--eerie-black); font-weight: var(--weight-600);">
-                  <ion-icon name="logo-paypal" style="vertical-align: middle; margin-right: 8px;"></ion-icon> PayPal
-                </label>
-              </div>
-
-              <div style="display: flex; align-items: center; padding: 12px; border: 1px solid var(--cultured); border-radius: var(--border-radius-sm); cursor: pointer;">
-                <input type="radio" name="payment" value="bank" style="cursor: pointer;">
-                <label style="flex: 1; margin-left: 10px; cursor: pointer; color: var(--eerie-black); font-weight: var(--weight-600);">
-                  <ion-icon name="bank-outline" style="vertical-align: middle; margin-right: 8px;"></ion-icon> Bank Transfer
-                </label>
-              </div>
-
-            </div>
-
-            <!--
-              - TERMS & CONDITIONS
-            -->
-
-            <div style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 30px;">
-              <input type="checkbox" id="terms" style="margin-top: 5px; cursor: pointer;">
-              <label for="terms" style="color: var(--sonic-silver); font-size: var(--fs-7); line-height: 1.6; cursor: pointer;">
-                I agree to the <a href="terms-and-conditions.html" style="color: var(--salmon-pink); text-decoration: underline;">Terms and Conditions</a> and <a href="privacy-policy.html" style="color: var(--salmon-pink); text-decoration: underline;">Privacy Policy</a>
+                <span style="color: var(--eerie-black); font-weight: var(--weight-700); margin-left: auto;">+$24.99</span>
               </label>
             </div>
 
-            <button style="width: 100%; background: var(--salmon-pink); color: var(--white); padding: 15px; border: none; border-radius: var(--border-radius-md); font-weight: var(--weight-600); font-size: 16px; cursor: pointer; transition: var(--transition-timing);" onmouseover="this.style.background='var(--eerie-black)'" onmouseout="this.style.background='var(--salmon-pink)'">
+            <!-- PAYMENT METHOD -->
+            <div class="checkout-section">
+              <h2>
+                <ion-icon name="card-outline" style="font-size: 24px; color: var(--salmon-pink);"></ion-icon>
+                Payment Method
+              </h2>
+
+              <label class="radio-group selected">
+                <input type="radio" name="payment" value="card" checked>
+                <div class="radio-content">
+                  <div class="radio-content-title">Credit/Debit Card</div>
+                  <div class="radio-content-desc">Visa, MasterCard, American Express</div>
+                </div>
+              </label>
+
+              <div id="cardForm" style="padding: 20px; background: #f9f9f9; border-radius: var(--border-radius-md); margin-bottom: 12px;">
+                <div class="form-row full">
+                  <div class="form-group">
+                    <label class="form-label">Cardholder Name *</label>
+                    <input type="text" class="form-input" placeholder="John Doe">
+                  </div>
+                </div>
+                <div class="form-row full">
+                  <div class="form-group">
+                    <label class="form-label">Card Number *</label>
+                    <input type="text" class="form-input" placeholder="1234 5678 9012 3456" maxlength="19">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group">
+                    <label class="form-label">Expiry Date *</label>
+                    <input type="text" class="form-input" placeholder="MM/YY" maxlength="5">
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label">CVV *</label>
+                    <input type="text" class="form-input" placeholder="123" maxlength="4">
+                  </div>
+                </div>
+              </div>
+
+              <label class="radio-group">
+                <input type="radio" name="payment" value="paypal">
+                <div class="radio-content">
+                  <div class="radio-content-title">PayPal</div>
+                  <div class="radio-content-desc">Fast, secure payment</div>
+                </div>
+              </label>
+
+              <label class="radio-group">
+                <input type="radio" name="payment" value="bank">
+                <div class="radio-content">
+                  <div class="radio-content-title">Bank Transfer</div>
+                  <div class="radio-content-desc">Direct bank payment</div>
+                </div>
+              </label>
+            </div>
+
+            <!-- TERMS & CONDITIONS -->
+            <div class="checkbox-group" style="margin-bottom: 30px;">
+              <input type="checkbox" id="terms">
+              <label for="terms" style="flex: 1; cursor: pointer; margin: 0;">
+                <span style="color: var(--sonic-silver); font-size: 13px;">I agree to the <a href="terms-and-conditions.html" style="color: var(--salmon-pink); text-decoration: none; font-weight: var(--weight-600);">Terms and Conditions</a> and <a href="privacy-policy.html" style="color: var(--salmon-pink); text-decoration: none; font-weight: var(--weight-600);">Privacy Policy</a></span>
+              </label>
+            </div>
+
+            <button class="btn-primary">
+              <ion-icon name="checkmark-circle-outline" style="vertical-align: middle; margin-right: 8px;"></ion-icon>
               Place Order
             </button>
 
           </div>
 
-          <!--
-            - ORDER SUMMARY
-          -->
-
+          <!-- ORDER SUMMARY -->
           <div class="order-summary">
 
-            <div style="background: var(--cultured); padding: 25px; border-radius: var(--border-radius-md);">
+            <div style="background: var(--white); padding: 30px; border-radius: var(--border-radius-md); border: 1px solid var(--cultured); position: sticky; top: 20px;">
 
-              <h2 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-600); margin-bottom: 20px;">Order Summary</h2>
+              <h2 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-700); margin-bottom: 25px; display: flex; align-items: center; gap: 10px;">
+                <ion-icon name="bag-handle-outline" style="font-size: 24px; color: var(--salmon-pink);"></ion-icon>
+                Order Summary
+              </h2>
 
               <!-- Order Items -->
-              <div style="border-bottom: 1px solid var(--white); padding-bottom: 15px; margin-bottom: 15px;">
+              <div style="border-bottom: 2px solid var(--cultured); padding-bottom: 20px; margin-bottom: 20px;">
 
-                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                  <span style="color: var(--sonic-silver);">Gold Standard Whey Protein × 1</span>
-                  <span style="color: var(--eerie-black); font-weight: var(--weight-600);">$39.99</span>
+                <div class="order-summary-item">
+                  <span class="order-summary-item-qty">Gold Standard Whey Protein × 1</span>
+                  <span class="order-summary-item-price">$39.99</span>
                 </div>
 
-                <div style="display: flex; justify-content: space-between; margin-bottom: 10px;">
-                  <span style="color: var(--sonic-silver);">Organic Cocoa Powder × 2</span>
-                  <span style="color: var(--eerie-black); font-weight: var(--weight-600);">$49.98</span>
+                <div class="order-summary-item">
+                  <span class="order-summary-item-qty">Organic Cocoa Powder × 2</span>
+                  <span class="order-summary-item-price">$49.98</span>
                 </div>
 
-                <div style="display: flex; justify-content: space-between;">
-                  <span style="color: var(--sonic-silver);">Daily Multi-Vitamin Complex × 1</span>
-                  <span style="color: var(--eerie-black); font-weight: var(--weight-600);">$19.99</span>
+                <div class="order-summary-item" style="border-bottom: none;">
+                  <span class="order-summary-item-qty">Daily Multi-Vitamin Complex × 1</span>
+                  <span class="order-summary-item-price">$19.99</span>
                 </div>
 
               </div>
 
               <!-- Totals -->
-              <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--white); color: var(--sonic-silver);">
+              <div class="order-summary-item">
                 <span>Subtotal</span>
                 <span style="font-weight: var(--weight-600);">$109.96</span>
               </div>
 
-              <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--white); color: var(--sonic-silver);">
+              <div class="order-summary-item">
                 <span>Shipping</span>
                 <span style="font-weight: var(--weight-600); color: var(--ocean-green);">FREE</span>
               </div>
 
-              <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--white); color: var(--sonic-silver);">
+              <div class="order-summary-item">
                 <span>Tax (estimated)</span>
                 <span style="font-weight: var(--weight-600);">$8.80</span>
               </div>
 
-              <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--white); color: var(--sonic-silver);">
+              <div class="order-summary-item" style="color: var(--ocean-green); border-bottom-color: var(--ocean-green);">
                 <span>Discount</span>
-                <span style="font-weight: var(--weight-600); color: var(--ocean-green);">-$11.00</span>
+                <span style="font-weight: var(--weight-600);">-$11.00</span>
               </div>
 
-              <div style="display: flex; justify-content: space-between; padding: 15px 0;">
-                <span style="color: var(--eerie-black); font-weight: var(--weight-700); font-size: 18px;">Total</span>
-                <span style="color: var(--salmon-pink); font-weight: var(--weight-700); font-size: 20px;">$115.76</span>
+              <div class="order-summary-total">
+                <span class="order-summary-total-label">Total</span>
+                <span class="order-summary-total-price">$115.76</span>
               </div>
 
-              <p style="color: var(--sonic-silver); font-size: var(--fs-8); text-align: center; margin-top: 15px;">✓ Secure checkout with SSL encryption</p>
+              <!-- Security Badge -->
+              <div class="security-badge">
+                <div class="security-badge-title">
+                  <ion-icon name="shield-checkmark-outline" style="vertical-align: middle; margin-right: 6px;"></ion-icon>
+                  Secure Payment
+                </div>
+                <div class="security-badge-desc">SSL Encrypted • PCI Compliant</div>
+              </div>
 
-            </div>
-
-            <!-- Security Info -->
-            <div style="margin-top: 20px; padding: 15px; background: var(--cultured); border-radius: var(--border-radius-md); text-align: center;">
-              <p style="color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">
-                <ion-icon name="shield-checkmark-outline" style="vertical-align: middle; margin-right: 8px;"></ion-icon> Secure Payment
-              </p>
-              <p style="color: var(--sonic-silver); font-size: var(--fs-8);">Your payment information is encrypted and secure</p>
             </div>
 
           </div>
@@ -613,6 +930,63 @@
 
     sameAddress.addEventListener('change', function() {
       shippingForm.style.display = this.checked ? 'none' : 'block';
+    });
+
+    // Radio button styling
+    document.querySelectorAll('.radio-group').forEach(group => {
+      group.addEventListener('change', function(e) {
+        if (e.target.type === 'radio') {
+          document.querySelectorAll(`input[name="${e.target.name}"]`).forEach(radio => {
+            radio.parentElement.classList.remove('selected');
+          });
+          this.classList.add('selected');
+        }
+      });
+
+      if (group.querySelector('input[type="radio"]:checked')) {
+        group.classList.add('selected');
+      }
+    });
+
+    // Card form toggle
+    document.querySelectorAll('input[name="payment"]').forEach(radio => {
+      radio.addEventListener('change', function() {
+        const cardForm = document.getElementById('cardForm');
+        if (this.value === 'card') {
+          cardForm.style.display = 'block';
+        } else {
+          cardForm.style.display = 'none';
+        }
+      });
+    });
+
+    // Form validation
+    document.querySelector('.btn-primary').addEventListener('click', function(e) {
+      const terms = document.getElementById('terms');
+      if (!terms.checked) {
+        alert('Please agree to Terms and Conditions');
+        e.preventDefault();
+      }
+    });
+
+    // Card number formatting
+    document.querySelectorAll('input[placeholder="1234 5678 9012 3456"]').forEach(input => {
+      input.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\s/g, '');
+        let formatted = value.match(/.{1,4}/g)?.join(' ') || value;
+        e.target.value = formatted;
+      });
+    });
+
+    // Expiry date formatting
+    document.querySelectorAll('input[placeholder="MM/YY"]').forEach(input => {
+      input.addEventListener('input', function(e) {
+        let value = e.target.value.replace(/\D/g, '');
+        if (value.length >= 2) {
+          value = value.slice(0, 2) + '/' + value.slice(2, 4);
+        }
+        e.target.value = value;
+      });
     });
   </script>
 

@@ -71,14 +71,14 @@
           <button class="action-btn">
             <ion-icon name="person-outline"></ion-icon>
           </button>
-          <button class="action-btn">
+          <a href="wishlist.html" class="action-btn">
             <ion-icon name="heart-outline"></ion-icon>
             <span class="count">0</span>
-          </button>
-          <button class="action-btn">
+          </a>
+          <a href="cart.html" class="action-btn">
             <ion-icon name="bag-handle-outline"></ion-icon>
             <span class="count">0</span>
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -99,17 +99,17 @@
       <button class="action-btn" data-mobile-menu-open-btn>
         <ion-icon name="menu-outline"></ion-icon>
       </button>
-      <button class="action-btn">
+      <a href="cart.html" class="action-btn">
         <ion-icon name="bag-handle-outline"></ion-icon>
         <span class="count">0</span>
-      </button>
+      </a>
       <button class="action-btn">
         <ion-icon name="home-outline"></ion-icon>
       </button>
-      <button class="action-btn">
+      <a href="wishlist.html" class="action-btn">
         <ion-icon name="heart-outline"></ion-icon>
         <span class="count">0</span>
-      </button>
+      </a>
       <button class="action-btn" data-mobile-menu-open-btn>
         <ion-icon name="grid-outline"></ion-icon>
       </button>
@@ -124,9 +124,7 @@
       </div>
 
       <ul class="mobile-menu-category-list">
-        <li class="menu-category"><a href="index.html" class="menu-title">Home</a></li>
         <li class="menu-category"><a href="shop.html" class="menu-title">Shop</a></li>
-        <li class="menu-category"><a href="about.html" class="menu-title">About Us</a></li>
         <li class="menu-category"><a href="contact.html" class="menu-title">Contact Us</a></li>
       </ul>
 
@@ -172,15 +170,7 @@
 
   <main>
 
-    <!-- BREADCRUMB -->
-    <div style="padding: 40px 0; background: var(--cultured);">
-      <div class="container">
-        <ul class="breadcrumb" style="list-style: none; display: flex; align-items: center; gap: 10px; color: var(--sonic-silver); font-size: var(--fs-7);">
-          <li><a href="index.html" style="color: var(--salmon-pink); text-decoration: none;">Home</a></li>
-          <li style="color: var(--sonic-silver);">About Us</li>
-        </ul>
-      </div>
-    </div>
+    
 
     <!-- ABOUT HERO SECTION -->
     <section style="padding: 60px 0;">
@@ -193,19 +183,39 @@
     </section>
 
     <!-- COMPANY STORY SECTION -->
-    <section style="padding: 60px 0; background: var(--cultured);">
+    <section style="padding: 80px 0; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);">
       <div class="container">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
           
-          <div>
-            <img src="https://via.placeholder.com/500x400?text=NuBaCo+Health+Products" alt="NuBaCo Story" style="width: 100%; height: 400px; border-radius: var(--border-radius-md); object-fit: cover;">
+          <div style="position: relative;">
+            <img src="https://picsum.photos/500/400?random=1" alt="NuBaCo Story" style="width: 100%; height: 400px; border-radius: 10px; object-fit: cover; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
           </div>
 
           <div>
-            <h2 style="color: var(--eerie-black); font-size: 28px; font-weight: var(--weight-700); margin-bottom: 20px;">Our Story</h2>
-            <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8; margin-bottom: 15px;">Founded in 2009, NuBaCo started with a simple mission: to make premium health and nutrition products accessible to everyone. What began as a small local supplement shop has grown into a leading online retailer serving thousands of customers worldwide.</p>
-            <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8; margin-bottom: 15px;">Our journey has been driven by a passion for quality, integrity, and customer satisfaction. We've partnered with leading manufacturers and suppliers to ensure that every product we offer meets the highest standards of purity and efficacy.</p>
-            <p style="color: var(--sonic-silver); font-size: var(--fs-6); line-height: 1.8;">Today, NuBaCo is proud to be the trusted choice for fitness enthusiasts, health professionals, and wellness seekers across the globe.</p>
+            <div style="display: inline-block; background: var(--salmon-pink); color: var(--white); padding: 8px 16px; border-radius: 20px; font-size: 12px; font-weight: var(--weight-600); margin-bottom: 20px; letter-spacing: 1px;">OUR JOURNEY</div>
+            
+            <h2 style="color: var(--eerie-black); font-size: 32px; font-weight: var(--weight-700); margin-bottom: 25px; line-height: 1.3;">Building Trust Through Quality & Excellence</h2>
+            
+            <p style="color: var(--sonic-silver); font-size: 16px; line-height: 1.8; margin-bottom: 18px; font-weight: 500;">Founded in 2009, NuBaCo started with a simple mission: to make premium health and nutrition products accessible to everyone. What began as a small local supplement shop has grown into a leading online retailer serving thousands of customers worldwide.</p>
+            
+            <p style="color: var(--sonic-silver); font-size: 16px; line-height: 1.8; margin-bottom: 18px;">Our journey has been driven by an unwavering passion for quality, integrity, and customer satisfaction. We've partnered with leading manufacturers and suppliers to ensure that every product we offer meets the highest standards of purity and efficacy.</p>
+            
+            <p style="color: var(--sonic-silver); font-size: 16px; line-height: 1.8; margin-bottom: 30px;">Today, NuBaCo is proud to be the trusted choice for fitness enthusiasts, health professionals, and wellness seekers across the globe. Our commitment remains unchanged: delivering excellence in every product and interaction.</p>
+            
+            <div style="display: flex; gap: 40px; padding-top: 20px; border-top: 2px solid #e8e8e8;">
+              <div>
+                <h4 style="color: var(--salmon-pink); font-size: 24px; font-weight: var(--weight-700);">15+</h4>
+                <p style="color: var(--sonic-silver); font-size: 14px; margin-top: 5px;">Years of Experience</p>
+              </div>
+              <div>
+                <h4 style="color: var(--salmon-pink); font-size: 24px; font-weight: var(--weight-700);">50K+</h4>
+                <p style="color: var(--sonic-silver); font-size: 14px; margin-top: 5px;">Happy Customers</p>
+              </div>
+              <div>
+                <h4 style="color: var(--salmon-pink); font-size: 24px; font-weight: var(--weight-700);">1000+</h4>
+                <p style="color: var(--sonic-silver); font-size: 14px; margin-top: 5px;">Quality Products</p>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -217,60 +227,60 @@
       <div class="container">
         <h2 style="color: var(--eerie-black); font-size: 28px; font-weight: var(--weight-700); margin-bottom: 50px; text-align: center;">Our Mission & Values</h2>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+        <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 20px;">
 
           <!-- Mission Card -->
-          <div style="padding: 30px; background: var(--cultured); border-radius: var(--border-radius-md); text-align: center;">
-            <div style="font-size: 40px; margin-bottom: 15px;">
+          <div style="padding: 25px 15px; background: var(--cultured); border-radius: var(--border-radius-md); text-align: center; display: flex; flex-direction: column; align-items: center;">
+            <div style="font-size: 48px; margin-bottom: 15px; display: flex; justify-content: center; align-items: center; width: 70px; height: 70px;">
               <ion-icon name="rocket-outline" style="color: var(--salmon-pink);"></ion-icon>
             </div>
-            <h3 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-600); margin-bottom: 15px;">Our Mission</h3>
-            <p style="color: var(--sonic-silver); font-size: var(--fs-7); line-height: 1.6;">To empower individuals to achieve their health and fitness goals by providing premium quality products, expert guidance, and exceptional customer service.</p>
+            <h3 style="color: var(--eerie-black); font-size: 16px; font-weight: var(--weight-600); margin-bottom: 10px;">Our Mission</h3>
+            <p style="color: var(--sonic-silver); font-size: var(--fs-8); line-height: 1.5;">Empower health goals</p>
           </div>
 
           <!-- Quality Value -->
-          <div style="padding: 30px; background: var(--cultured); border-radius: var(--border-radius-md); text-align: center;">
-            <div style="font-size: 40px; margin-bottom: 15px;">
+          <div style="padding: 25px 15px; background: var(--cultured); border-radius: var(--border-radius-md); text-align: center; display: flex; flex-direction: column; align-items: center;">
+            <div style="font-size: 48px; margin-bottom: 15px; display: flex; justify-content: center; align-items: center; width: 70px; height: 70px;">
               <ion-icon name="checkmark-circle-outline" style="color: var(--ocean-green);"></ion-icon>
             </div>
-            <h3 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-600); margin-bottom: 15px;">Quality First</h3>
-            <p style="color: var(--sonic-silver); font-size: var(--fs-7); line-height: 1.6;">We're committed to sourcing and offering only the highest quality products from trusted manufacturers who share our commitment to excellence.</p>
+            <h3 style="color: var(--eerie-black); font-size: 16px; font-weight: var(--weight-600); margin-bottom: 10px;">Quality First</h3>
+            <p style="color: var(--sonic-silver); font-size: var(--fs-8); line-height: 1.5;">Premium quality products</p>
           </div>
 
           <!-- Integrity Value -->
-          <div style="padding: 30px; background: var(--cultured); border-radius: var(--border-radius-md); text-align: center;">
-            <div style="font-size: 40px; margin-bottom: 15px;">
+          <div style="padding: 25px 15px; background: var(--cultured); border-radius: var(--border-radius-md); text-align: center; display: flex; flex-direction: column; align-items: center;">
+            <div style="font-size: 48px; margin-bottom: 15px; display: flex; justify-content: center; align-items: center; width: 70px; height: 70px;">
               <ion-icon name="shield-checkmark-outline" style="color: var(--sandy-brown);"></ion-icon>
             </div>
-            <h3 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-600); margin-bottom: 15px;">Integrity</h3>
-            <p style="color: var(--sonic-silver); font-size: var(--fs-7); line-height: 1.6;">Transparency and honesty are at the core of everything we do. We believe in fair pricing and truthful product information.</p>
+            <h3 style="color: var(--eerie-black); font-size: 16px; font-weight: var(--weight-600); margin-bottom: 10px;">Integrity</h3>
+            <p style="color: var(--sonic-silver); font-size: var(--fs-8); line-height: 1.5;">Transparent dealings</p>
           </div>
 
           <!-- Customer Focus -->
-          <div style="padding: 30px; background: var(--cultured); border-radius: var(--border-radius-md); text-align: center;">
-            <div style="font-size: 40px; margin-bottom: 15px;">
+          <div style="padding: 25px 15px; background: var(--cultured); border-radius: var(--border-radius-md); text-align: center; display: flex; flex-direction: column; align-items: center;">
+            <div style="font-size: 48px; margin-bottom: 15px; display: flex; justify-content: center; align-items: center; width: 70px; height: 70px;">
               <ion-icon name="people-outline" style="color: var(--bittersweet);"></ion-icon>
             </div>
-            <h3 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-600); margin-bottom: 15px;">Customer Focus</h3>
-            <p style="color: var(--sonic-silver); font-size: var(--fs-7); line-height: 1.6;">Your satisfaction is our priority. We're dedicated to providing exceptional customer service and support at every touchpoint.</p>
+            <h3 style="color: var(--eerie-black); font-size: 16px; font-weight: var(--weight-600); margin-bottom: 10px;">Customer First</h3>
+            <p style="color: var(--sonic-silver); font-size: var(--fs-8); line-height: 1.5;">Your satisfaction</p>
           </div>
 
           <!-- Innovation Value -->
-          <div style="padding: 30px; background: var(--cultured); border-radius: var(--border-radius-md); text-align: center;">
-            <div style="font-size: 40px; margin-bottom: 15px;">
+          <div style="padding: 25px 15px; background: var(--cultured); border-radius: var(--border-radius-md); text-align: center; display: flex; flex-direction: column; align-items: center;">
+            <div style="font-size: 48px; margin-bottom: 15px; display: flex; justify-content: center; align-items: center; width: 70px; height: 70px;">
               <ion-icon name="bulb-outline" style="color: var(--eerie-black);"></ion-icon>
             </div>
-            <h3 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-600); margin-bottom: 15px;">Innovation</h3>
-            <p style="color: var(--sonic-silver); font-size: var(--fs-7); line-height: 1.6;">We continuously seek new ways to improve our products, services, and customer experience to stay ahead of industry trends.</p>
+            <h3 style="color: var(--eerie-black); font-size: 16px; font-weight: var(--weight-600); margin-bottom: 10px;">Innovation</h3>
+            <p style="color: var(--sonic-silver); font-size: var(--fs-8); line-height: 1.5;">Continuous improvement</p>
           </div>
 
           <!-- Community Value -->
-          <div style="padding: 30px; background: var(--cultured); border-radius: var(--border-radius-md); text-align: center;">
-            <div style="font-size: 40px; margin-bottom: 15px;">
+          <div style="padding: 25px 15px; background: var(--cultured); border-radius: var(--border-radius-md); text-align: center; display: flex; flex-direction: column; align-items: center;">
+            <div style="font-size: 48px; margin-bottom: 15px; display: flex; justify-content: center; align-items: center; width: 70px; height: 70px;">
               <ion-icon name="earth-outline" style="color: var(--ocean-green);"></ion-icon>
             </div>
-            <h3 style="color: var(--eerie-black); font-size: 20px; font-weight: var(--weight-600); margin-bottom: 15px;">Community</h3>
-            <p style="color: var(--sonic-silver); font-size: var(--fs-7); line-height: 1.6;">We believe in giving back to the community through educational initiatives, sustainability practices, and social responsibility programs.</p>
+            <h3 style="color: var(--eerie-black); font-size: 16px; font-weight: var(--weight-600); margin-bottom: 10px;">Community</h3>
+            <p style="color: var(--sonic-silver); font-size: var(--fs-8); line-height: 1.5;">Giving back always</p>
           </div>
 
         </div>

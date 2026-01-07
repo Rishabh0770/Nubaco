@@ -10,6 +10,313 @@
   <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./assets/css/style-prefix.css">
 
+  <style>
+    :root {
+      --salmon-pink: #FF6B6B;
+      --eerie-black: #1a1a1a;
+      --sonic-silver: #757575;
+      --cultured: #f7f7f7;
+      --white: #ffffff;
+      --border-radius-md: 8px;
+      --border-radius-sm: 4px;
+      --weight-600: 600;
+      --fs-7: 14px;
+      --transition-timing: 0.3s ease;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .signup-container {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .signup-content {
+      background: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 40px;
+      width: 100%;
+    }
+
+    .signup-card {
+      width: 100%;
+      max-width: 450px;
+    }
+
+    .signup-card-container {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 50px 40px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      border: 1px solid #f0f0f0;
+      width: 100%;
+      max-width: 450px;
+    }
+
+    .signup-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .signup-header img {
+      height: 40px;
+      width: auto;
+      margin-bottom: 24px;
+      display: inline-block;
+    }
+
+    .signup-header h1 {
+      color: var(--eerie-black);
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .signup-header p {
+      color: var(--sonic-silver);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      color: var(--eerie-black);
+      font-weight: 600;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid #e0e0e0;
+      border-radius: var(--border-radius-md);
+      font-size: 14px;
+      font-family: inherit;
+      transition: all 0.3s ease;
+      background: var(--white);
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: var(--salmon-pink);
+      box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+      background: var(--white);
+    }
+
+    .form-group input::placeholder {
+      color: #bdbdbd;
+    }
+
+    .password-hint {
+      color: var(--sonic-silver);
+      font-size: 12px;
+      margin-top: 6px;
+      line-height: 1.4;
+    }
+
+    .terms-agreement {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 24px;
+      font-size: 13px;
+      color: var(--sonic-silver);
+      line-height: 1.4;
+    }
+
+    .terms-agreement span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .terms-agreement input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      cursor: pointer;
+      accent-color: var(--salmon-pink);
+      flex-shrink: 0;
+    }
+
+    .terms-agreement a {
+      color: var(--salmon-pink);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .terms-agreement a:hover {
+      color: var(--eerie-black);
+      text-decoration: underline;
+    }
+
+    .signup-btn {
+      width: 100%;
+      padding: 12px;
+      background: var(--salmon-pink);
+      color: var(--white);
+      border: none;
+      border-radius: var(--border-radius-md);
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-bottom: 20px;
+    }
+
+    .signup-btn:hover {
+      background: var(--eerie-black);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 16px rgba(255, 107, 107, 0.2);
+    }
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin: 24px 0;
+      color: var(--sonic-silver);
+      font-size: 14px;
+    }
+
+    .divider-line {
+      flex: 1;
+      height: 1px;
+      background: #e0e0e0;
+    }
+
+    .social-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .social-btn {
+      width: 100%;
+      padding: 12px;
+      background: var(--white);
+      color: var(--eerie-black);
+      border: 1.5px solid #e0e0e0;
+      border-radius: var(--border-radius-md);
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .social-btn:hover {
+      background: var(--cultured);
+      border-color: var(--salmon-pink);
+      color: var(--salmon-pink);
+    }
+
+    .social-btn ion-icon {
+      font-size: 20px;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 24px;
+      color: var(--sonic-silver);
+      font-size: 14px;
+    }
+
+    .login-link a {
+      color: var(--salmon-pink);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .login-link a:hover {
+      color: var(--eerie-black);
+      text-decoration: underline;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .signup-content {
+        padding: 40px 24px;
+      }
+
+      .signup-card-container {
+        padding: 40px 30px;
+      }
+
+      .signup-header h1 {
+        font-size: 24px;
+      }
+
+      .form-group input {
+        padding: 12px 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .signup-content {
+        padding: 30px 16px;
+      }
+
+      .signup-card-container {
+        padding: 30px 20px;
+      }
+
+      .signup-header {
+        margin-bottom: 30px;
+      }
+
+      .signup-header h1 {
+        font-size: 22px;
+      }
+
+      .signup-header p {
+        font-size: 13px;
+      }
+
+      .form-group {
+        margin-bottom: 16px;
+      }
+
+      .form-group input {
+        padding: 11px 12px;
+        font-size: 16px;
+      }
+
+      .signup-btn {
+        padding: 11px;
+        font-size: 14px;
+      }
+
+      .social-btn {
+        padding: 11px;
+        font-size: 13px;
+      }
+
+      .login-link {
+        font-size: 13px;
+      }
+    }
+  </style>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
@@ -71,14 +378,14 @@
           <button class="action-btn">
             <ion-icon name="person-outline"></ion-icon>
           </button>
-          <button class="action-btn">
+          <a href="wishlist.html" class="action-btn">
             <ion-icon name="heart-outline"></ion-icon>
             <span class="count">0</span>
-          </button>
-          <button class="action-btn">
+          </a>
+          <a href="cart.html" class="action-btn">
             <ion-icon name="bag-handle-outline"></ion-icon>
             <span class="count">0</span>
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -99,17 +406,17 @@
       <button class="action-btn" data-mobile-menu-open-btn>
         <ion-icon name="menu-outline"></ion-icon>
       </button>
-      <button class="action-btn">
+      <a href="cart.html" class="action-btn">
         <ion-icon name="bag-handle-outline"></ion-icon>
         <span class="count">0</span>
-      </button>
+      </a>
       <button class="action-btn">
         <ion-icon name="home-outline"></ion-icon>
       </button>
-      <button class="action-btn">
+      <a href="wishlist.html" class="action-btn">
         <ion-icon name="heart-outline"></ion-icon>
         <span class="count">0</span>
-      </button>
+      </a>
       <button class="action-btn" data-mobile-menu-open-btn>
         <ion-icon name="grid-outline"></ion-icon>
       </button>
@@ -171,90 +478,73 @@
   -->
 
   <main>
-
-    <div style="min-height: 70vh; display: flex; align-items: center; justify-content: center; padding: 40px 20px;">
-
-      <div class="container">
-
-        <div style="max-width: 450px; margin: 0 auto;">
-
-          <!-- Logo -->
-          <div style="text-align: center; margin-bottom: 30px;">
-            <a href="index.html" style="display: inline-block;">
-              <img src="./assets/images/logo/nubaco1.webp" alt="NuBaCo logo" width="120" height="36">
-            </a>
-          </div>
-
-          <!-- Sign Up Form -->
-          <div style="background: var(--cultured); padding: 40px; border-radius: var(--border-radius-md);">
-
-            <h1 style="color: var(--eerie-black); font-size: 24px; font-weight: var(--weight-600); text-align: center; margin-bottom: 10px;">Create Account</h1>
-            <p style="color: var(--sonic-silver); text-align: center; margin-bottom: 30px;">Join NuBaCo and start shopping today</p>
-
-            <form>
-
-              <div style="margin-bottom: 20px;">
-                <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">Full Name</label>
-                <input type="text" placeholder="John Doe" style="width: 100%; padding: 12px; border: 1px solid var(--white); border-radius: var(--border-radius-sm); font-size: var(--fs-7); background: var(--white);">
-              </div>
-
-              <div style="margin-bottom: 20px;">
-                <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">Email Address</label>
-                <input type="email" placeholder="you@example.com" style="width: 100%; padding: 12px; border: 1px solid var(--white); border-radius: var(--border-radius-sm); font-size: var(--fs-7); background: var(--white);">
-              </div>
-
-              <div style="margin-bottom: 20px;">
-                <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">Password</label>
-                <input type="password" placeholder="••••••••" style="width: 100%; padding: 12px; border: 1px solid var(--white); border-radius: var(--border-radius-sm); font-size: var(--fs-7); background: var(--white);">
-                <p style="color: var(--sonic-silver); font-size: var(--fs-8); margin-top: 5px;">Must be at least 8 characters</p>
-              </div>
-
-              <div style="margin-bottom: 20px;">
-                <label style="display: block; color: var(--eerie-black); font-weight: var(--weight-600); margin-bottom: 8px;">Confirm Password</label>
-                <input type="password" placeholder="••••••••" style="width: 100%; padding: 12px; border: 1px solid var(--white); border-radius: var(--border-radius-sm); font-size: var(--fs-7); background: var(--white);">
-              </div>
-
-              <div style="margin-bottom: 25px;">
-                <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer; color: var(--sonic-silver); font-size: var(--fs-7); line-height: 1.4;">
-                  <input type="checkbox" style="margin-top: 3px;">
-                  <span>I agree to the <a href="terms-and-conditions.html" style="color: var(--salmon-pink); text-decoration: none;">Terms and Conditions</a> and <a href="privacy-policy.html" style="color: var(--salmon-pink); text-decoration: none;">Privacy Policy</a></span>
-                </label>
-              </div>
-
-              <button type="submit" style="width: 100%; background: var(--salmon-pink); color: var(--white); padding: 12px; border: none; border-radius: var(--border-radius-md); font-weight: var(--weight-600); cursor: pointer; transition: var(--transition-timing); margin-bottom: 15px;" onmouseover="this.style.background='var(--eerie-black)'" onmouseout="this.style.background='var(--salmon-pink)'">
-                Create Account
-              </button>
-
-            </form>
-
-            <div style="display: flex; align-items: center; gap: 15px; margin: 25px 0; color: var(--sonic-silver);">
-              <div style="flex: 1; height: 1px; background: var(--white);"></div>
-              <span style="font-size: var(--fs-8);">OR</span>
-              <div style="flex: 1; height: 1px; background: var(--white);"></div>
+    <div class="signup-container">
+      <!-- Sign Up Form Section -->
+      <div class="signup-content">
+        <div class="signup-card-container">
+          <div class="signup-card">
+            <div class="signup-header">
+              <a href="index.html">
+                <img src="./assets/images/logo/nubaco1.webp" alt="NuBaCo logo">
+              </a>
+              <h1>Create Account</h1>
+              <p>Join NuBaCo and get exclusive access to premium products</p>
             </div>
 
-            <!-- Social Sign Up -->
-            <button type="button" style="width: 100%; background: var(--white); color: var(--eerie-black); padding: 12px; border: 1px solid var(--white); border-radius: var(--border-radius-md); font-weight: var(--weight-600); cursor: pointer; transition: var(--transition-timing); margin-bottom: 12px;" onmouseover="this.style.background='var(--cultured)'" onmouseout="this.style.background='var(--white)'">
-              <ion-icon name="logo-google" style="vertical-align: middle; margin-right: 8px;"></ion-icon> Sign up with Google
-            </button>
+            <form id="signupForm">
+              <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+              </div>
 
-            <button type="button" style="width: 100%; background: var(--white); color: var(--eerie-black); padding: 12px; border: 1px solid var(--white); border-radius: var(--border-radius-md); font-weight: var(--weight-600); cursor: pointer; transition: var(--transition-timing);" onmouseover="this.style.background='var(--cultured)'" onmouseout="this.style.background='var(--white)'">
-              <ion-icon name="logo-facebook" style="vertical-align: middle; margin-right: 8px;"></ion-icon> Sign up with Facebook
-            </button>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+              </div>
 
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+                <p class="password-hint">Must be at least 8 characters with a mix of letters and numbers</p>
+              </div>
+
+              <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+              </div>
+
+              <label class="terms-agreement">
+                <input type="checkbox" id="terms" name="terms" required>
+                <span>I agree to the <a href="terms-and-conditions.html">Terms and Conditions</a> and <a href="privacy-policy.html">Privacy Policy</a></span>
+              </label>
+
+              <button type="submit" class="signup-btn">Create Account</button>
+            </form>
+
+            <div class="divider">
+              <div class="divider-line"></div>
+              <span>OR</span>
+              <div class="divider-line"></div>
+            </div>
+
+            <div class="social-buttons">
+              <button class="social-btn" type="button">
+                <ion-icon name="logo-google"></ion-icon>
+                Sign up with Google
+              </button>
+              <button class="social-btn" type="button">
+                <ion-icon name="logo-facebook"></ion-icon>
+                Sign up with Facebook
+              </button>
+            </div>
+
+            <div class="login-link">
+              Already have an account? <a href="login.html">Sign in here</a>
+            </div>
           </div>
-
-          <!-- Login Link -->
-          <div style="text-align: center; margin-top: 20px; color: var(--sonic-silver);">
-            <p>Already have an account? <a href="login.html" style="color: var(--salmon-pink); text-decoration: none; font-weight: var(--weight-600);">Sign in here</a></p>
-          </div>
-
         </div>
-
       </div>
-
     </div>
-
   </main>
 
   <!--
@@ -382,6 +672,90 @@
   <script src="./assets/js/script.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  <script>
+    // Form validation and submission
+    const signupForm = document.getElementById('signupForm');
+    
+    signupForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const fullname = document.getElementById('fullname').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const confirmPassword = document.getElementById('confirm-password').value.trim();
+      const terms = document.getElementById('terms').checked;
+      
+      // Basic validation
+      if (!fullname || !email || !password || !confirmPassword) {
+        alert('Please fill in all fields');
+        return;
+      }
+      
+      // Name validation
+      if (fullname.length < 2) {
+        alert('Please enter a valid full name');
+        return;
+      }
+      
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        alert('Please enter a valid email address');
+        return;
+      }
+      
+      // Password validation (minimum 8 characters)
+      if (password.length < 8) {
+        alert('Password must be at least 8 characters');
+        return;
+      }
+      
+      // Check if passwords match
+      if (password !== confirmPassword) {
+        alert('Passwords do not match');
+        return;
+      }
+      
+      // Check terms agreement
+      if (!terms) {
+        alert('Please agree to the Terms and Conditions');
+        return;
+      }
+      
+      // Show success message
+      alert('Account created successfully! Redirecting to login...');
+      
+      // Simulate signup and redirect
+      setTimeout(() => {
+        window.location.href = 'login.html';
+      }, 1000);
+    });
+
+    // Social signup buttons
+    const socialButtons = document.querySelectorAll('.social-btn');
+    socialButtons.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const provider = this.textContent.includes('Google') ? 'Google' : 'Facebook';
+        alert(`Signing up with ${provider}...`);
+      });
+    });
+
+    // Real-time password confirmation check
+    const passwordInput = document.getElementById('password');
+    const confirmPasswordInput = document.getElementById('confirm-password');
+    
+    confirmPasswordInput.addEventListener('blur', function() {
+      if (passwordInput.value && confirmPasswordInput.value) {
+        if (passwordInput.value !== confirmPasswordInput.value) {
+          confirmPasswordInput.style.borderColor = '#FF6B6B';
+        } else {
+          confirmPasswordInput.style.borderColor = '#28a745';
+        }
+      }
+    });
+  </script>
 
 </body>
 

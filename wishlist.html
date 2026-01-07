@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Order Confirmed - NuBaCo eCommerce</title>
+  <title>My Wishlist - NuBaCo eCommerce</title>
 
   <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="./assets/css/style-prefix.css">
@@ -71,14 +71,14 @@
           <button class="action-btn">
             <ion-icon name="person-outline"></ion-icon>
           </button>
-          <button class="action-btn">
+          <a href="wishlist.html" class="action-btn">
             <ion-icon name="heart-outline"></ion-icon>
             <span class="count">0</span>
-          </button>
-          <button class="action-btn">
+          </a>
+          <a href="cart.html" class="action-btn">
             <ion-icon name="bag-handle-outline"></ion-icon>
             <span class="count">0</span>
-          </button>
+          </a>
         </div>
       </div>
     </div>
@@ -99,17 +99,17 @@
       <button class="action-btn" data-mobile-menu-open-btn>
         <ion-icon name="menu-outline"></ion-icon>
       </button>
-      <button class="action-btn">
+      <a href="cart.html" class="action-btn">
         <ion-icon name="bag-handle-outline"></ion-icon>
         <span class="count">0</span>
-      </button>
+      </a>
       <button class="action-btn">
         <ion-icon name="home-outline"></ion-icon>
       </button>
-      <button class="action-btn">
+      <a href="wishlist.html" class="action-btn">
         <ion-icon name="heart-outline"></ion-icon>
         <span class="count">0</span>
-      </button>
+      </a>
       <button class="action-btn" data-mobile-menu-open-btn>
         <ion-icon name="grid-outline"></ion-icon>
       </button>
@@ -171,87 +171,35 @@
   -->
 
   <main>
-
-    <!-- Order Success Section -->
-    <section class="order-status-section order-success-section">
+    
+    <!--
+      - WISHLIST SECTION
+    -->
+    <section class="wishlist-section">
       <div class="container">
-        <div class="status-wrapper">
-
-          <!-- Status Icon -->
-          <div class="status-icon success">
-            <ion-icon name="checkmark-outline"></ion-icon>
-          </div>
-
-          <!-- Main Heading -->
-          <h1 class="status-title">Order Confirmed!</h1>
-
-          <!-- Subheading -->
-          <p class="status-subtitle">
-            Thank you for your purchase. Your order has been successfully placed and confirmed.
-          </p>
-
-          <!-- Order Details Card -->
-          <div class="order-details-card">
-            <h2 class="details-heading">Order Details</h2>
-
-            <div class="detail-row">
-              <span class="detail-label">Order Number</span>
-              <span class="detail-value">#ORD-2024-001547</span>
-            </div>
-
-            <div class="detail-row">
-              <span class="detail-label">Order Date</span>
-              <span class="detail-value">January 15, 2024 at 2:45 PM</span>
-            </div>
-
-            <div class="detail-row">
-              <span class="detail-label">Total Amount</span>
-              <span class="detail-value amount">$115.76</span>
-            </div>
-
-            <div class="detail-row">
-              <span class="detail-label">Estimated Delivery</span>
-              <span class="detail-value">January 20-22, 2024</span>
-            </div>
-
-            <div class="detail-row">
-              <span class="detail-label">Payment Status</span>
-              <span class="detail-value status-badge">
-                <ion-icon name="checkmark-circle"></ion-icon>
-                Payment Confirmed
-              </span>
-            </div>
-          </div>
-
-          <!-- What's Next Section -->
-          <div class="next-steps-card">
-            <h3 class="next-steps-heading">What's Next?</h3>
-            <ol class="next-steps-list">
-              <li>You'll receive a confirmation email shortly with your order details and tracking information.</li>
-              <li>Your order will be processed and shipped within 1-2 business days.</li>
-              <li>Track your shipment in real-time using the tracking number sent to your email.</li>
-            </ol>
-          </div>
-
-          <!-- Action Buttons -->
-          <div class="status-actions">
-            <a href="shop.html" class="btn-continue">
-              <ion-icon name="bag-outline"></ion-icon>
-              Continue Shopping
-            </a>
-            <a href="index.html" class="btn-home">
-              <ion-icon name="home-outline"></ion-icon>
-              Back to Home
-            </a>
-          </div>
-
-          <!-- Support Section -->
-          <div class="support-footer">
-            <p class="support-question">Have questions about your order?</p>
-            <a href="contact.html" class="support-link">Contact our support team →</a>
-          </div>
-
+        
+        <!-- Page Header -->
+        <div class="wishlist-header">
+          <h1 class="wishlist-title">My Wishlist</h1>
+          <p class="wishlist-subtitle">Save your favorite products for later</p>
         </div>
+
+        <!-- Wishlist Content -->
+        <div class="wishlist-content-wrapper">
+          <div class="wishlist-empty-state">
+            <div class="empty-icon">
+              <ion-icon name="heart-outline"></ion-icon>
+            </div>
+            <h2 class="empty-title">Your Wishlist is Empty</h2>
+            <p class="empty-description">You haven't added any products to your wishlist yet. Explore our collection and save your favorite items!</p>
+            
+            <div class="empty-actions">
+              <a href="shop.html" class="btn-primary">Continue Shopping</a>
+              <a href="index.html" class="btn-secondary">Back to Home</a>
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -264,122 +212,279 @@
   <footer>
 
     <div class="footer-category">
+
       <div class="container">
+
         <h2 class="footer-category-title">Brand directory</h2>
 
-        <div class="footer-category-box">
-          <h3 class="category-box-title">Pharmaceuticals :</h3>
-          <a href="#" class="footer-category-link">Tablets</a>
-          <a href="#" class="footer-category-link">Capsules</a>
-          <a href="#" class="footer-category-link">Syrups</a>
-        </div>
+       <div class="footer-category-box">
+  <h3 class="category-box-title">Pharmaceuticals :</h3>
+  <a href="#" class="footer-category-link">Tablets</a>
+  <a href="#" class="footer-category-link">Capsules</a>
+  <a href="#" class="footer-category-link">Syrups</a>
+  <a href="#" class="footer-category-link">Injections</a>
+  <a href="#" class="footer-category-link">Antibiotics</a>
+  <a href="#" class="footer-category-link">Pain Relievers</a>
+  <a href="#" class="footer-category-link">Vitamins & Minerals</a>
+</div>
 
-        <div class="footer-category-box">
-          <h3 class="category-box-title">Whey Protein :</h3>
-          <a href="#" class="footer-category-link">Isolate</a>
-          <a href="#" class="footer-category-link">Concentrate</a>
-          <a href="#" class="footer-category-link">Mass Gainers</a>
-        </div>
+<div class="footer-category-box">
+  <h3 class="category-box-title">Whey Protein :</h3>
+  <a href="#" class="footer-category-link">Whey Protein Isolate</a>
+  <a href="#" class="footer-category-link">Whey Protein Concentrate</a>
+  <a href="#" class="footer-category-link">Whey Protein Hydrolysate</a>
+  <a href="#" class="footer-category-link">Mass Gainers</a>
+  <a href="#" class="footer-category-link">Protein Bars</a>
+  <a href="#" class="footer-category-link">Pre-Workout Mix</a>
+  <a href="#" class="footer-category-link">Post-Workout Shakes</a>
+</div>
 
-        <div class="footer-category-box">
-          <h3 class="category-box-title">Cocoa Powder :</h3>
-          <a href="#" class="footer-category-link">Organic</a>
-          <a href="#" class="footer-category-link">Dutch Processed</a>
-          <a href="#" class="footer-category-link">Instant Mix</a>
-        </div>
+<div class="footer-category-box">
+  <h3 class="category-box-title">Cocoa Powder :</h3>
+  <a href="#" class="footer-category-link">Organic Cocoa Powder</a>
+  <a href="#" class="footer-category-link">Dark Cocoa Powder</a>
+  <a href="#" class="footer-category-link">Unsweetened Cocoa</a>
+  <a href="#" class="footer-category-link">Instant Cocoa Mix</a>
+  <a href="#" class="footer-category-link">Drinking Chocolate</a>
+  <a href="#" class="footer-category-link">Baking Cocoa</a>
+  <a href="#" class="footer-category-link">Flavored Cocoa (Vanilla/Caramel)</a>
+</div>
 
-        <div class="footer-category-box">
-          <h3 class="category-box-title">Supplements :</h3>
-          <a href="#" class="footer-category-link">Vitamins</a>
-          <a href="#" class="footer-category-link">Minerals</a>
-          <a href="#" class="footer-category-link">Herbs</a>
-        </div>
+<div class="footer-category-box">
+  <h3 class="category-box-title">Supplements :</h3>
+  <a href="#" class="footer-category-link">Multivitamins</a>
+  <a href="#" class="footer-category-link">Omega-3 Fish Oil</a>
+  <a href="#" class="footer-category-link">Calcium & Vitamin D</a>
+  <a href="#" class="footer-category-link">Probiotics</a>
+  <a href="#" class="footer-category-link">Herbal Supplements</a>
+  <a href="#" class="footer-category-link">Immunity Boosters</a>
+  <a href="#" class="footer-category-link">Joint Health</a>
+  <a href="#" class="footer-category-link">Energy Boosters</a>
+</div>
+
       </div>
+
     </div>
 
     <div class="footer-nav">
+
       <div class="container">
 
         <ul class="footer-nav-list">
-          <li class="footer-nav-item"><h2 class="nav-title">Popular Categories</h2></li>
-          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Pharmaceuticals</a></li>
-          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Whey Protein</a></li>
-          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Supplements</a></li>
-          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Cocoa Powder</a></li>
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Popular Categories</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Pharmaceuticals</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Nutraceuticals</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Whey-protein</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Supplements</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Cocoa Powder</a>
+          </li>
+
         </ul>
 
         <ul class="footer-nav-list">
-          <li class="footer-nav-item"><h2 class="nav-title">Products</h2></li>
-          <li class="footer-nav-item"><a href="#" class="footer-nav-link">New products</a></li>
-          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Best sales</a></li>
-          <li class="footer-nav-item"><a href="shop.html" class="footer-nav-link">All products</a></li>
-          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Sitemap</a></li>
+        
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Products</h2>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Prices drop</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">New products</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Best sales</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Contact us</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Sitemap</a>
+          </li>
+        
         </ul>
 
         <ul class="footer-nav-list">
-          <li class="footer-nav-item"><h2 class="nav-title">Our Company</h2></li>
-          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Delivery</a></li>
-          <li class="footer-nav-item"><a href="about.html" class="footer-nav-link">About us</a></li>
-          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Terms and conditions</a></li>
-          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Secure payment</a></li>
+        
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Our Company</h2>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Delivery</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Legal Notice</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Terms and conditions</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">About us</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Secure payment</a>
+          </li>
+        
         </ul>
 
         <ul class="footer-nav-list">
-          <li class="footer-nav-item"><h2 class="nav-title">Services</h2></li>
-          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Free shipping</a></li>
-          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Easy returns</a></li>
-          <li class="footer-nav-item"><a href="contact.html" class="footer-nav-link">Contact us</a></li>
-          <li class="footer-nav-item"><a href="#" class="footer-nav-link">Support</a></li>
+        
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Services</h2>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Prices drop</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">New products</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Best sales</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Contact us</a>
+          </li>
+        
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Sitemap</a>
+          </li>
+        
         </ul>
 
         <ul class="footer-nav-list">
-          <li class="footer-nav-item"><h2 class="nav-title">Contact</h2></li>
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Contact</h2>
+          </li>
+
           <li class="footer-nav-item flex">
             <div class="icon-box">
               <ion-icon name="location-outline"></ion-icon>
             </div>
-            <address class="content">419 State 414 Rte, Beaver Dams, New York(NY), 14812, USA</address>
+
+            <address class="content">
+              419 State 414 Rte
+              Beaver Dams, New York(NY), 14812, USA
+            </address>
           </li>
+
           <li class="footer-nav-item flex">
             <div class="icon-box">
               <ion-icon name="call-outline"></ion-icon>
             </div>
+
             <a href="tel:+607936-8058" class="footer-nav-link">(607) 936-8058</a>
           </li>
+
           <li class="footer-nav-item flex">
             <div class="icon-box">
               <ion-icon name="mail-outline"></ion-icon>
             </div>
+
             <a href="mailto:example@gmail.com" class="footer-nav-link">example@gmail.com</a>
           </li>
+
         </ul>
 
         <ul class="footer-nav-list">
-          <li class="footer-nav-item"><h2 class="nav-title">Follow Us</h2></li>
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Follow Us</h2>
+          </li>
+
           <li>
             <ul class="social-link">
-              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-facebook"></ion-icon></a></li>
-              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-twitter"></ion-icon></a></li>
-              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-              <li class="footer-nav-item"><a href="#" class="footer-nav-link"><ion-icon name="logo-instagram"></ion-icon></a></li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
             </ul>
           </li>
+
         </ul>
 
       </div>
+
     </div>
 
     <div class="footer-bottom">
+
       <div class="container">
+
         <img src="./assets/images/payment.webp" alt="payment method" class="payment-img">
-        <p class="copyright">Copyright &copy; <a href="index.html">NuBaCo</a> all rights reserved.</p>
+
+        <p class="copyright">
+          Copyright &copy; <a href="#">NuBaCo</a> all rights reserved.
+        </p>
+
       </div>
+
     </div>
 
   </footer>
 
-  <!-- Scripts -->
+  <!--
+    - custom js link
+  -->
+
   <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
