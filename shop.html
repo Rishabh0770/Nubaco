@@ -367,7 +367,7 @@
             </div>
 
             <div style="color: var(--sonic-silver); font-size: var(--fs-7);">
-              Showing <span id="productCount">12</span> products
+              Showing <span id="productCount">20</span> products
             </div>
 
           </div>
@@ -381,14 +381,14 @@
             <!-- Product Card 1 -->
             <div class="showcase">
               <div class="showcase-banner">
-                <img src="https://via.placeholder.com/300x300?text=Whey+Protein+1" alt="Whey Protein Isolate" class="product-img default">
-                <img src="https://via.placeholder.com/300x300?text=Whey+Protein+2" alt="Whey Protein Isolate" class="product-img hover">
+                <img src="./assets/images/products/whey-powder.webp" alt="Whey Protein Isolate" class="product-img default">
+                <img src="./assets/images/products/whey-jar.webp" alt="Whey Protein Isolate" class="product-img hover">
                 <p class="showcase-badge">-20%</p>
                 <div class="showcase-actions">
-                  <button class="btn-action" title="Add to wishlist">
+                  <button class="btn-action wishlist-btn" data-product-id="1" title="Add to wishlist">
                     <ion-icon name="heart-outline"></ion-icon>
                   </button>
-                  <button class="btn-action" title="Quick view">
+                  <button class="btn-action view-btn" data-product-id="1" title="View details">
                     <ion-icon name="eye-outline"></ion-icon>
                   </button>
                   <button class="btn-action" title="Compare">
@@ -410,8 +410,13 @@
                 </div>
 
                 <div class="price-box">
-                  <p class="price">$39.99</p>
-                  <del>$49.99</del>
+                  <div>
+                    <p class="price">₹3,200</p>
+                    <del>₹4,000</del>
+                  </div>
+                  <button class="add-cart-btn" title="Add to cart">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                  </button>
                 </div>
               </div>
             </div>
@@ -419,14 +424,14 @@
             <!-- Product Card 2 -->
             <div class="showcase">
               <div class="showcase-banner">
-                <img src="https://via.placeholder.com/300x300?text=Cocoa+Powder+1" alt="Organic Cocoa Powder" class="product-img default">
-                <img src="https://via.placeholder.com/300x300?text=Cocoa+Powder+2" alt="Organic Cocoa Powder" class="product-img hover">
+                <img src="./assets/images/products/cocoa-natural.webp" alt="Organic Cocoa Powder" class="product-img default">
+                <img src="./assets/images/products/cocoa-alkalised.webp" alt="Organic Cocoa Powder" class="product-img hover">
                 <p class="showcase-badge">-15%</p>
                 <div class="showcase-actions">
-                  <button class="btn-action" title="Add to wishlist">
+                  <button class="btn-action wishlist-btn" data-product-id="2" title="Add to wishlist">
                     <ion-icon name="heart-outline"></ion-icon>
                   </button>
-                  <button class="btn-action" title="Quick view">
+                  <button class="btn-action view-btn" data-product-id="2" title="View details">
                     <ion-icon name="eye-outline"></ion-icon>
                   </button>
                   <button class="btn-action" title="Compare">
@@ -448,8 +453,13 @@
                 </div>
 
                 <div class="price-box">
-                  <p class="price">$24.99</p>
-                  <del>$29.99</del>
+                  <div>
+                    <p class="price">₹2,000</p>
+                    <del>₹2,400</del>
+                  </div>
+                  <button class="add-cart-btn" title="Add to cart">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                  </button>
                 </div>
               </div>
             </div>
@@ -457,14 +467,14 @@
             <!-- Product Card 3 -->
             <div class="showcase">
               <div class="showcase-banner">
-                <img src="https://via.placeholder.com/300x300?text=Vitamins+1" alt="Multi-Vitamin Complex" class="product-img default">
-                <img src="https://via.placeholder.com/300x300?text=Vitamins+2" alt="Multi-Vitamin Complex" class="product-img hover">
+                <img src="./assets/images/products/pea-protein.webp" alt="Multi-Vitamin Complex" class="product-img default">
+                <img src="./assets/images/products/creatine.webp" alt="Multi-Vitamin Complex" class="product-img hover">
                 <p class="showcase-badge pink">Sale</p>
                 <div class="showcase-actions">
-                  <button class="btn-action" title="Add to wishlist">
+                  <button class="btn-action wishlist-btn" data-product-id="3" title="Add to wishlist">
                     <ion-icon name="heart-outline"></ion-icon>
                   </button>
-                  <button class="btn-action" title="Quick view">
+                  <button class="btn-action view-btn" data-product-id="3" title="View details">
                     <ion-icon name="eye-outline"></ion-icon>
                   </button>
                   <button class="btn-action" title="Compare">
@@ -486,8 +496,13 @@
                 </div>
 
                 <div class="price-box">
-                  <p class="price">$19.99</p>
-                  <del>$24.99</del>
+                  <div>
+                    <p class="price">₹1,600</p>
+                    <del>₹2,000</del>
+                  </div>
+                  <button class="add-cart-btn" title="Add to cart">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                  </button>
                 </div>
               </div>
             </div>
@@ -495,14 +510,14 @@
             <!-- Product Card 4 -->
             <div class="showcase">
               <div class="showcase-banner">
-                <img src="./assets/images/products/jewellery-1.webp" alt="Omega-3 Fish Oil" class="product-img default">
-                <img src="./assets/images/products/jewellery-2.webp" alt="Omega-3 Fish Oil" class="product-img hover">
+                <img src="./assets/images/products/whey-pouch.webp" alt="Omega-3 Fish Oil" class="product-img default">
+                <img src="./assets/images/products/whey-flavored.webp" alt="Omega-3 Fish Oil" class="product-img hover">
                 <p class="showcase-badge black">New</p>
                 <div class="showcase-actions">
-                  <button class="btn-action" title="Add to wishlist">
+                  <button class="btn-action wishlist-btn" data-product-id="4" title="Add to wishlist">
                     <ion-icon name="heart-outline"></ion-icon>
                   </button>
-                  <button class="btn-action" title="Quick view">
+                  <button class="btn-action view-btn" data-product-id="4" title="View details">
                     <ion-icon name="eye-outline"></ion-icon>
                   </button>
                   <button class="btn-action" title="Compare">
@@ -524,8 +539,13 @@
                 </div>
 
                 <div class="price-box">
-                  <p class="price">$34.99</p>
-                  <del>$39.99</del>
+                  <div>
+                    <p class="price">₹2,800</p>
+                    <del>₹3,200</del>
+                  </div>
+                  <button class="add-cart-btn" title="Add to cart">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                  </button>
                 </div>
               </div>
             </div>
@@ -533,14 +553,14 @@
             <!-- Product Card 5 -->
             <div class="showcase">
               <div class="showcase-banner">
-                <img src="./assets/images/products/jewellery-3.webp" alt="Creatine Monohydrate" class="product-img default">
-                <img src="./assets/images/products/jewellery-4.webp" alt="Creatine Monohydrate" class="product-img hover">
+                <img src="./assets/images/products/BCAA.webp" alt="Creatine Monohydrate" class="product-img default">
+                <img src="./assets/images/products/energy-drink.webp" alt="Creatine Monohydrate" class="product-img hover">
                 <p class="showcase-badge">-25%</p>
                 <div class="showcase-actions">
-                  <button class="btn-action" title="Add to wishlist">
+                  <button class="btn-action wishlist-btn" data-product-id="5" title="Add to wishlist">
                     <ion-icon name="heart-outline"></ion-icon>
                   </button>
-                  <button class="btn-action" title="Quick view">
+                  <button class="btn-action view-btn" data-product-id="5" title="View details">
                     <ion-icon name="eye-outline"></ion-icon>
                   </button>
                   <button class="btn-action" title="Compare">
@@ -562,8 +582,13 @@
                 </div>
 
                 <div class="price-box">
-                  <p class="price">$14.99</p>
-                  <del>$19.99</del>
+                  <div>
+                    <p class="price">₹1,200</p>
+                    <del>₹1,600</del>
+                  </div>
+                  <button class="add-cart-btn" title="Add to cart">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                  </button>
                 </div>
               </div>
             </div>
@@ -571,14 +596,14 @@
             <!-- Product Card 6 -->
             <div class="showcase">
               <div class="showcase-banner">
-                <img src="./assets/images/products/jewellery-5.webp" alt="Vitamin C Boost" class="product-img default">
-                <img src="./assets/images/products/jewellery-6.webp" alt="Vitamin C Boost" class="product-img hover">
+                <img src="./assets/images/products/flavored-whey.webp" alt="Vitamin C Boost" class="product-img default">
+                <img src="./assets/images/products/whey-raw.webp" alt="Vitamin C Boost" class="product-img hover">
                 <p class="showcase-badge">-10%</p>
                 <div class="showcase-actions">
-                  <button class="btn-action" title="Add to wishlist">
+                  <button class="btn-action wishlist-btn" data-product-id="6" title="Add to wishlist">
                     <ion-icon name="heart-outline"></ion-icon>
                   </button>
-                  <button class="btn-action" title="Quick view">
+                  <button class="btn-action view-btn" data-product-id="6" title="View details">
                     <ion-icon name="eye-outline"></ion-icon>
                   </button>
                   <button class="btn-action" title="Compare">
@@ -600,8 +625,13 @@
                 </div>
 
                 <div class="price-box">
-                  <p class="price">$12.99</p>
-                  <del>$14.49</del>
+                  <div>
+                    <p class="price">₹1,040</p>
+                    <del>₹1,160</del>
+                  </div>
+                  <button class="add-cart-btn" title="Add to cart">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                  </button>
                 </div>
               </div>
             </div>
@@ -609,14 +639,14 @@
             <!-- Product Card 7 -->
             <div class="showcase">
               <div class="showcase-banner">
-                <img src="./assets/images/products/jewellery-1.webp" alt="Mass Gainer Deluxe" class="product-img default">
-                <img src="./assets/images/products/jewellery-2.webp" alt="Mass Gainer Deluxe" class="product-img hover">
+                <img src="./assets/images/products/protein-bar.webp" alt="Mass Gainer Deluxe" class="product-img default">
+                <img src="./assets/images/products/protein-bar-choco.webp" alt="Mass Gainer Deluxe" class="product-img hover">
                 <p class="showcase-badge pink">Bestseller</p>
                 <div class="showcase-actions">
-                  <button class="btn-action" title="Add to wishlist">
+                  <button class="btn-action wishlist-btn" data-product-id="7" title="Add to wishlist">
                     <ion-icon name="heart-outline"></ion-icon>
                   </button>
-                  <button class="btn-action" title="Quick view">
+                  <button class="btn-action view-btn" data-product-id="7" title="View details">
                     <ion-icon name="eye-outline"></ion-icon>
                   </button>
                   <button class="btn-action" title="Compare">
@@ -638,8 +668,13 @@
                 </div>
 
                 <div class="price-box">
-                  <p class="price">$54.99</p>
-                  <del>$69.99</del>
+                  <div>
+                    <p class="price">₹4,400</p>
+                    <del>₹5,600</del>
+                  </div>
+                  <button class="add-cart-btn" title="Add to cart">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                  </button>
                 </div>
               </div>
             </div>
@@ -647,14 +682,14 @@
             <!-- Product Card 8 -->
             <div class="showcase">
               <div class="showcase-banner">
-                <img src="./assets/images/products/jewellery-3.webp" alt="Pre-Workout Energy" class="product-img default">
-                <img src="./assets/images/products/jewellery-4.webp" alt="Pre-Workout Energy" class="product-img hover">
+                <img src="./assets/images/products/protein-bar-peanut.webp" alt="Pre-Workout Energy" class="product-img default">
+                <img src="./assets/images/products/protein-cookie.webp" alt="Pre-Workout Energy" class="product-img hover">
                 <p class="showcase-badge">-30%</p>
                 <div class="showcase-actions">
-                  <button class="btn-action" title="Add to wishlist">
+                  <button class="btn-action wishlist-btn" data-product-id="8" title="Add to wishlist">
                     <ion-icon name="heart-outline"></ion-icon>
                   </button>
-                  <button class="btn-action" title="Quick view">
+                  <button class="btn-action view-btn" data-product-id="8" title="View details">
                     <ion-icon name="eye-outline"></ion-icon>
                   </button>
                   <button class="btn-action" title="Compare">
@@ -676,8 +711,13 @@
                 </div>
 
                 <div class="price-box">
-                  <p class="price">$27.99</p>
-                  <del>$39.99</del>
+                  <div>
+                    <p class="price">₹2,240</p>
+                    <del>₹3,200</del>
+                  </div>
+                  <button class="add-cart-btn" title="Add to cart">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                  </button>
                 </div>
               </div>
             </div>
@@ -685,14 +725,14 @@
             <!-- Product Card 9 -->
             <div class="showcase">
               <div class="showcase-banner">
-                <img src="./assets/images/products/jewellery-5.webp" alt="Protein Bars Box" class="product-img default">
-                <img src="./assets/images/products/jewellery-6.webp" alt="Protein Bars Box" class="product-img hover">
+                <img src="./assets/images/products/choco-chips.webp" alt="Protein Bars Box" class="product-img default">
+                <img src="./assets/images/products/choco-chips-premium.webp" alt="Protein Bars Box" class="product-img hover">
                 <p class="showcase-badge">-12%</p>
                 <div class="showcase-actions">
-                  <button class="btn-action" title="Add to wishlist">
+                  <button class="btn-action wishlist-btn" data-product-id="9" title="Add to wishlist">
                     <ion-icon name="heart-outline"></ion-icon>
                   </button>
-                  <button class="btn-action" title="Quick view">
+                  <button class="btn-action view-btn" data-product-id="9" title="View details">
                     <ion-icon name="eye-outline"></ion-icon>
                   </button>
                   <button class="btn-action" title="Compare">
@@ -714,8 +754,13 @@
                 </div>
 
                 <div class="price-box">
-                  <p class="price">$29.99</p>
-                  <del>$34.99</del>
+                  <div>
+                    <p class="price">₹2,400</p>
+                    <del>₹2,800</del>
+                  </div>
+                  <button class="add-cart-btn" title="Add to cart">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                  </button>
                 </div>
               </div>
             </div>
@@ -723,14 +768,14 @@
             <!-- Product Card 10 -->
             <div class="showcase">
               <div class="showcase-banner">
-                <img src="./assets/images/products/jewellery-1.webp" alt="BCAAs Powder" class="product-img default">
-                <img src="./assets/images/products/jewellery-2.webp" alt="BCAAs Powder" class="product-img hover">
+                <img src="./assets/images/products/choco-slab.webp" alt="BCAAs Powder" class="product-img default">
+                <img src="./assets/images/products/choco-spread.webp" alt="BCAAs Powder" class="product-img hover">
                 <p class="showcase-badge black">Popular</p>
                 <div class="showcase-actions">
-                  <button class="btn-action" title="Add to wishlist">
+                  <button class="btn-action wishlist-btn" data-product-id="10" title="Add to wishlist">
                     <ion-icon name="heart-outline"></ion-icon>
                   </button>
-                  <button class="btn-action" title="Quick view">
+                  <button class="btn-action view-btn" data-product-id="10" title="View details">
                     <ion-icon name="eye-outline"></ion-icon>
                   </button>
                   <button class="btn-action" title="Compare">
@@ -752,8 +797,13 @@
                 </div>
 
                 <div class="price-box">
-                  <p class="price">$32.99</p>
-                  <del>$39.99</del>
+                  <div>
+                    <p class="price">₹2,640</p>
+                    <del>₹3,200</del>
+                  </div>
+                  <button class="add-cart-btn" title="Add to cart">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                  </button>
                 </div>
               </div>
             </div>
@@ -761,14 +811,14 @@
             <!-- Product Card 11 -->
             <div class="showcase">
               <div class="showcase-banner">
-                <img src="./assets/images/products/jewellery-3.webp" alt="Dutch Cocoa Premium" class="product-img default">
-                <img src="./assets/images/products/jewellery-4.webp" alt="Dutch Cocoa Premium" class="product-img hover">
+                <img src="./assets/images/products/cocoa-black.webp" alt="Dutch Cocoa Premium" class="product-img default">
+                <img src="./assets/images/products/cocoa-natural.webp" alt="Dutch Cocoa Premium" class="product-img hover">
                 <p class="showcase-badge">-18%</p>
                 <div class="showcase-actions">
-                  <button class="btn-action" title="Add to wishlist">
+                  <button class="btn-action wishlist-btn" data-product-id="11" title="Add to wishlist">
                     <ion-icon name="heart-outline"></ion-icon>
                   </button>
-                  <button class="btn-action" title="Quick view">
+                  <button class="btn-action view-btn" data-product-id="11" title="View details">
                     <ion-icon name="eye-outline"></ion-icon>
                   </button>
                   <button class="btn-action" title="Compare">
@@ -790,8 +840,13 @@
                 </div>
 
                 <div class="price-box">
-                  <p class="price">$22.99</p>
-                  <del>$27.99</del>
+                  <div>
+                    <p class="price">₹1,840</p>
+                    <del>₹2,240</del>
+                  </div>
+                  <button class="add-cart-btn" title="Add to cart">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                  </button>
                 </div>
               </div>
             </div>
@@ -799,14 +854,14 @@
             <!-- Product Card 12 -->
             <div class="showcase">
               <div class="showcase-banner">
-                <img src="./assets/images/products/jewellery-5.webp" alt="Probiotics Blend" class="product-img default">
-                <img src="./assets/images/products/jewellery-6.webp" alt="Probiotics Blend" class="product-img hover">
+                <img src="./assets/images/products/choco-baking.webp" alt="Probiotics Blend" class="product-img default">
+                <img src="./assets/images/products/choco-syrup.webp" alt="Probiotics Blend" class="product-img hover">
                 <p class="showcase-badge pink">Sale</p>
                 <div class="showcase-actions">
-                  <button class="btn-action" title="Add to wishlist">
+                  <button class="btn-action wishlist-btn" data-product-id="12" title="Add to wishlist">
                     <ion-icon name="heart-outline"></ion-icon>
                   </button>
-                  <button class="btn-action" title="Quick view">
+                  <button class="btn-action view-btn" data-product-id="12" title="View details">
                     <ion-icon name="eye-outline"></ion-icon>
                   </button>
                   <button class="btn-action" title="Compare">
@@ -828,8 +883,357 @@
                 </div>
 
                 <div class="price-box">
-                  <p class="price">$28.99</p>
-                  <del>$35.99</del>
+                  <div>
+                    <p class="price">₹2,320</p>
+                    <del>₹2,880</del>
+                  </div>
+                  <button class="add-cart-btn" title="Add to cart">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 13 - Milk Powder -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/milk.webp" alt="Premium Milk Powder" class="product-img default">
+                <img src="./assets/images/products/milkpowder.webp" alt="Premium Milk Powder" class="product-img hover">
+                <p class="showcase-badge">-8%</p>
+                <div class="showcase-actions">
+                  <button class="btn-action wishlist-btn" data-product-id="13" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action view-btn" data-product-id="13" title="View details">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Dairy</a>
+                <a href="product-details.html"><h3 class="showcase-title">Premium Milk Powder 500g</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <p>(134)</p>
+                </div>
+
+                <div class="price-box">
+                  <div>
+                    <p class="price">₹920</p>
+                    <del>₹1,000</del>
+                  </div>
+                  <button class="add-cart-btn" title="Add to cart">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 14 - Skimmed Milk -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/skimmed-milk.webp" alt="Skimmed Milk Powder" class="product-img default">
+                <img src="./assets/images/products/skimed.webp" alt="Skimmed Milk Powder" class="product-img hover">
+                <p class="showcase-badge">-5%</p>
+                <div class="showcase-actions">
+                  <button class="btn-action wishlist-btn" data-product-id="14" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action view-btn" data-product-id="14" title="View details">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Dairy</a>
+                <a href="product-details.html"><h3 class="showcase-title">Skimmed Milk Powder 400g</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <p>(218)</p>
+                </div>
+
+                <div class="price-box">
+                  <div>
+                    <p class="price">₹760</p>
+                    <del>₹800</del>
+                  </div>
+                  <button class="add-cart-btn" title="Add to cart">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 15 - Energy Drink Powder -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/energy-drink.webp" alt="Energy Drink Powder" class="product-img default">
+                <img src="./assets/images/products/cococo.webp" alt="Energy Drink Powder" class="product-img hover">
+                <p class="showcase-badge">-20%</p>
+                <div class="showcase-actions">
+                  <button class="btn-action wishlist-btn" data-product-id="15" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action view-btn" data-product-id="15" title="View details">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Energy Drinks</a>
+                <a href="product-details.html"><h3 class="showcase-title">Energy Boost Drink Powder</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <p>(145)</p>
+                </div>
+
+                <div class="price-box">
+                  <div>
+                    <p class="price">₹1,200</p>
+                    <del>₹1,500</del>
+                  </div>
+                  <button class="add-cart-btn" title="Add to cart">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 16 - Supplements Pack -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/suplimentss.webp" alt="Supplements Pack" class="product-img default">
+                <img src="./assets/images/products/cocoa-alkalised.webp" alt="Supplements Pack" class="product-img hover">
+                <p class="showcase-badge pink">Bundle</p>
+                <div class="showcase-actions">
+                  <button class="btn-action wishlist-btn" data-product-id="16" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action view-btn" data-product-id="16" title="View details">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Supplements</a>
+                <a href="product-details.html"><h3 class="showcase-title">Complete Supplements Pack</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <p>(389)</p>
+                </div>
+
+                <div class="price-box">
+                  <div>
+                    <p class="price">₹5,500</p>
+                    <del>₹6,800</del>
+                  </div>
+                  <button class="add-cart-btn" title="Add to cart">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 17 - Whey Isolate Advanced -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/whey-jar.webp" alt="Whey Isolate Advanced" class="product-img default">
+                <img src="./assets/images/products/whey-pouch.webp" alt="Whey Isolate Advanced" class="product-img hover">
+                <p class="showcase-badge black">Premium</p>
+                <div class="showcase-actions">
+                  <button class="btn-action wishlist-btn" data-product-id="17" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action view-btn" data-product-id="17" title="View details">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Whey Protein</a>
+                <a href="product-details.html"><h3 class="showcase-title">Whey Isolate Advanced 2kg</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <p>(267)</p>
+                </div>
+
+                <div class="price-box">
+                  <div>
+                    <p class="price">₹5,200</p>
+                    <del>₹6,500</del>
+                  </div>
+                  <button class="add-cart-btn" title="Add to cart">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 18 - Creatine Stack -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/creatine.webp" alt="Creatine Stack" class="product-img default">
+                <img src="./assets/images/products/BCAA.webp" alt="Creatine Stack" class="product-img hover">
+                <p class="showcase-badge">-15%</p>
+                <div class="showcase-actions">
+                  <button class="btn-action wishlist-btn" data-product-id="18" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action view-btn" data-product-id="18" title="View details">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Supplements</a>
+                <a href="product-details.html"><h3 class="showcase-title">Creatine & BCAA Stack</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <p>(312)</p>
+                </div>
+
+                <div class="price-box">
+                  <div>
+                    <p class="price">₹2,550</p>
+                    <del>₹3,000</del>
+                  </div>
+                  <button class="add-cart-btn" title="Add to cart">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 19 - Fitness Bundle -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/flavored-whey.webp" alt="Fitness Bundle" class="product-img default">
+                <img src="./assets/images/products/whey-raw.webp" alt="Fitness Bundle" class="product-img hover">
+                <p class="showcase-badge pink">Special</p>
+                <div class="showcase-actions">
+                  <button class="btn-action wishlist-btn" data-product-id="19" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action view-btn" data-product-id="19" title="View details">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Bundle Deals</a>
+                <a href="product-details.html"><h3 class="showcase-title">Fitness Enthusiast Bundle</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <p>(425)</p>
+                </div>
+
+                <div class="price-box">
+                  <div>
+                    <p class="price">₹6,800</p>
+                    <del>₹8,500</del>
+                  </div>
+                  <button class="add-cart-btn" title="Add to cart">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Product Card 20 - Protein Cookie Pack -->
+            <div class="showcase">
+              <div class="showcase-banner">
+                <img src="./assets/images/products/protein-cookie.webp" alt="Protein Cookie Pack" class="product-img default">
+                <img src="./assets/images/products/protein-bar-choco.webp" alt="Protein Cookie Pack" class="product-img hover">
+                <p class="showcase-badge">-14%</p>
+                <div class="showcase-actions">
+                  <button class="btn-action wishlist-btn" data-product-id="20" title="Add to wishlist">
+                    <ion-icon name="heart-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action view-btn" data-product-id="20" title="View details">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </button>
+                  <button class="btn-action" title="Compare">
+                    <ion-icon name="repeat-outline"></ion-icon>
+                  </button>
+                </div>
+              </div>
+
+              <div class="showcase-content">
+                <a href="#" class="showcase-category">Snacks</a>
+                <a href="product-details.html"><h3 class="showcase-title">Protein Cookie Pack 10pcs</h3></a>
+                <div class="showcase-rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                  <p>(178)</p>
+                </div>
+
+                <div class="price-box">
+                  <div>
+                    <p class="price">₹520</p>
+                    <del>₹600</del>
+                  </div>
+                  <button class="add-cart-btn" title="Add to cart">
+                    <ion-icon name="bag-handle-outline"></ion-icon>
+                  </button>
                 </div>
               </div>
             </div>
